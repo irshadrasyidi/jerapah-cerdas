@@ -40,7 +40,7 @@ line_bot_api = LineBotApi('u/HC0JwWnT0bZ62dGFiU3ewK50M68nvOgXi6SMDCnJ/TK07kCMFED
 # Channel Secret
 handler = WebhookHandler('6b3652ce6db6b622101382eba4c3fd25')
 #===========[ NOTE SAVER ]=======================
-notes = {}
+notes = {""}
 
 # Post Request
 @app.route("/callback", methods=['POST'])
@@ -67,7 +67,7 @@ def handle_message(event):
     if text=="djohan":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat djohan'))
     if text=="cuy":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='opose'))
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='oposeduh'))
 
     line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Halo '+profile.display_name+'\nKata Kunci Tidak Diketahui :) \nKetik "menu" untuk mengetahui menu yang tersedia'))
         
