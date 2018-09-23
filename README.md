@@ -1,0 +1,2 @@
+# jerapah-cerdas
+Smart Girrafe
