@@ -10,6 +10,7 @@ from linebot.models import *
 import requests, json
 
 from random import randint
+from random import seed
 
 import errno
 import os
@@ -61,6 +62,7 @@ def handle_message(event):
     gid = event.source.sender_id #get group_id
     profile = line_bot_api.get_profile(sender)
     if text=="meme":
+        seed(1)
         value = randint(0, 100)
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='siap bos '+value+' mantap'))
     if text=="mail":
