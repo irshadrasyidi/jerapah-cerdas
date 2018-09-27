@@ -9,7 +9,7 @@ from linebot.exceptions import (
 from linebot.models import *
 import requests, json
 
-import random
+from random import *
 
 import errno
 import os
@@ -56,12 +56,11 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    import random
     text = event.message.text #simplify for receove message
     sender = event.source.user_id #get usesenderr_id
     gid = event.source.sender_id #get group_id
     profile = line_bot_api.get_profile(sender)
-    value = random.randint(1, 10)
+    value = random.randint()
     if text=="meme":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='siap bos '+value+' mantap'))
     if text=="mail":
