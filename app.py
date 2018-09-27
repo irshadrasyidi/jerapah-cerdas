@@ -60,8 +60,9 @@ def handle_message(event):
     sender = event.source.user_id #get usesenderr_id
     gid = event.source.sender_id #get group_id
     profile = line_bot_api.get_profile(sender)
-    if text=="adit":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat adit'))
+    if text=="meme pls":
+        value = randint(0, 100)
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='siap bos '+value))
     if text=="mail":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat mail'))
     if text=="djohan":
@@ -73,8 +74,11 @@ def handle_message(event):
     original_content_url='https://s0.bukalapak.com/img/0343005662/w-1000/Boneka_Anak_Jerapah_Imut_Menggemaskan.jpg',
     preview_image_url='https://s0.bukalapak.com/img/0343005662/w-1000/Boneka_Anak_Jerapah_Imut_Menggemaskan.jpg'
     ))
+    if text=="jerapah bego":
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat, '+profile.display_name+' :('))
+        line_bot_api.leave_group(group_id)
 
-    line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Halo '+profile.display_name+'\nKata Kunci Tidak Diketahui :) \nKetik "menu" untuk mengetahui menu yang tersedia'))
+    line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Sorry '+profile.display_name+'\nAku g ngerti km ngomong apa\nKetik "cuy" klo bingung mo ngomong apa'))
         
 import os
 if __name__ == "__main__":
