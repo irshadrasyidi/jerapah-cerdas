@@ -57,13 +57,17 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    from random import randint
+    from random import seed
+
     text = event.message.text #simplify for receove message
     sender = event.source.user_id #get usesenderr_id
     gid = event.source.sender_id #get group_id
     profile = line_bot_api.get_profile(sender)
+    seed(1)
     value = randint(0, 100)
     if text=="meme":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='siap bos'+value+' mantap'))
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='siap bos '+value+' mantap'))
     if text=="mail":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat mail'))
     if text=="djohan":
