@@ -68,6 +68,11 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat djohan'))
     if text=="cuy":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='oposeduh'))
+    if text=="tyo":
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    original_content_url='https://s0.bukalapak.com/img/0343005662/w-1000/Boneka_Anak_Jerapah_Imut_Menggemaskan.jpg',
+    preview_image_url='https://s0.bukalapak.com/img/0343005662/w-1000/Boneka_Anak_Jerapah_Imut_Menggemaskan.jpg'
+    ))
 
     line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Halo '+profile.display_name+'\nKata Kunci Tidak Diketahui :) \nKetik "menu" untuk mengetahui menu yang tersedia'))
         
