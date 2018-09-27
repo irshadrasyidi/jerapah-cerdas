@@ -62,9 +62,7 @@ def handle_message(event):
     gid = event.source.sender_id #get group_id
     profile = line_bot_api.get_profile(sender)
     if text=="meme":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='siap bos '' mantap'))
-        seed(1)
-        value = randint(0, 100)
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='siap bos mantap'))
     if text=="mail":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat mail'))
     if text=="djohan":
@@ -76,7 +74,7 @@ def handle_message(event):
     original_content_url='https://s0.bukalapak.com/img/0343005662/w-1000/Boneka_Anak_Jerapah_Imut_Menggemaskan.jpg',
     preview_image_url='https://s0.bukalapak.com/img/0343005662/w-1000/Boneka_Anak_Jerapah_Imut_Menggemaskan.jpg'
     ))
-    if text=="jerapah bego":
+    if text=="bego":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat, '+profile.display_name+' :('))
         line_bot_api.leave_group(group_id)
 
