@@ -60,7 +60,7 @@ def handle_message(event):
     sender = event.source.user_id #get usesenderr_id
     gid = event.source.sender_id #get group_id
     profile = line_bot_api.get_profile(sender)
-    value = 3
+    value = 
     if text=="meme":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='siap bos '+value+' mantap'))
     if text=="mail":
@@ -71,8 +71,8 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='oposeduh'))
     if text=="tyo":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://s0.bukalapak.com/img/0343005662/w-1000/Boneka_Anak_Jerapah_Imut_Menggemaskan.jpg',
-    preview_image_url='https://s0.bukalapak.com/img/0343005662/w-1000/Boneka_Anak_Jerapah_Imut_Menggemaskan.jpg'
+    original_content_url='https://drive.google.com/file/d/1KdSTWgiSn2TYOC8YOHCIHzkQ3uNycasl/view?usp=sharing',
+    preview_image_url='https://drive.google.com/file/d/1KdSTWgiSn2TYOC8YOHCIHzkQ3uNycasl/view?usp=sharing'
     ))
     if text=="bego":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat, '+profile.display_name+' :('))
