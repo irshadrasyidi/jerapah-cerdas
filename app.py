@@ -71,8 +71,8 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='oposeduh'))
     if text=="tyo":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://drive.google.com/file/d/1KdSTWgiSn2TYOC8YOHCIHzkQ3uNycasl/view?usp=sharing',
-    preview_image_url='https://drive.google.com/file/d/1KdSTWgiSn2TYOC8YOHCIHzkQ3uNycasl/view?usp=sharing'
+    original_content_url='https://pics.me.me/Facebook-0dfc75.png',
+    preview_image_url='https://pics.me.me/Facebook-0dfc75.png'
     ))
     if text=="bego":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat, '+profile.display_name+' :('))
