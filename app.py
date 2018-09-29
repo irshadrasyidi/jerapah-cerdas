@@ -58,8 +58,6 @@ def handle_message(event):
     sender = event.source.user_id #get usesenderr_id
     gid = event.source.sender_id #get group_id
     profile = line_bot_api.get_profile(sender)
-    if text=="meme":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='siap bos '+value+' mantap'))
     if text=="mail":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat mail'))
     if text=="djohan":
@@ -68,8 +66,8 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='oposeduh'))
     if text=="tyo":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://pics.me.me/Facebook-0dfc75.png',
-    preview_image_url='https://pics.me.me/Facebook-0dfc75.png'
+    original_content_url='http://thedotbruh.fun/kamus/1501901141247.jpg',
+    preview_image_url='http://thedotbruh.fun/kamus/1501901141247.jpg'
     ))
     if text=="bego":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat, '+profile.display_name+' :('))
