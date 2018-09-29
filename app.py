@@ -64,8 +64,8 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='oposeduh'))
     if text=="tyo":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='http://thedotbruh.fun/kamus/1501901141247.jpg',
-    preview_image_url='http://thedotbruh.fun/kamus/1501901141247.jpg'
+    original_content_url='https://scontent-sea1-1.cdninstagram.com/vp/2c394d8989e606e431d054c59d6c53f1/5C2174D9/t51.2885-15/e35/c15.0.369.369/38064518_717399328602147_7969344949105721344_n.jpg',
+    preview_image_url='https://scontent-sea1-1.cdninstagram.com/vp/2c394d8989e606e431d054c59d6c53f1/5C2174D9/t51.2885-15/e35/c15.0.369.369/38064518_717399328602147_7969344949105721344_n.jpg'
     ))
     if text=="bego":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat, '+profile.display_name+' :('))
