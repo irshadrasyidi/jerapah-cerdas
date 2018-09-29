@@ -9,8 +9,6 @@ from linebot.exceptions import (
 from linebot.models import *
 import requests, json
 
-from random import *
-
 import errno
 import os
 import sys, random
