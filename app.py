@@ -70,10 +70,10 @@ def handle_message(event):
     if text=="bego":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat, '+profile.display_name+' :('))
         line_bot_api.leave_group(group_id)
-
-    line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Sorry '+profile.display_name+'\nAku g ngerti km ngomong apa\nKetik "cuy" klo bingung mo ngomong apa'))
     else:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=text))   
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='a'+event.message.text+'b'))
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Sorry '+profile.display_name+'\nAku g ngerti km ngomong apa\nKetik "cuy" klo bingung mo ngomong apa'))
+       
 import os
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
