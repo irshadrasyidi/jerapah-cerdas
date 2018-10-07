@@ -37,8 +37,21 @@ app = Flask(__name__)
 line_bot_api = LineBotApi('u/HC0JwWnT0bZ62dGFiU3ewK50M68nvOgXi6SMDCnJ/TK07kCMFEDbaMqtXGpYOCPgRAaNH27m66RXcGnAHizI8fXUj5mEChhd2ikqGQ+y9/AAvB0TUFjM6q79pBEPAIHjCv7ttW0o50W0woztRGsgdB04t89/1O/w1cDnyilFU=')
 # Channel Secret
 handler = WebhookHandler('6b3652ce6db6b622101382eba4c3fd25')
+
 #===========[ NOTE SAVER ]=======================
 notes = {""}
+
+#INPUT DATA MHS buat di app.py
+def inputmhs(nrp, nama, alamat):
+    r = requests.post("http://www.aditmasih.tk/api_kelompok3/insert.php", data={'nrp': nrp, 'nama': nama, 'alamat': alamat})
+    data = r.json()
+
+    flag = data['flag']
+   
+    if(flag == "1"):
+        return 'Data '+nama+' berhasil dimasukkan\n'
+    elif(flag == "0"):
+        return 'Data gagal dimasukkan\n'
 
 # Post Request
 @app.route("/callback", methods=['POST'])
@@ -58,6 +71,10 @@ def handle_message(event):
     sender = event.source.user_id #get usesenderr_id
     gid = event.source.sender_id #get group_id
     profile = line_bot_api.get_profile(sender)
+    
+    data=text.split('-')
+    if(data[0]=='tambah'):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=inputmhs(data[1],data[2],data[3])))
     if text=="vivat":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its 3x'))
     if text=="cuy":
@@ -83,7 +100,7 @@ def handle_message(event):
     preview_image_url='http://ekspresia.com/wp-content/uploads/2018/03/19.jpg'
     ))
     if text=="/begobgt":
-        #line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat, '+profile.display_name+' :('))
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat, '+profile.display_name+' :('))
         line_bot_api.leave_group(group_id)
     if text=="/bego":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='yah, '+profile.display_name+' diboongi bot'))
