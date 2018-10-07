@@ -61,25 +61,32 @@ def handle_message(event):
     if text=="vivat":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its 3x'))
     if text=="cuy":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='oposeduh'))
-    if text=="shit1":
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='opo?'))
+    if text=="/shit1":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://media.keepo.me/20180306164707/800x532--28795197_1460633330725188_9160489402158820484_n.jpg',
     preview_image_url='https://media.keepo.me/20180306164707/800x532--28795197_1460633330725188_9160489402158820484_n.jpg'
     ))
-    if text=="shit2":
+    if text=="/shit2":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://i.pinimg.com/474x/64/f4/73/64f47325fd093120d8e16e7759fc5224.jpg',
     preview_image_url='https://i.pinimg.com/474x/64/f4/73/64f47325fd093120d8e16e7759fc5224.jpg'
     ))
-    if text=="shit3":
+    if text=="/shit3":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://3.bp.blogspot.com/-2bHJrd2yl7s/Wr3Sy2zDudI/AAAAAAAABNk/DKwqkIkvufUteDl_CQlvfV98EjDNeTJagCLcBGAs/s1600/IMG_20180327_221555.jpg',
     preview_image_url='https://3.bp.blogspot.com/-2bHJrd2yl7s/Wr3Sy2zDudI/AAAAAAAABNk/DKwqkIkvufUteDl_CQlvfV98EjDNeTJagCLcBGAs/s1600/IMG_20180327_221555.jpg'
     ))
-    if text=="bego":
+    if text=="/shit4":
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    original_content_url='http://ekspresia.com/wp-content/uploads/2018/03/19.jpg',
+    preview_image_url='http://ekspresia.com/wp-content/uploads/2018/03/19.jpg'
+    ))
+    if text=="/begobgt":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat, '+profile.display_name+' :('))
         line_bot_api.leave_group(group_id)
+    if text=="/bego":
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='yah, '+profile.display_name+' diboongi bot'))
     else:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Sorry '+profile.display_name+'\nAku gk ngerti artinya "'+event.message.text+'" apa:('))
 
