@@ -83,9 +83,8 @@ def handle_message(event):
     preview_image_url='http://ekspresia.com/wp-content/uploads/2018/03/19.jpg'
     ))
     if text=="/begobgt":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat, '+profile.display_name+' :('))
+        #line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat, '+profile.display_name+' :('))
         line_bot_api.leave_group(group_id)
-        line_bot_api.leave_room(room_id)
     if text=="/bego":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='yah, '+profile.display_name+' diboongi bot'))
     else:
