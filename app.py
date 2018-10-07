@@ -62,18 +62,18 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its 3x'))
     if text=="cuy":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='oposeduh'))
-    if text=="tyo":
+    if text=="shit1":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://media.keepo.me/20180306164707/800x532--28795197_1460633330725188_9160489402158820484_n.jpg',
     preview_image_url='https://media.keepo.me/20180306164707/800x532--28795197_1460633330725188_9160489402158820484_n.jpg'
     ))
-
     if text=="bego":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat, '+profile.display_name+' :('))
         line_bot_api.leave_group(group_id)
 
     line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Sorry '+profile.display_name+'\nAku g ngerti km ngomong apa\nKetik "cuy" klo bingung mo ngomong apa'))
-        
+    else:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=text))   
 import os
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
