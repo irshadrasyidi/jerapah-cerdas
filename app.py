@@ -43,7 +43,7 @@ notes = {""}
 
 #INPUT DATA MHS buat di app.py
 def inputHewan(id, Kingdom, Hewan, Nama, Gender):
-    r = requests.post("http://www.aditmasih.tk/api_irshad/insert.php", data={'id': no, 'Kingdom': kingdom, 'Hewan': hewan, 'Nama': nama, 'Gender': gender})
+    r = requests.post("http://www.aditmasih.tk/api_irshad/insert.php", data={'id': id, 'Kingdom': Kingdom, 'Hewan': Hewan, 'Nama': Nama, 'Gender': Gender})
     data = r.json()
 
     flag = data['flag']
@@ -130,13 +130,13 @@ def handle_message(event):
     
     data=text.split('-')
     if(data[0]=='tambah'):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=inputmhs(data[1], data[2], data[3], data[4], data[5])))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=inputHewan(data[1], data[2], data[3], data[4], data[5])))
     elif(data[0]=='lihat'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=inputmhs(data[1],data[2],data[3])))
     elif(data[0]=='hapus'):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=hapusmhs(data[1])))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=delHewan(data[1])))
     elif(data[0]=='ganti'):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=updatemhs(data[1],data[2],data[3],data[4])))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=updateHewan(data[1],data[2],data[3],data[4])))
     elif(data[0]=='semwa'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=allsmhs()))
     elif(data[0]=='menu'):
