@@ -133,8 +133,8 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=inputHewan(data[1], data[2], data[3], data[4], data[5])))
     # elif(data[0]=='lihat'):
     #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=inputmhs(data[1],data[2],data[3])))
-    # elif(data[0]=='hapus'):
-    #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=delHewan(data[1])))
+    elif(data[0]=='hapus'):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=delHewan(data[1])))
     # elif(data[0]=='ganti'):
     #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=updateHewan(data[1],data[2],data[3],data[4])))
     # elif(data[0]=='semwa'):
