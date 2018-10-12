@@ -133,7 +133,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=inputHewan(data[1], data[2], data[3], data[4], data[5])))
     # elif(data[0]=='lihat'):
     #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=inputmhs(data[1],data[2],data[3])))
-    elif(data[0]=='hapus'):
+    if(data[0]=='hapus'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=delHewan(data[1])))
     # elif(data[0]=='ganti'):
     #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=updateHewan(data[1],data[2],data[3],data[4])))
@@ -142,6 +142,7 @@ def handle_message(event):
     # elif(data[0]=='menu'):
         # menu = "1. lihat-[nrp]\n2. tambah-[nrp]-[nama]-[kosan]\n3. hapus-[nrp]\n4. ganti-[nrp lama]-[nrp baru]-[nama baru]-[kosan baru]\n5. semwa"
         # line_bot_api.reply_message(event.reply_token, TextSendMessage(text=menu))
+    
     if text=="vivat":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its 3x'))
     if text=="cuy":
