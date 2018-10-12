@@ -42,17 +42,73 @@ handler = WebhookHandler('6b3652ce6db6b622101382eba4c3fd25')
 notes = {""}
 
 #INPUT DATA MHS buat di app.py
-def inputmhs(nrp, nama, alamat):
-    r = requests.post("http://www.aditmasih.tk/api_kelompok3/insert.php", data={'nrp': nrp, 'nama': nama, 'alamat': alamat})
+def inputHewan(nrp, nama, alamat):
+    r = requests.post("http://www.aditmasih.tk/api_irshad/insert.php", data={'id': id, 'kingdom': kingdom, 'hewan': hewan, 'nama': nama, 'gender': gender})
     data = r.json()
 
     flag = data['flag']
    
     if(flag == "1"):
-        return 'Data '+nama+' berhasil dimasukkan\n'
+        return 'Hewan '+hewan+' Bernama '+nama+' berhasil diimport dari hutan\n'
+    elif(flag == "0"):
+        return 'Hewan gk jadi masuk\n'
+
+def allmhs():
+    r = requests.post("http://www.aditmasih.tk/api_irshad/all.php")
+    data = r.json()
+
+    flag = data['flag']
+   
+    if(flag == "1"):
+        hasil = ""
+        for i in range(0,len(data['data_angkatan'])):
+            nrp = data['data_angkatan'][int(i)][0]
+            nama = data['data_angkatan'][int(i)][2]
+            alamat = data['data_angkatan'][int(i)][4]
+            hasil=hasil+str(i+1)
+            hasil=hasil+".\nNrp : "
+            hasil=hasil+nrp
+            hasil=hasil+"\nNama : "
+            hasil=hasil+nama
+            hasil=hasil+"\nAlamat : "
+            hasil=hasil+alamat
+            hasil=hasil+"\n"
+        return hasil
     elif(flag == "0"):
         return 'Data gagal dimasukkan\n'
 
+
+#DELETE DATA MHS
+def hapusmhs(nrp):
+    r = requests.post("http://www.aditmasih.tk/api_irshad/delete.php", data={'nrp': nrp})
+    data = r.json()
+
+    flag = data['flag']
+   
+    if(flag == "1"):
+        return 'Data '+nrp+' berhasil dihapus\n'
+    elif(flag == "0"):
+        return 'Data gagal dihapus\n'
+
+def updatemhs(nrpLama,nrp,nama,kosan):
+    URLmhs = "http://www.aditmasih.tk/api_irshad/show.php?nrp=" + nrpLama
+    r = requests.get(URLmhs)
+    data = r.json()
+    err = "data tidak ditemukan"
+    nrp_lama=nrpLama
+    flag = data['flag']
+    if(flag == "1"):
+        r = requests.post("http://www.aditmasih.tk/api_irshad/update.php", data={'nrp': nrp, 'nama': nama, 'kosan': kosan, 'nrp_lama':nrp_lama})
+        data = r.json()
+        flag = data['flag']
+
+        if(flag == "1"):
+            return 'Data '+nrp_lama+'berhasil diupdate\n'
+        elif(flag == "0"):
+            return 'Data gagal diupdate\n'
+
+    elif(flag == "0"):
+        return err
 # Post Request
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -75,6 +131,17 @@ def handle_message(event):
     data=text.split('-')
     if(data[0]=='tambah'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=inputmhs(data[1],data[2],data[3])))
+    elif(data[0]=='lihat'):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=inputmhs(data[1],data[2],data[3])))
+    elif(data[0]=='hapus'):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=hapusmhs(data[1])))
+    elif(data[0]=='ganti'):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=updatemhs(data[1],data[2],data[3],data[4])))
+    elif(data[0]=='semwa'):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=allsmhs()))
+    elif(data[0]=='menu'):
+        menu = "1. lihat-[nrp]\n2. tambah-[nrp]-[nama]-[kosan]\n3. hapus-[nrp]\n4. ganti-[nrp lama]-[nrp baru]-[nama baru]-[kosan baru]\n5. semwa"
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=menu))
     if text=="vivat":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its 3x'))
     if text=="cuy":
@@ -101,7 +168,8 @@ def handle_message(event):
     ))
     if text=="/begobgt":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat, '+profile.display_name+' :('))
-        line_bot_api.leave_group(group_id)
+        line_bot_api.leave_group(event.source.group_id)
+        line_bot_api.leave_room(event.source.room_id)
     if text=="/bego":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='yah, '+profile.display_name+' diboongi bot'))
     else:
