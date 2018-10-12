@@ -41,7 +41,7 @@ handler = WebhookHandler('6b3652ce6db6b622101382eba4c3fd25')
 #===========[ NOTE SAVER ]=======================
 notes = {""}
 
-#INPUT DATA MHS buat di app.py
+#INPUT DATA HEWAN
 def inputHewan(Kode, Tipe, Hewan, Nama, Gender):
     r = requests.post("http://www.aditmasih.tk/api_irshad/insert.php", data={'Kode': Kode, 'Tipe': Tipe, 'Hewan': Hewan, 'Nama': Nama, 'Gender': Gender})
     data = r.json()
@@ -49,9 +49,9 @@ def inputHewan(Kode, Tipe, Hewan, Nama, Gender):
     flag = data['flag']
    
     if(flag == "1"):
-        return 'Hewan '+Hewan+' Bernama '+Nama+' berhasil diimport dari hutan\n'
+        return 'Hewan '+Hewan+' Bernama '+Nama+' berhasil diimport dari hutan'
     elif(flag == "0"):
-        return 'Hewan gk jadi masuk\n'
+        return 'Hewan gk jadi masuk'
 
 # def showHewan():
 #     r = requests.post("http://www.aditmasih.tk/api_irshad/show.php")
@@ -78,37 +78,37 @@ def inputHewan(Kode, Tipe, Hewan, Nama, Gender):
 #         return 'Data gagal dimasukkan\n'
 
 
-#DELETE DATA MHS
-def delHewan(nrp):
-    r = requests.post("http://www.aditmasih.tk/api_irshad/delete.php", data={'id': no})
+#DELETE DATA HEWAN
+def delHewan(Kode):
+    r = requests.post("http://www.aditmasih.tk/api_irshad/delete.php", data={'Kode': Kode})
     data = r.json()
 
     flag = data['flag']
    
     if(flag == "1"):
-        return 'Hewan dengan ID '+no+' berhasil dihapus\n'
+        return 'Hewan dengan Kode '+Kode+' berhasil dilepas'
     elif(flag == "0"):
-        return 'Hewannya ga ada :/\n'
+        return 'Hewannya emang ga ada :/'
 
-def updateHewan(nrpLama,nrp,nama,kosan):
-    URLmhs = "http://www.aditmasih.tk/api_irshad/show.php?nrp=" + nrpLama
-    r = requests.get(URLmhs)
-    data = r.json()
-    err = "data tidak ditemukan"
-    nrp_lama=nrpLama
-    flag = data['flag']
-    if(flag == "1"):
-        r = requests.post("http://www.aditmasih.tk/api_irshad/update.php", data={'nrp': nrp, 'nama': nama, 'kosan': kosan, 'nrp_lama':nrp_lama})
-        data = r.json()
-        flag = data['flag']
+# def updateHewan(nrpLama,nrp,nama,kosan):
+#     URLmhs = "http://www.aditmasih.tk/api_irshad/show.php?nrp=" + nrpLama
+#     r = requests.get(URLmhs)
+#     data = r.json()
+#     err = "data tidak ditemukan"
+#     nrp_lama=nrpLama
+#     flag = data['flag']
+#     if(flag == "1"):
+#         r = requests.post("http://www.aditmasih.tk/api_irshad/update.php", data={'nrp': nrp, 'nama': nama, 'kosan': kosan, 'nrp_lama':nrp_lama})
+#         data = r.json()
+#         flag = data['flag']
 
-        if(flag == "1"):
-            return 'Data '+nrp_lama+'berhasil diupdate\n'
-        elif(flag == "0"):
-            return 'Data gagal diupdate\n'
+#         if(flag == "1"):
+#             return 'Data '+nrp_lama+'berhasil diupdate\n'
+#         elif(flag == "0"):
+#             return 'Data gagal diupdate\n'
 
-    elif(flag == "0"):
-        return err
+#     elif(flag == "0"):
+#         return err
 # Post Request
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -131,17 +131,17 @@ def handle_message(event):
     data=text.split('-')
     if(data[0]=='tambah'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=inputHewan(data[1], data[2], data[3], data[4], data[5])))
-    elif(data[0]=='lihat'):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=inputmhs(data[1],data[2],data[3])))
-    elif(data[0]=='hapus'):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=delHewan(data[1])))
-    elif(data[0]=='ganti'):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=updateHewan(data[1],data[2],data[3],data[4])))
-    elif(data[0]=='semwa'):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=allsmhs()))
-    elif(data[0]=='menu'):
-        menu = "1. lihat-[nrp]\n2. tambah-[nrp]-[nama]-[kosan]\n3. hapus-[nrp]\n4. ganti-[nrp lama]-[nrp baru]-[nama baru]-[kosan baru]\n5. semwa"
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=menu))
+    # elif(data[0]=='lihat'):
+    #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=inputmhs(data[1],data[2],data[3])))
+    # elif(data[0]=='hapus'):
+    #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=delHewan(data[1])))
+    # elif(data[0]=='ganti'):
+    #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=updateHewan(data[1],data[2],data[3],data[4])))
+    # elif(data[0]=='semwa'):
+    #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=allsmhs()))
+    # elif(data[0]=='menu'):
+        # menu = "1. lihat-[nrp]\n2. tambah-[nrp]-[nama]-[kosan]\n3. hapus-[nrp]\n4. ganti-[nrp lama]-[nrp baru]-[nama baru]-[kosan baru]\n5. semwa"
+        # line_bot_api.reply_message(event.reply_token, TextSendMessage(text=menu))
     if text=="vivat":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its 3x'))
     if text=="cuy":
