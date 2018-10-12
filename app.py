@@ -167,11 +167,12 @@ def handle_message(event):
     preview_image_url='http://ekspresia.com/wp-content/uploads/2018/03/19.jpg'
     ))
     if text=="/begobgt":
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat, '+profile.display_name+' :('))
         line_bot_api.leave_room(event.source.room_id)
         #line_bot_api.leave_group(event.source.group_id)
     if text=="/bego":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='yah, '+profile.display_name+' diboongi bot'))
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat, '+profile.display_name+' :('))
+        
     else:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Sorry '+profile.display_name+'\nAku gk ngerti artinya "'+event.message.text+'" apa:('))
 
