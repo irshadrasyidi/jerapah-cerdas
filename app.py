@@ -42,8 +42,8 @@ handler = WebhookHandler('6b3652ce6db6b622101382eba4c3fd25')
 notes = {""}
 
 #INPUT DATA MHS buat di app.py
-def inputHewan(nrp, nama, alamat):
-    r = requests.post("http://www.aditmasih.tk/api_irshad/insert.php", data={'id': id, 'kingdom': kingdom, 'hewan': hewan, 'nama': nama, 'gender': gender})
+def inputHewan(id, Kingdom, Hewan, Nama, Gender):
+    r = requests.post("http://www.aditmasih.tk/api_irshad/insert.php", data={'id': no, 'Kingdom': kingdom, 'Hewan': hewan, 'Nama': nama, 'Gender': gender})
     data = r.json()
 
     flag = data['flag']
@@ -53,44 +53,44 @@ def inputHewan(nrp, nama, alamat):
     elif(flag == "0"):
         return 'Hewan gk jadi masuk\n'
 
-def allmhs():
-    r = requests.post("http://www.aditmasih.tk/api_irshad/all.php")
-    data = r.json()
+# def showHewan():
+#     r = requests.post("http://www.aditmasih.tk/api_irshad/show.php")
+#     data = r.json()
 
-    flag = data['flag']
+#     flag = data['flag']
    
-    if(flag == "1"):
-        hasil = ""
-        for i in range(0,len(data['data_angkatan'])):
-            nrp = data['data_angkatan'][int(i)][0]
-            nama = data['data_angkatan'][int(i)][2]
-            alamat = data['data_angkatan'][int(i)][4]
-            hasil=hasil+str(i+1)
-            hasil=hasil+".\nNrp : "
-            hasil=hasil+nrp
-            hasil=hasil+"\nNama : "
-            hasil=hasil+nama
-            hasil=hasil+"\nAlamat : "
-            hasil=hasil+alamat
-            hasil=hasil+"\n"
-        return hasil
-    elif(flag == "0"):
-        return 'Data gagal dimasukkan\n'
+#     if(flag == "1"):
+#         hasil = ""
+#         for i in range(0,len(data['data_angkatan'])):
+#             nrp = data['data_angkatan'][int(i)][0]
+#             nama = data['data_angkatan'][int(i)][2]
+#             alamat = data['data_angkatan'][int(i)][4]
+#             hasil=hasil+str(i+1)
+#             hasil=hasil+".\nNrp : "
+#             hasil=hasil+nrp
+#             hasil=hasil+"\nNama : "
+#             hasil=hasil+nama
+#             hasil=hasil+"\nAlamat : "
+#             hasil=hasil+alamat
+#             hasil=hasil+"\n"
+#         return hasil
+#     elif(flag == "0"):
+#         return 'Data gagal dimasukkan\n'
 
 
 #DELETE DATA MHS
-def hapusmhs(nrp):
-    r = requests.post("http://www.aditmasih.tk/api_irshad/delete.php", data={'nrp': nrp})
+def delHewan(nrp):
+    r = requests.post("http://www.aditmasih.tk/api_irshad/delete.php", data={'id': no})
     data = r.json()
 
     flag = data['flag']
    
     if(flag == "1"):
-        return 'Data '+nrp+' berhasil dihapus\n'
+        return 'Hewan dengan ID '+no+' berhasil dihapus\n'
     elif(flag == "0"):
-        return 'Data gagal dihapus\n'
+        return 'Hewannya ga ada :/\n'
 
-def updatemhs(nrpLama,nrp,nama,kosan):
+def updateHewan(nrpLama,nrp,nama,kosan):
     URLmhs = "http://www.aditmasih.tk/api_irshad/show.php?nrp=" + nrpLama
     r = requests.get(URLmhs)
     data = r.json()
@@ -172,7 +172,6 @@ def handle_message(event):
         #line_bot_api.leave_group(event.source.group_id)
     if text=="/bego":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='yah, '+profile.display_name+' diboongi bot'))
-        
     else:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Sorry '+profile.display_name+'\nAku gk ngerti artinya "'+event.message.text+'" apa:('))
 
