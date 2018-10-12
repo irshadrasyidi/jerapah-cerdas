@@ -42,14 +42,14 @@ handler = WebhookHandler('6b3652ce6db6b622101382eba4c3fd25')
 notes = {""}
 
 #INPUT DATA MHS buat di app.py
-def inputHewan(id, Kingdom, Hewan, Nama, Gender):
-    r = requests.post("http://www.aditmasih.tk/api_irshad/insert.php", data={'id': id, 'Kingdom': Kingdom, 'Hewan': Hewan, 'Nama': Nama, 'Gender': Gender})
+def inputHewan(Kode, Tipe, Hewan, Nama, Gender):
+    r = requests.post("http://www.aditmasih.tk/api_irshad/insert.php", data={'Kode': Kode, 'Tipe': Tipe, 'Hewan': Hewan, 'Nama': Nama, 'Gender': Gender})
     data = r.json()
 
     flag = data['flag']
    
     if(flag == "1"):
-        return 'Hewan '+hewan+' Bernama '+nama+' berhasil diimport dari hutan\n'
+        return 'Hewan '+Hewan+' Bernama '+Nama+' berhasil diimport dari hutan\n'
     elif(flag == "0"):
         return 'Hewan gk jadi masuk\n'
 
