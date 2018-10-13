@@ -159,14 +159,14 @@ def handle_message(event):
     gid = event.source.sender_id #get group_id
     profile = line_bot_api.get_profile(sender)
     
-    data=text.split(' ')
+    data=text.split('-')
     if(data[0]=='tambah'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=inputHewan(data[1], data[2], data[3], data[4], data[5])))
-    elif(data[0]=='lihat'):
+    if(data[0]=='lihat'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=showHewan(data[1],data[2],data[3])))
     if(data[0]=='hapus'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=delHewan(data[1])))
-    elif(data[0]=='all'):
+    if(data[0]=='all'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=showAll()))
     # elif(data[0]=='ganti'):
     #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=updateHewan(data[1],data[2],data[3],data[4])))
