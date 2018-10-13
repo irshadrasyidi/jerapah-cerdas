@@ -62,10 +62,10 @@ def showAll():
    
     if(flag == "1"):
         hasil = ""
-        for i in range(0,len(data['data_angkatan'])):
-            Kode = data['data_angkatan'][int(i)][0]
-            Tipe = data['data_angkatan'][int(i)][2]
-            Hewan = data['data_angkatan'][int(i)][4]
+        for i in range(0,len(data['digital_zoo'])):
+            Kode = data['digital_zoo'][int(i)][0]
+            Tipe = data['digital_zoo'][int(i)][2]
+            Hewan = data['digital_zoo'][int(i)][4]
             # Nama = data['digital_zoo'][int(i)][6]
             # Gender = data['digital_zoo'][int(i)][8]
             hasil=hasil+str(i+1)
@@ -83,31 +83,6 @@ def showAll():
         return hasil
     elif(flag == "0"):
         return 'Kebun binatang kosong'
-
-# def showFromKode(Kode):
-#     r = requests.post("http://www.aditmasih.tk/api_irshad/show.php")
-#     data = r.json()
-
-#     flag = data['flag']
-   
-#     if(flag == "1"):
-#         hasil = ""
-#         for i in range(0,len(data['digital_zoo'])):
-#             Kode = data['digital_zoo'][int(i)][0]
-#             Tipe = data['digital_zoo'][int(i)][2]
-#             Hewan = data['digital_zoo'][int(i)][4]
-#             hasil=hasil+str(i+1)
-#             hasil=hasil+".\nKode : "
-#             hasil=hasil+Kode
-#             hasil=hasil+"\nTipe : "
-#             hasil=hasil+Tipe
-#             hasil=hasil+"\nAlamat : "
-#             hasil=hasil+alamat
-#             hasil=hasil+"\n"
-#         return hasil
-#     elif(flag == "0"):
-#         return 'Data gagal dimasukkan\n'
-
 
 #DELETE DATA HEWAN
 def delHewan(Kode):
