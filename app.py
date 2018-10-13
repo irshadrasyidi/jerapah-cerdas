@@ -63,17 +63,17 @@ def showAll():
     if(flag == "1"):
         hasil = ""
         for i in range(0,len(data['data_angkatan'])):
-            Kode = data['data_angkatan'][0][0]
-            Tipe = data['data_angkatan'][0][2]
-            Hewan = data['data_angkatan'][0][4]
+            Kode = data['data_angkatan'][int(i)][0]
+            Tipe = data['data_angkatan'][int(i)][2]
+            Hewan = data['data_angkatan'][int(i)][4]
             # Nama = data['digital_zoo'][int(i)][6]
             # Gender = data['digital_zoo'][int(i)][8]
             hasil=hasil+str(i+1)
-            hasil=hasil+".\nKode : "
+            # hasil=hasil+".\nKode : "
             hasil=hasil+Kode
-            hasil=hasil+"\nTipe : "
+            # hasil=hasil+"\nTipe : "
             hasil=hasil+Tipe
-            hasil=hasil+"\nHewan : "
+            # hasil=hasil+"\nHewan : "
             hasil=hasil+Hewan
             # hasil=hasil+"\nNama : "
             # hasil=hasil+Nama
