@@ -15,6 +15,7 @@ import sys, random
 import tempfile
 import requests
 import re
+import requests, json
 
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
@@ -61,10 +62,10 @@ def showAll():
    
     if(flag == "1"):
         hasil = ""
-        for i in range(0,len(data['digital_zoo'])):
-            Kode = data['digital_zoo'][int(i)][0]
-            Tipe = data['digital_zoo'][int(i)][2]
-            Hewan = data['digital_zoo'][int(i)][4]
+        for i in range(0,len(data['data_angkatan'])):
+            Kode = data['data_angkatan'][int(i)][0]
+            Tipe = data['data_angkatan'][int(i)][2]
+            Hewan = data['data_angkatan'][int(i)][4]
             # Nama = data['digital_zoo'][int(i)][6]
             # Gender = data['digital_zoo'][int(i)][8]
             hasil=hasil+str(i+1)
@@ -81,7 +82,7 @@ def showAll():
             hasil=hasil+"\n"
         return hasil
     elif(flag == "0"):
-        return 'Data gagal ditampilkan\n'
+        return 'Kebun binatang kosong'
 
 # def showFromKode(Kode):
 #     r = requests.post("http://www.aditmasih.tk/api_irshad/show.php")
