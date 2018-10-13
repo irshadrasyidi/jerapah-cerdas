@@ -65,8 +65,8 @@ def showAll():
             Kode = data['digital_zoo'][int(i)][0]
             Tipe = data['digital_zoo'][int(i)][2]
             Hewan = data['digital_zoo'][int(i)][4]
-            Nama = data['digital_zoo'][int(i)][6]
-            Gender = data['digital_zoo'][int(i)][8]
+            # Nama = data['digital_zoo'][int(i)][6]
+            # Gender = data['digital_zoo'][int(i)][8]
             hasil=hasil+str(i+1)
             hasil=hasil+".\nKode : "
             hasil=hasil+Kode
@@ -74,10 +74,10 @@ def showAll():
             hasil=hasil+Tipe
             hasil=hasil+"\nHewan : "
             hasil=hasil+Hewan
-            hasil=hasil+"\nNama : "
-            hasil=hasil+Nama
-            hasil=hasil+"\nGender : "
-            hasil=hasil+Gender
+            # hasil=hasil+"\nNama : "
+            # hasil=hasil+Nama
+            # hasil=hasil+"\nGender : "
+            # hasil=hasil+Gender
             hasil=hasil+"\n"
         return hasil
     elif(flag == "0"):
