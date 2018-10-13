@@ -59,7 +59,7 @@ def showAll():
 
     flag = data['flag']
    
-    if(flag == "1"):
+    if(flag == "0"):
         hasil = ""
         for i in range(0,len(data['digital_zoo'])):
             Kode = data['digital_zoo'][int(i)][0]
