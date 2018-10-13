@@ -53,7 +53,31 @@ def inputHewan(Kode, Tipe, Hewan, Nama, Gender):
     elif(flag == "0"):
         return 'Hewan gk jadi masuk'
 
-# def showHewan():
+def showAll(Tipe):
+    r = requests.post("http://www.aditmasih.tk/api_irshad/all.php")
+    data = r.json()
+
+    flag = data['flag']
+   
+    if(flag == "1"):
+        hasil = ""
+        for i in range(0,len(data['digital_zoo'])):
+            Kode = data['digital_zoo'][int(i)][0]
+            Tipe = data['digital_zoo'][int(i)][2]
+            Hewan = data['digital_zoo'][int(i)][4]
+            hasil=hasil+str(i+1)
+            hasil=hasil+".\nKode : "
+            hasil=hasil+Kode
+            hasil=hasil+"\nTipe : "
+            hasil=hasil+Tipe
+            hasil=hasil+"\nHewan : "
+            hasil=hasil+Hewan
+            hasil=hasil+"\n"
+        return hasil
+    elif(flag == "0"):
+        return 'Data gagal dimasukkan\n'
+
+# def showFromKode(Kode):
 #     r = requests.post("http://www.aditmasih.tk/api_irshad/show.php")
 #     data = r.json()
 
@@ -61,15 +85,15 @@ def inputHewan(Kode, Tipe, Hewan, Nama, Gender):
    
 #     if(flag == "1"):
 #         hasil = ""
-#         for i in range(0,len(data['data_angkatan'])):
-#             nrp = data['data_angkatan'][int(i)][0]
-#             nama = data['data_angkatan'][int(i)][2]
-#             alamat = data['data_angkatan'][int(i)][4]
+#         for i in range(0,len(data['digital_zoo'])):
+#             Kode = data['digital_zoo'][int(i)][0]
+#             Tipe = data['digital_zoo'][int(i)][2]
+#             Hewan = data['digital_zoo'][int(i)][4]
 #             hasil=hasil+str(i+1)
-#             hasil=hasil+".\nNrp : "
-#             hasil=hasil+nrp
-#             hasil=hasil+"\nNama : "
-#             hasil=hasil+nama
+#             hasil=hasil+".\nKode : "
+#             hasil=hasil+Kode
+#             hasil=hasil+"\nTipe : "
+#             hasil=hasil+Tipe
 #             hasil=hasil+"\nAlamat : "
 #             hasil=hasil+alamat
 #             hasil=hasil+"\n"
@@ -128,13 +152,15 @@ def handle_message(event):
     gid = event.source.sender_id #get group_id
     profile = line_bot_api.get_profile(sender)
     
-    data=text.split('-')
+    data=text.split(' ')
     if(data[0]=='tambah'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=inputHewan(data[1], data[2], data[3], data[4], data[5])))
-    # elif(data[0]=='lihat'):
-    #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=inputmhs(data[1],data[2],data[3])))
+    elif(data[0]=='lihat'):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=showHewan(data[1],data[2],data[3])))
     if(data[0]=='hapus'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=delHewan(data[1])))
+    elif(data[0]=='all'):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=showAll()))
     # elif(data[0]=='ganti'):
     #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=updateHewan(data[1],data[2],data[3],data[4])))
     # elif(data[0]=='semwa'):
