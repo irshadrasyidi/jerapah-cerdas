@@ -53,7 +53,7 @@ def inputHewan(Kode, Tipe, Hewan, Nama, Gender):
     elif(flag == "0"):
         return 'Hewan gk jadi masuk'
 
-def showAll(Tipe):
+def showAll():
     r = requests.post("http://www.aditmasih.tk/api_irshad/all.php")
     data = r.json()
 
@@ -75,7 +75,7 @@ def showAll(Tipe):
             hasil=hasil+"\n"
         return hasil
     elif(flag == "0"):
-        return 'Data gagal dimasukkan\n'
+        return 'Data gagal ditampilkan\n'
 
 # def showFromKode(Kode):
 #     r = requests.post("http://www.aditmasih.tk/api_irshad/show.php")
