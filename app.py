@@ -109,9 +109,9 @@ def updateHewan(Kode_Lama, Kode, Tipe, Hewan, Nama, Gender):
         flag = data['flag']
 
         if(flag == "1"):
-            return 'Data '+KodeLama+' berhasil diupdate\n'
+            return 'Data '+KodeLama+' berhasil diupdate'
         elif(flag == "0"):
-            return 'Data gagal diupdate\n'
+            return 'Data gagal diupdate'
 
     elif(flag == "0"):
         return err
