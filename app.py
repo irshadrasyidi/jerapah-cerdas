@@ -96,25 +96,26 @@ def delHewan(Kode):
     elif(flag == "0"):
         return 'Hewannya emang ga ada :/'
 
-# def updateHewan(nrpLama,nrp,nama,kosan):
-#     URLmhs = "http://www.aditmasih.tk/api_irshad/show.php?nrp=" + nrpLama
-#     r = requests.get(URLmhs)
-#     data = r.json()
-#     err = "data tidak ditemukan"
-#     nrp_lama=nrpLama
-#     flag = data['flag']
-#     if(flag == "1"):
-#         r = requests.post("http://www.aditmasih.tk/api_irshad/update.php", data={'nrp': nrp, 'nama': nama, 'kosan': kosan, 'nrp_lama':nrp_lama})
-#         data = r.json()
-#         flag = data['flag']
+def updateHewan(Kode_Lama, Kode, Tipe, Hewan, Nama, Gender):
+    URLmhs = "http://www.aditmasih.tk/api_irshad/show.php?nrp=" + Kode_Lama
+    r = requests.get(URLmhs)
+    data = r.json()
+    err = "data tidak ditemukan"
+    KodeLama = Kode_Lama
+    flag = data['flag']
+    if(flag == "1"):
+        r = requests.post("http://www.aditmasih.tk/api_irshad/update.php", data={'Kode': Kode, 'Tipe': Tipe, 'Hewan': Hewan, 'Nama':Nama, 'Gender':Gender, 'KodeLama':KodeLama})
+        data = r.json()
+        flag = data['flag']
 
-#         if(flag == "1"):
-#             return 'Data '+nrp_lama+'berhasil diupdate\n'
-#         elif(flag == "0"):
-#             return 'Data gagal diupdate\n'
+        if(flag == "1"):
+            return 'Data '+KodeLama+' berhasil diupdate\n'
+        elif(flag == "0"):
+            return 'Data gagal diupdate\n'
 
-#     elif(flag == "0"):
-#         return err
+    elif(flag == "0"):
+        return err
+
 # Post Request
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -143,8 +144,8 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=delHewan(data[1])))
     elif(data[0]=='all'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=showAll()))
-    # elif(data[0]=='ganti'):
-    #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=updateHewan(data[1],data[2],data[3],data[4])))
+    elif(data[0]=='ganti'):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=updateHewan(data[1],data[2],data[3],data[4],data[5],data[6])))
     # elif(data[0]=='semwa'):
     #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=allsmhs()))
     # elif(data[0]=='menu'):
