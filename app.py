@@ -54,6 +54,29 @@ def inputHewan(Kode, Tipe, Hewan, Nama, Gender):
     elif(flag == "0"):
         return 'Hewan gk jadi masuk'
 
+def cariHewan(Kode):
+    URLmhs = "http://www.aditmasih.tk/api_irshad/show.php?Kode=" + Kode
+    r = requests.get(URLmhs)
+    data = r.json()
+    err = "data tidak ditemukan"
+    
+    flag = data['flag']
+    if(flag == "1"):
+        # Kode = data['digital_zoo'][0]['Kode']
+        Tipe = data['digital_zoo'][0]['Tipe']
+        Hewan = data['digital_zoo'][0]['Hewan']
+        Nama = data['digital_zoo'][0]['Nama']
+        Gender = data['digital_zoo'][0]['Gender']
+
+        # munculin semua, ga rapi, ada 'u' nya
+        # all_data = data['data_angkatan'][0]
+        data= "Tipe : "+Tipe+"\nHewan : "+Hewan+"\nNama : "+Nama+"\nGender : "+Gender
+        return data
+        # return all_data
+
+    elif(flag == "0"):
+        return err
+
 def showAll():
     r = requests.post("http://www.aditmasih.tk/api_irshad/all.php")
     data = r.json()
@@ -138,8 +161,8 @@ def handle_message(event):
     data=text.split('-')
     if(data[0]=='tambah'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=inputHewan(data[1], data[2], data[3], data[4], data[5])))
-    # elif(data[0]=='lihat'):
-    #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=showHewan(data[1],data[2],data[3])))
+    elif(data[0]=='lihat'):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=cariHewan(data[1])))
     elif(data[0]=='hapus'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=delHewan(data[1])))
     elif(data[0]=='all'):
