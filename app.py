@@ -55,24 +55,21 @@ def inputHewan(Kode, Tipe, Hewan, Nama, Gender):
         return 'Hewan gk jadi masuk'
 
 def cariHewan(Kode):
-    URLmhs = "http://www.aditmasih.tk/api_irshad/show.php?Kode=" + Kode
-    r = requests.get(URLmhs)
+    URLhewan = "http://www.aditmasih.tk/api_irshad/show.php?Kode=" + Kode
+    r = requests.get(URLhewan)
     data = r.json()
     err = "Hewan tidak ditemukan"
     
     flag = data['flag']
     if(flag == "1"):
-        # Kode = data['digital_zoo'][0]['Kode']
+        Kode = data['digital_zoo'][0]['Kode']
         Tipe = data['digital_zoo'][0]['Tipe']
         Hewan = data['digital_zoo'][0]['Hewan']
         Nama = data['digital_zoo'][0]['Nama']
         Gender = data['digital_zoo'][0]['Gender']
 
-        # munculin semua, ga rapi, ada 'u' nya
-        # all_data = data['data_angkatan'][0]
         data= "Tipe : "+Tipe+"\nHewan : "+Hewan+"\nNama : "+Nama+"\nGender : "+Gender
         return data
-        # return all_data
 
     elif(flag == "0"):
         return err
