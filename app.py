@@ -68,7 +68,7 @@ def cariHewan(Kode):
         Nama = data['digital_zoo'][0]['Nama']
         Gender = data['digital_zoo'][0]['Gender']
 
-        data= "Tipe : "+Tipe+"\nHewan : "+Hewan+"\nNama : "+Nama+"\nGender : "+Gender
+        data= "Kode : "+Kode+"\nTipe : "+Tipe+"\nHewan : "+Hewan+"\nNama : "+Nama+"\nGender : "+Gender
         return data
 
     elif(flag == "0"):
