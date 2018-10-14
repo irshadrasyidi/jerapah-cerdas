@@ -120,8 +120,8 @@ def delHewan(Kode):
         return 'Hewannya emang ga ada :/'
 
 def updateHewan(Kode_Lama, Kode, Tipe, Hewan, Nama, Gender):
-    URLmhs = "http://www.aditmasih.tk/api_irshad/show.php?Kode=" + Kode_Lama
-    r = requests.get(URLmhs)
+    URLhewan = "http://www.aditmasih.tk/api_irshad/show.php?Kode=" + Kode_Lama
+    r = requests.get(URLhewan)
     data = r.json()
     err = "data tidak ditemukan"
     KodeLama = Kode_Lama
