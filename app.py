@@ -58,7 +58,7 @@ def cariHewan(Kode):
     URLmhs = "http://www.aditmasih.tk/api_irshad/show.php?Kode=" + Kode
     r = requests.get(URLmhs)
     data = r.json()
-    err = "data tidak ditemukan"
+    err = "Hewan tidak ditemukan"
     
     flag = data['flag']
     if(flag == "1"):
@@ -119,15 +119,16 @@ def delHewan(Kode):
     elif(flag == "0"):
         return 'Hewannya emang ga ada :/'
 
+#UPDATE DATA HEWAN
 def updateHewan(Kode_Lama, Kode, Tipe, Hewan, Nama, Gender):
     URLhewan = "http://www.aditmasih.tk/api_irshad/show.php?Kode=" + Kode_Lama
     r = requests.get(URLhewan)
     data = r.json()
-    err = "data tidak ditemukan"
+    err = "Hewan tidak ditemukan"
     KodeLama = Kode_Lama
     flag = data['flag']
     if(flag == "1"):
-        r = requests.post("http://www.aditmasih.tk/api_irshad/update.php", data={'KodeLama':KodeLama,  'Kode': Kode, 'Tipe': Tipe, 'Hewan': Hewan, 'Nama':Nama, 'Gender':Gender})
+        r = requests.post("http://www.aditmasih.tk/api_irshad/update.php", data={'KodeLama':KodeLama, 'Kode': Kode, 'Tipe': Tipe, 'Hewan': Hewan, 'Nama':Nama, 'Gender':Gender})
         data = r.json()
         flag = data['flag']
 
@@ -169,9 +170,9 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=showAll()))
     elif(data[0]=='ganti'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=updateHewan(data[1],data[2],data[3],data[4],data[5],data[6])))
-    # elif(data[0]=='menu'):
-        # menu = "1. lihat-[nrp]\n2. tambah-[nrp]-[nama]-[kosan]\n3. hapus-[nrp]\n4. ganti-[nrp lama]-[nrp baru]-[nama baru]-[kosan baru]\n5. semwa"
-        # line_bot_api.reply_message(event.reply_token, TextSendMessage(text=menu))
+    elif(data[0]=='menu'):
+        menu = "1. lihat-[Kode]\n2. tambah-[Kode]-[Tipe]-[Hewan]-[Nama]-[Gender]\n3. hapus-[Kode]\n4. ganti-[Kode lama]-[Kode baru]-[Tipe baru]-[Hewan baru]-[Nama baru]-[Gender baru]\n5. all"
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=menu))
     
     if text=="vivat":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its 3x'))
