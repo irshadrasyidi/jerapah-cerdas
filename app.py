@@ -127,7 +127,7 @@ def updateHewan(Kode_Lama, Kode, Tipe, Hewan, Nama, Gender):
     KodeLama = Kode_Lama
     flag = data['flag']
     if(flag == "1"):
-        r = requests.post("http://www.aditmasih.tk/api_irshad/update.php", data={'Kode': Kode, 'Tipe': Tipe, 'Hewan': Hewan, 'Nama':Nama, 'Gender':Gender, 'KodeLama':KodeLama})
+        r = requests.post("http://www.aditmasih.tk/api_irshad/update.php", data={'KodeLama':KodeLama,  'Kode': Kode, 'Tipe': Tipe, 'Hewan': Hewan, 'Nama':Nama, 'Gender':Gender})
         data = r.json()
         flag = data['flag']
 
@@ -169,8 +169,6 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=showAll()))
     elif(data[0]=='ganti'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=updateHewan(data[1],data[2],data[3],data[4],data[5],data[6])))
-    # elif(data[0]=='semwa'):
-    #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=allsmhs()))
     # elif(data[0]=='menu'):
         # menu = "1. lihat-[nrp]\n2. tambah-[nrp]-[nama]-[kosan]\n3. hapus-[nrp]\n4. ganti-[nrp lama]-[nrp baru]-[nama baru]-[kosan baru]\n5. semwa"
         # line_bot_api.reply_message(event.reply_token, TextSendMessage(text=menu))
