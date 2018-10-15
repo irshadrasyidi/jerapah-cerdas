@@ -209,20 +209,54 @@ def handle_message(event):
             line_bot_api.leave_room(event.source.room_id)
     if text=="/bye":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='gamau keluar wek!'))
-    # if text=="/cartemplate":
-    #     carousel_template = CarouselTemplate(columns=[
-    #         CarouselColumn(text='hoge1', title='fuga1', actions=[
-    #             URIAction(label='Go to aditmasih.tk', uri='http://aditmasih.tk'),
-    #             PostbackAction(label='ping', data='ping')
-    #         ]),
-    #         CarouselColumn(text='hoge2', title='fuga2', actions=[
-    #             URIAction(label='Go to aditmasih.tk', uri='http://aditmasih.tk'),
-    #             PostbackAction(label='nangningnung', data='pret')
-    #         ])
-    #     ])
-    #     template_message = TemplateSendMessage(
-    #         alt_text='carousel alt text', template=carousel_template)
-    #     line_bot_api.reply_message(event.reply_token, template_message)
+    if text=="/cartemplate":
+        line_bot_api.reply_message(event.reply_token,TemplateSendMessage(
+            alt_text='Carousel template',
+            template=CarouselTemplate(
+                columns=[
+                    CarouselColumn(
+                        thumbnail_image_url='https://img.memecdn.com/rmx-wait-wut_fb_1918415.jpg',
+                        title='this is menu1',
+                        text='description1',
+                        actions=[
+                            PostbackAction(
+                                label='postback1',
+                                text='postback text1',
+                                data='action=buy&itemid=1'
+                            ),
+                            MessageAction(
+                                label='message1',
+                                text='message text1'
+                            ),
+                            URIAction(
+                                label='uri1',
+                                uri='https://img.memecdn.com/rmx-wait-wut_fb_1918415.jpg'
+                            )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://img.memecdn.com/rmx-wait-wut_fb_1918415.jpg',
+                        title='this is menu2',
+                        text='description2',
+                        actions=[
+                            PostbackAction(
+                                label='postback2',
+                                text='postback text2',
+                                data='action=buy&itemid=2'
+                            ),
+                            MessageAction(
+                                label='message2',
+                                text='message text2'
+                            ),
+                            URIAction(
+                                label='uri2',
+                                uri='https://img.memecdn.com/rmx-wait-wut_fb_1918415.jpg'
+                            )
+                        ]
+                    )
+                ]
+            )
+        ))
     # if text=="/carimage":
 
     else:
