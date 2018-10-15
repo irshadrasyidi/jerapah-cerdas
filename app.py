@@ -244,8 +244,8 @@ def handle_message(event):
     ))
     if text=="/meme5":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://drive.google.com/file/d/11WISkBeE41eHGiWvRkrKV-s5PwzZbqgC/view?usp=sharing',
-    preview_image_url='https://drive.google.com/file/d/11WISkBeE41eHGiWvRkrKV-s5PwzZbqgC/view?usp=sharing'
+    original_content_url='https://drive.google.com/file/d/11WISkBeE41eHGiWvRkrKV-s5PwzZbqgC/view',
+    preview_image_url='https://drive.google.com/file/d/11WISkBeE41eHGiWvRkrKV-s5PwzZbqgC/view'
     ))
     if text=="/begobgt":
         if isinstance(event.source, SourceGroup):
