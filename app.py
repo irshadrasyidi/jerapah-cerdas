@@ -209,21 +209,21 @@ def handle_message(event):
             line_bot_api.leave_room(event.source.room_id)
     if text=="/bye":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='gamau keluar wek!'))
-    if text=="/cartemplate":
-        carousel_template = CarouselTemplate(columns=[
-            CarouselColumn(text='hoge1', title='fuga1', actions=[
-                URIAction(label='Go to aditmasih.tk', uri='http://aditmasih.tk'),
-                PostbackAction(label='ping', data='ping')
-            ]),
-            CarouselColumn(text='hoge2', title='fuga2', actions=[
-                URIAction(label='Go to aditmasih.tk', uri='http://aditmasih.tk'),
-                PostbackAction(label='nangningnung', data='pret')
-            ])
-        ])
-        template_message = TemplateSendMessage(
-            alt_text='carousel alt text', template=carousel_template)
-        line_bot_api.reply_message(event.reply_token, template_message)
-    if text=="/carimage":
+    # if text=="/cartemplate":
+    #     carousel_template = CarouselTemplate(columns=[
+    #         CarouselColumn(text='hoge1', title='fuga1', actions=[
+    #             URIAction(label='Go to aditmasih.tk', uri='http://aditmasih.tk'),
+    #             PostbackAction(label='ping', data='ping')
+    #         ]),
+    #         CarouselColumn(text='hoge2', title='fuga2', actions=[
+    #             URIAction(label='Go to aditmasih.tk', uri='http://aditmasih.tk'),
+    #             PostbackAction(label='nangningnung', data='pret')
+    #         ])
+    #     ])
+    #     template_message = TemplateSendMessage(
+    #         alt_text='carousel alt text', template=carousel_template)
+    #     line_bot_api.reply_message(event.reply_token, template_message)
+    # if text=="/carimage":
 
     else:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Sorry '+profile.display_name+'\nAku gk ngerti artinya "'+event.message.text+'" apa:('))
