@@ -170,7 +170,54 @@ def handle_message(event):
     elif(data[0]=='menu'):
         menu = "1. lihat-[Kode]\n2. tambah-[Kode]-[Tipe]-[Hewan]-[Nama]-[Gender]\n3. hapus-[Kode]\n4. ganti-[Kode lama]-[Kode baru]-[Tipe baru]-[Hewan baru]-[Nama baru]-[Gender baru]\n5. all"
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=menu))
-    
+    if text=="/menu":
+        line_bot_api.reply_message(event.reply_token,TemplateSendMessage(
+            alt_text='Carousel template',
+            template=CarouselTemplate(
+                columns=[
+                    CarouselColumn(
+                        thumbnail_image_url='https://example.com/item1.jpg',
+                        title='Meme Shitpost',
+                        text='My most valuable personal collection',
+                        actions=[
+                            PostbackAction(
+                                label='postback1',
+                                text='postback text1',
+                                data='action=buy&itemid=1'
+                            ),
+                            MessageAction(
+                                label='Koleksi Meme',
+                                text='/koleksi-meme'
+                            ),
+                            URIAction(
+                                label='uri1',
+                                uri='http://example.com/1'
+                            )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://static.family.ca/rendition/17001/1058/595',
+                        title='Digital Zoo',
+                        text='A whole zoo in your hand',
+                        actions=[
+                            PostbackAction(
+                                label='postback2',
+                                text='postback text2',
+                                data='action=buy&itemid=2'
+                            ),
+                            MessageAction(
+                                label='Koleksi Hewan',
+                                text='/koleksi-hewan'
+                            ),
+                            URIAction(
+                                label='Zoo in my city',
+                                uri='http://www.surabayazoo.co.id/'
+                            )
+                        ]
+                    )
+                ]
+            )
+        ))
     if text=="vivat":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its 3x'))
     if text=="cuy":
@@ -197,8 +244,8 @@ def handle_message(event):
     ))
     if text=="/meme5":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='http://aditmasih.tk/api_irshad/Asli_Penting/maju.jpg',
-    preview_image_url='http://aditmasih.tk/api_irshad/Asli_Penting/maju.jpg'
+    original_content_url='https://drive.google.com/file/d/11WISkBeE41eHGiWvRkrKV-s5PwzZbqgC/view?usp=sharing',
+    preview_image_url='https://drive.google.com/file/d/11WISkBeE41eHGiWvRkrKV-s5PwzZbqgC/view?usp=sharing'
     ))
     if text=="/begobgt":
         if isinstance(event.source, SourceGroup):
@@ -209,55 +256,8 @@ def handle_message(event):
             line_bot_api.leave_room(event.source.room_id)
     if text=="/bye":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='gamau keluar wek!'))
-    if text=="/cartemplate":
-        line_bot_api.reply_message(event.reply_token,TemplateSendMessage(
-            alt_text='Carousel template',
-            template=CarouselTemplate(
-                columns=[
-                    CarouselColumn(
-                        thumbnail_image_url='https://img.memecdn.com/rmx-wait-wut_fb_1918415.jpg',
-                        title='this is menu1',
-                        text='description1',
-                        actions=[
-                            PostbackAction(
-                                label='postback1',
-                                text='postback text1',
-                                data='action=buy&itemid=1'
-                            ),
-                            MessageAction(
-                                label='message1',
-                                text='message text1'
-                            ),
-                            URIAction(
-                                label='uri1',
-                                uri='https://img.memecdn.com/rmx-wait-wut_fb_1918415.jpg'
-                            )
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://img.memecdn.com/rmx-wait-wut_fb_1918415.jpg',
-                        title='this is menu2',
-                        text='description2',
-                        actions=[
-                            PostbackAction(
-                                label='postback2',
-                                text='postback text2',
-                                data='action=buy&itemid=2'
-                            ),
-                            MessageAction(
-                                label='message2',
-                                text='message text2'
-                            ),
-                            URIAction(
-                                label='uri2',
-                                uri='https://img.memecdn.com/rmx-wait-wut_fb_1918415.jpg'
-                            )
-                        ]
-                    )
-                ]
-            )
-        ))
-    # if text=="/carimage":
+    if text=="/carimage":
+        
 
     else:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Sorry '+profile.display_name+'\nAku gk ngerti artinya "'+event.message.text+'" apa:('))
