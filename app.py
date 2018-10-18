@@ -221,7 +221,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its 3x'))
     if text=="cuy":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='opo?'))
-    if text=="/meme1":
+    if text=="/kecewa":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://media.keepo.me/20180306164707/800x532--28795197_1460633330725188_9160489402158820484_n.jpg',
     preview_image_url='https://media.keepo.me/20180306164707/800x532--28795197_1460633330725188_9160489402158820484_n.jpg'
@@ -243,8 +243,8 @@ def handle_message(event):
     ))
     if text=="/meme5":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://ibb.co/mfyTLf',
-    preview_image_url='https://ibb.co/mfyTLf'
+    original_content_url='https://luna.jagoanhosting.com:2083/cpsess8185996458/frontend/paper_lantern/filemanager/showfile.html?file=ah-yang-bener.jpg&fileop=&dir=%2Fhome%2Fthedotbr%2FAsli+Penting&dirop=&charset=&file_charset=&baseurl=&basedir=',
+    preview_image_url='https://luna.jagoanhosting.com:2083/cpsess8185996458/frontend/paper_lantern/filemanager/showfile.html?file=ah-yang-bener.jpg&fileop=&dir=%2Fhome%2Fthedotbr%2FAsli+Penting&dirop=&charset=&file_charset=&baseurl=&basedir='
     ))
     if text=="/begobgt":
         if isinstance(event.source, SourceGroup):
