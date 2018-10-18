@@ -219,7 +219,7 @@ def handle_message(event):
         ))
     if text=="vivat":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its 3x'))
-    if text=="cuy":
+    if text=="cuyyy":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='opo?'))
     if text=="/kecewa":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
