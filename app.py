@@ -157,18 +157,17 @@ def handle_message(event):
     profile = line_bot_api.get_profile(sender)
     
     data=text.split('-')
-    if(data[0]=='tambah'):
+    if(data[0]=='/tambah'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=inputHewan(data[1], data[2], data[3], data[4], data[5])))
-    elif(data[0]=='lihat'):
+    elif(data[0]=='/lihat'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=cariHewan(data[1])))
-    elif(data[0]=='hapus'):
+    elif(data[0]=='/hapus'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=delHewan(data[1])))
-    elif(data[0]=='all'):
+    elif(data[0]=='/koleksi-hewan'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=showAll()))
-    elif(data[0]=='ganti'):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=updateHewan(data[1],data[2],data[3],data[4],data[5],data[6])))
-    elif(data[0]=='menu'):
-        menu = "1. lihat-[Kode]\n2. tambah-[Kode]-[Tipe]-[Hewan]-[Nama]-[Gender]\n3. hapus-[Kode]\n4. ganti-[Kode lama]-[Kode baru]-[Tipe baru]-[Hewan baru]-[Nama baru]-[Gender baru]\n5. all"
+    # elif(data[0]=='/ganti'):
+    #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=updateHewan(data[1],data[2],data[3],data[4],data[5],data[6])))
+
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=menu))
     if text=="/menu":
         line_bot_api.reply_message(event.reply_token,TemplateSendMessage(
@@ -244,8 +243,8 @@ def handle_message(event):
     ))
     if text=="/meme5":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://drive.google.com/file/d/11WISkBeE41eHGiWvRkrKV-s5PwzZbqgC/view',
-    preview_image_url='https://drive.google.com/file/d/11WISkBeE41eHGiWvRkrKV-s5PwzZbqgC/view'
+    original_content_url='https://ibb.co/mfyTLf',
+    preview_image_url='https://ibb.co/mfyTLf'
     ))
     if text=="/begobgt":
         if isinstance(event.source, SourceGroup):
