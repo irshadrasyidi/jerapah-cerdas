@@ -243,8 +243,8 @@ def handle_message(event):
     ))
     if text=="/meme5":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://luna.jagoanhosting.com:2083/cpsess8185996458/frontend/paper_lantern/filemanager/showfile.html?file=ah-yang-bener.jpg&fileop=&dir=%2Fhome%2Fthedotbr%2FAsli+Penting&dirop=&charset=&file_charset=&baseurl=&basedir=',
-    preview_image_url='https://luna.jagoanhosting.com:2083/cpsess8185996458/frontend/paper_lantern/filemanager/showfile.html?file=ah-yang-bener.jpg&fileop=&dir=%2Fhome%2Fthedotbr%2FAsli+Penting&dirop=&charset=&file_charset=&baseurl=&basedir='
+    original_content_url='www.google.com',
+    preview_image_url='www.google.com'
     ))
     if text=="/begobgt":
         if isinstance(event.source, SourceGroup):
