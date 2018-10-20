@@ -253,14 +253,14 @@ def handle_message(event):
                     #         data='action=buy&itemid=4'
                     #     )
                     # ),
-                    # ImageCarouselColumn(
-                    #     image_url='http://tps2u.com/wp-content/uploads/2017/11/OTHERS-1.jpg',
-                    #     action=PostbackAction(
-                    #         label='Others',
-                    #         text='/meme-others',
-                    #         data='action=buy&itemid=5'
-                    #     )
-                    # )
+                    ImageCarouselColumn(
+                        image_url='http://tps2u.com/wp-content/uploads/2017/11/OTHERS-1.jpg',
+                        action=PostbackAction(
+                            label='Others',
+                            text='/meme-others',
+                            data='action=buy&itemid=5'
+                        )
+                    )
                 ]
             )
         ))
