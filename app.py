@@ -180,7 +180,8 @@ def handle_message(event):
                         actions=[
                             PostbackAction(
                                 label='Kategori Meme',
-                                text='/kategori-meme'
+                                text='/kategori-meme',
+                                data='action=buy&itemid=1'
                             ),
                             MessageAction(
                                 label='Koleksi Meme',
@@ -215,57 +216,57 @@ def handle_message(event):
                 ]
             )
         ))
-    if text=="/kategori-meme":
-        line_bot_api.reply_message(event.reply_token,TemplateSendMessage(
-            alt_text='ImageCarousel template',
-            template=ImageCarouselTemplate(
-                columns=[
-                    ImageCarouselColumn(
-                        image_url='https://example.com/item1.jpg',
-                        action=PostbackAction(
-                            label='Anjing',
-                            text='/meme-anjing',
-                            data='action=buy&itemid=1'
-                        )
-                    ),
-                    ImageCarouselColumn(
-                        image_url='https://example.com/item2.jpg',
-                        action=PostbackAction(
-                            label='Pun',
-                            text='/meme-pun',
-                            data='action=buy&itemid=2'
-                        )
-                    ),
-                    ImageCarouselColumn(
-                        image_url='https://example.com/item1.jpg',
-                        action=PostbackAction(
-                            label='Kak Seto',
-                            text='/meme-seto',
-                            data='action=buy&itemid=1'
-                        )
-                    ),
-                    ImageCarouselColumn(
-                        image_url='https://example.com/item2.jpg',
-                        action=PostbackAction(
-                            label='Wikihow',
-                            text='/meme-wikihow',
-                            data='action=buy&itemid=2'
-                        )
-                    ),
-                    ImageCarouselColumn(
-                        image_url='https://example.com/item1.jpg',
-                        action=PostbackAction(
-                            label='Others',
-                            text='/meme-others',
-                            data='action=buy&itemid=1'
-                        )
-                    )
-                ]
-            )
-        )
-    if text=="/meme-anjing":
-        kamus2="Kategori Anjing :\n1. /anjing-ga-jelas\n2. /anjing-ga-nyambung\n3. /anjing-ngegas\n4. /anjing-tolol\n5. /anjing-semua\n6. /anjing-asu\n7. /anjing-ga-sopan\n8. /anjing-ga-jelas"
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
+    # if text=="/kategori-meme":
+    #     line_bot_api.reply_message(event.reply_token,TemplateSendMessage(
+    #         alt_text='ImageCarousel template',
+    #         template=ImageCarouselTemplate(
+    #             columns=[
+    #                 ImageCarouselColumn(
+    #                     image_url='https://example.com/item1.jpg',
+    #                     action=PostbackAction(
+    #                         label='Anjing',
+    #                         text='/meme-anjing',
+    #                         data='action=buy&itemid=1'
+    #                     )
+    #                 ),
+    #                 ImageCarouselColumn(
+    #                     image_url='https://example.com/item2.jpg',
+    #                     action=PostbackAction(
+    #                         label='Pun',
+    #                         text='/meme-pun',
+    #                         data='action=buy&itemid=2'
+    #                     )
+    #                 ),
+    #                 ImageCarouselColumn(
+    #                     image_url='https://example.com/item1.jpg',
+    #                     action=PostbackAction(
+    #                         label='Kak Seto',
+    #                         text='/meme-seto',
+    #                         data='action=buy&itemid=1'
+    #                     )
+    #                 ),
+    #                 ImageCarouselColumn(
+    #                     image_url='https://example.com/item2.jpg',
+    #                     action=PostbackAction(
+    #                         label='Wikihow',
+    #                         text='/meme-wikihow',
+    #                         data='action=buy&itemid=2'
+    #                     )
+    #                 ),
+    #                 ImageCarouselColumn(
+    #                     image_url='https://example.com/item1.jpg',
+    #                     action=PostbackAction(
+    #                         label='Others',
+    #                         text='/meme-others',
+    #                         data='action=buy&itemid=1'
+    #                     )
+    #                 )
+    #             ]
+    #         )
+    #     )
+    # if text=="/meme-anjing":
+    #     kamus2="Kategori Anjing :\n1. /anjing-ga-jelas\n2. /anjing-ga-nyambung\n3. /anjing-ngegas\n4. /anjing-tolol\n5. /anjing-semua\n6. /anjing-asu\n7. /anjing-ga-sopan\n8. /anjing-ga-jelas"
+    #     line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     if text=="/koleksi-meme1":
         kamus="kamus shitpost :\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
