@@ -222,7 +222,7 @@ def handle_message(event):
             template=ImageCarouselTemplate(
                 columns=[
                     ImageCarouselColumn(
-                        image_url='https://example.com/item1.jpg',
+                        image_url='https://asset.kompas.com/crop/0x2:960x642/750x500/data/photo/2018/03/06/2717904116.jpg',
                         action=PostbackAction(
                             label='Anjing',
                             text='/meme-anjing',
@@ -230,7 +230,7 @@ def handle_message(event):
                         )
                     ),
                     ImageCarouselColumn(
-                        image_url='https://example.com/item2.jpg',
+                        image_url='https://forums.lbsg.net/uploads/default/original/2X/7/7c14a99d7de45e3d691ed9cf05deec1ec69d0d78.png',
                         action=PostbackAction(
                             label='Pun',
                             text='/meme-pun',
@@ -238,7 +238,7 @@ def handle_message(event):
                         )
                     ),
                     ImageCarouselColumn(
-                        image_url='https://example.com/item1.jpg',
+                        image_url='https://3.bp.blogspot.com/-3DCApIDpPg8/WadDwhqKGlI/AAAAAAAALVQ/cLo2R5M3C3AHmdC7WH7YZr-q_mwYu_0BACLcBGAs/s1600/kak-seto.jpg',
                         action=PostbackAction(
                             label='Kak Seto',
                             text='/meme-seto',
@@ -246,15 +246,15 @@ def handle_message(event):
                         )
                     ),
                     ImageCarouselColumn(
-                        image_url='https://example.com/item2.jpg',
+                        image_url='https://vignette.wikia.nocookie.net/h3h3/images/2/28/WikiHow_logo.png/revision/latest?cb=20171207052718',
                         action=PostbackAction(
-                            label='Wikihow',
+                            label='WikiHow',
                             text='/meme-wikihow',
                             data='action=buy&itemid=2'
                         )
                     ),
                     ImageCarouselColumn(
-                        image_url='https://example.com/item1.jpg',
+                        image_url='http://tps2u.com/wp-content/uploads/2017/11/OTHERS-1.jpg',
                         action=PostbackAction(
                             label='Others',
                             text='/meme-others',
