@@ -156,7 +156,7 @@ def handle_message(event):
     gid = event.source.sender_id #get group_id
     profile = line_bot_api.get_profile(sender)
     
-    data=text.split('-')
+    data=text.split(' ')
     if(data[0]=='tambah'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=inputHewan(data[1], data[2], data[3], data[4], data[5])))
     elif(data[0]=='lihat'):
@@ -168,7 +168,6 @@ def handle_message(event):
     # elif(data[0]=='/ganti'):
     #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=updateHewan(data[1],data[2],data[3],data[4],data[5],data[6])))
 
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=menu))
     if text=="/menu":
         line_bot_api.reply_message(event.reply_token,TemplateSendMessage(
             alt_text='Carousel template',
@@ -219,14 +218,14 @@ def handle_message(event):
         ))
     if text=="/koleksi-meme":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='kamus shitpost :\n'))
-    if text=="vivat":
+    if(data[0]=='vivat'):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its 3x'))
     if text=="cuyyy":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='opo?'))
     if text=="/meme1":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://media.keepo.me/20180306164707/800x532--28795197_1460633330725188_9160489402158820484_n.jpg',
-    preview_image_url='https://media.keepo.me/20180306164707/800x532--28795197_1460633330725188_9160489402158820484_n.jpg'
+    original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
+    preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
     if text=="/meme2":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
