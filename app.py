@@ -269,55 +269,55 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
 #ANJING
     if text=="/meme-anjing":
-        kamus="Kategori Anjing :\n1. /anjing-ga-jelas\n2. /anjing-ga-nyambung\n3. /anjing-ngegas\n4. /anjing-tolol\n5. /anjing-semua\n6. /anjing-asu\n7. /anjing-ga-sopan\n8. /anjing-jangkrik"
+        kamus="Kategori Anjing :\n1. /anjing-ga-jelas\n2. /anjing-ga-nyambung\n3. /anjing-ngegas\n4. /anjing-tolol\n5. /anjing-semua\n6. /anjing-jangkrik\n7. /anjing-kok\n8. /anjing-bawel\n9. /anjing-baper\n10. /anjing-kalem"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     
-    if text=="/anjing-ga-jelas":
+    if text=="/anjing-ga-jelas" or text=="ga jelas":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://cdn.brilio.net/news/2018/04/05/141154/760223-meme-anjing.jpg',
     preview_image_url='https://cdn.brilio.net/news/2018/04/05/141154/760223-meme-anjing.jpg'
     ))
-    if text=="/anjing-ga-nyambung":
+    if text=="/anjing-ga-nyambung" or text=="ga nyambung":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pics.me.me/anjing-kaga-nyambung-31476214.png',
     preview_image_url='https://pics.me.me/anjing-kaga-nyambung-31476214.png'
     ))
-    if text=="/anjing-ngegas":
+    if text=="/anjing-ngegas" or text=="ngegas":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://img.duniaku.net/2018/03/1521427491-anjing-ngegas.jpg',
     preview_image_url='https://img.duniaku.net/2018/03/1521427491-anjing-ngegas.jpg'
     ))
-    if text=="/anjing-tolol":
+    if text=="/anjing-tolol" or text=="tolol":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DYLq_4fU0AA9b-B.jpg',
     preview_image_url='https://pbs.twimg.com/media/DYLq_4fU0AA9b-B.jpg'
     ))
-    if text=="/anjing-semua":
+    if text=="/anjing-semua" or text=="asu kabeh":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://1.bp.blogspot.com/-nsYjWy0W4AU/VArRtVc7MxI/AAAAAAAAM8k/SnNZKZxfNmA/s1600/bm-image-789062.jpeg',
     preview_image_url='https://1.bp.blogspot.com/-nsYjWy0W4AU/VArRtVc7MxI/AAAAAAAAM8k/SnNZKZxfNmA/s1600/bm-image-789062.jpeg'
     ))
-    if text=="/anjing-jangkrik":
+    if text=="/anjing-jangkrik" or text=="jangkrik":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DX95-GUUQAUIT7i.jpg',
     preview_image_url='https://pbs.twimg.com/media/DX95-GUUQAUIT7i.jpg'
     ))
-    if text=="/anjing-kok":
+    if text=="/anjing-kok" or text=="kok anjing":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DYLLvU3VAAABy7F.jpg',
     preview_image_url='https://pbs.twimg.com/media/DYLLvU3VAAABy7F.jpg'
     ))
-    if text=="/anjing-bawel":
+    if text=="/anjing-bawel" or text=="bawel":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://s.kaskus.id/images/2018/03/14/7034635_201803140545070870.jpg',
     preview_image_url='https://s.kaskus.id/images/2018/03/14/7034635_201803140545070870.jpg'
     ))
-    if text=="/anjing-baper":
+    if text=="/anjing-baper" or text=="baper":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://img.duniaku.net/2018/03/1521427445-anjing-baper.jpg',
     preview_image_url='https://img.duniaku.net/2018/03/1521427445-anjing-baper.jpg'
     ))
-    if text=="/anjing-kalem":
+    if text=="/anjing-kalem" or text=="kalem":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://scontent-atl3-1.cdninstagram.com/vp/a5162fe74fd29170ddbbfbba71863c1b/5C5537BA/t51.2885-15/e35/29088954_1860060620959017_6436073020644655104_n.jpg',
     preview_image_url='https://scontent-atl3-1.cdninstagram.com/vp/a5162fe74fd29170ddbbfbba71863c1b/5C5537BA/t51.2885-15/e35/29088954_1860060620959017_6436073020644655104_n.jpg'
