@@ -246,7 +246,7 @@ def handle_message(event):
                         )
                     ),
                     ImageCarouselColumn(
-                        image_url='https://vignette.wikia.nocookie.net/h3h3/images/2/28/WikiHow_logo.png/revision/latest?cb=20171207052718',
+                        image_url='https://vignette.wikia.nocookie.net/h3h3/images/2/28/WikiHow_logo.png',
                         action=PostbackAction(
                             label='WikiHow',
                             text='/meme-wikihow',
