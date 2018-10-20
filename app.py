@@ -255,9 +255,6 @@ def handle_message(event):
             line_bot_api.leave_room(event.source.room_id)
     if text=="/bye":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='gamau keluar wek!'))
-    if text=="/carimage":
-        
-
     else:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Sorry '+profile.display_name+'\nAku gk ngerti artinya "'+event.message.text+'" apa:('))
 
