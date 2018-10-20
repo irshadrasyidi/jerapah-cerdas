@@ -242,15 +242,15 @@ def handle_message(event):
                         action=PostbackAction(
                             label='Kak Seto',
                             text='/meme-seto',
-                            data='action=buy&itemid=1'
+                            data='action=buy&itemid=3'
                         )
                     ),
                     ImageCarouselColumn(
-                        image_url='https://vignette.wikia.nocookie.net/h3h3/images/2/28/WikiHow_logo.png',
+                        image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120552320355.jpg',
                         action=PostbackAction(
                             label='WikiHow',
                             text='/meme-wikihow',
-                            data='action=buy&itemid=2'
+                            data='action=buy&itemid=4'
                         )
                     ),
                     ImageCarouselColumn(
@@ -258,7 +258,7 @@ def handle_message(event):
                         action=PostbackAction(
                             label='Others',
                             text='/meme-others',
-                            data='action=buy&itemid=1'
+                            data='action=buy&itemid=5'
                         )
                     )
                 ]
