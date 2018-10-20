@@ -263,7 +263,7 @@ def handle_message(event):
                     )
                 ]
             )
-        )
+        ))
     if text=="/meme-anjing":
         kamus2="Kategori Anjing :\n1. /anjing-ga-jelas\n2. /anjing-ga-nyambung\n3. /anjing-ngegas\n4. /anjing-tolol\n5. /anjing-semua\n6. /anjing-asu\n7. /anjing-ga-sopan\n8. /anjing-ga-jelas"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
