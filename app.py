@@ -243,8 +243,8 @@ def handle_message(event):
     ))
     if text=="/meme5":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='www.google.com',
-    preview_image_url='www.google.com'
+    original_content_url='http://ekspresia.com/wp-content/uploads/2018/03/19.jpg',
+    preview_image_url='http://ekspresia.com/wp-content/uploads/2018/03/19.jpg'
     ))
     if text=="/begobgt":
         if isinstance(event.source, SourceGroup):
