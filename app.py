@@ -294,7 +294,7 @@ def handle_message(event):
     original_content_url='http://ekspresia.com/wp-content/uploads/2018/03/19.jpg',
     preview_image_url='http://ekspresia.com/wp-content/uploads/2018/03/19.jpg'
     ))
-    if(data[0]=='vivat'):
+    if text=="vivat":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its!'))
     if text=="cuy":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='opo?'))
