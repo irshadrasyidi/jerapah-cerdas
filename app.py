@@ -216,8 +216,8 @@ def handle_message(event):
                 ]
             )
         ))
-    if text=="/koleksi-meme":
-        kamus = 'kamus shitpost :\n'
+    if text=="/koleksi-meme1":
+        kamus="kamus shitpost :\n"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     if(data[0]=='vivat'):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its 3x'))
