@@ -157,13 +157,13 @@ def handle_message(event):
     profile = line_bot_api.get_profile(sender)
     
     data=text.split('-')
-    if(data[0]=='/tambah'):
+    if(data[0]=='tambah'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=inputHewan(data[1], data[2], data[3], data[4], data[5])))
-    elif(data[0]=='/lihat'):
+    elif(data[0]=='lihat'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=cariHewan(data[1])))
-    elif(data[0]=='/hapus'):
+    elif(data[0]=='hapus'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=delHewan(data[1])))
-    elif(data[0]=='/koleksi-hewan'):
+    elif(data[0]=='all'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=showAll()))
     # elif(data[0]=='/ganti'):
     #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=updateHewan(data[1],data[2],data[3],data[4],data[5],data[6])))
