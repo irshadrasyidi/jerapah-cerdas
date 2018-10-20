@@ -179,17 +179,16 @@ def handle_message(event):
                         text='My most valuable personal collection',
                         actions=[
                             PostbackAction(
-                                label='postback1',
-                                text='postback text1',
-                                data='action=buy&itemid=1'
+                                label='Kategori Meme',
+                                text='/kategori-meme'
                             ),
                             MessageAction(
                                 label='Koleksi Meme',
                                 text='/koleksi-meme'
                             ),
                             URIAction(
-                                label='uri1',
-                                uri='http://example.com/1'
+                                label='Akun IG saya',
+                                uri='https://www.instagram.com/irshadrasyidi/'
                             )
                         ]
                     ),
@@ -216,13 +215,66 @@ def handle_message(event):
                 ]
             )
         ))
-    if text=="/koleksi-meme1":
-        kamus="kamus shitpost :\n"
+    if text=="/kategori-meme":
+        line_bot_api.reply_message(event.reply_token,TemplateSendMessage(
+            alt_text='ImageCarousel template',
+            template=ImageCarouselTemplate(
+                columns=[
+                    ImageCarouselColumn(
+                        image_url='https://example.com/item1.jpg',
+                        action=PostbackAction(
+                            label='Anjing',
+                            text='/meme-anjing',
+                            data='action=buy&itemid=1'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url='https://example.com/item2.jpg',
+                        action=PostbackAction(
+                            label='Pun',
+                            text='/meme-pun',
+                            data='action=buy&itemid=2'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url='https://example.com/item1.jpg',
+                        action=PostbackAction(
+                            label='Kak Seto',
+                            text='/meme-seto',
+                            data='action=buy&itemid=1'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url='https://example.com/item2.jpg',
+                        action=PostbackAction(
+                            label='Wikihow',
+                            text='/meme-wikihow',
+                            data='action=buy&itemid=2'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url='https://example.com/item1.jpg',
+                        action=PostbackAction(
+                            label='Others',
+                            text='/meme-others',
+                            data='action=buy&itemid=1'
+                        )
+                    )
+                ]
+            )
+        )
+    if text=="/meme-anjing":
+        kamus="Kategori Anjing :\n1. /anjing-ga-jelas\n2. /anjing-ga-nyambung\n3. /anjing-ngegas\n4. /anjing-tolol\n5. /anjing-semua\n6. /anjing-asu\n7. /anjing-ga-sopan\n8. /anjing-ga-jelas"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
-    if(data[0]=='vivat'):
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its 3x'))
-    if text=="cuyyy":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='opo?'))
+
+
+
+
+
+    
+    if text=="/koleksi-meme1":
+        kamus="kamus shitpost :\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks"
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     if text=="/meme1":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
@@ -248,6 +300,12 @@ def handle_message(event):
     original_content_url='http://ekspresia.com/wp-content/uploads/2018/03/19.jpg',
     preview_image_url='http://ekspresia.com/wp-content/uploads/2018/03/19.jpg'
     ))
+    if(data[0]=='vivat'):
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its!'))
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its!'))
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its!'))
+    if text=="cuy":
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='opo?'))
     if text=="/begobgt":
         if isinstance(event.source, SourceGroup):
             line_bot_api.reply_message(event.reply_token,TextSendMessage(text=profile.display_name+'jahat :('))
