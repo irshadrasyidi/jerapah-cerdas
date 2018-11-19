@@ -186,26 +186,6 @@ def handle_message(event):
                                 uri='https://www.instagram.com/irshadrasyidi/'
                             )
                         ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://static.family.ca/rendition/17001/1058/595',
-                        title='Digital Zoo',
-                        text='A whole zoo in your hand',
-                        actions=[
-                            PostbackAction(
-                                label='postback2',
-                                text='postback text2',
-                                data='action=buy&itemid=2'
-                            ),
-                            MessageAction(
-                                label='Koleksi Hewan',
-                                text='/koleksi-hewan'
-                            ),
-                            URIAction(
-                                label='Zoo in my city',
-                                uri='http://www.surabayazoo.co.id/'
-                            )
-                        ]
                     )
                 ]
             )
