@@ -48,7 +48,7 @@ notes = {""}
 #     data = r.json()
 
 #     flag = data['flag']
-   
+
 #     if(flag == "1"):
 #         return 'Hewan '+Hewan+' Bernama '+Nama+' berhasil diimport dari hutan'
 #     elif(flag == "0"):
@@ -156,11 +156,11 @@ def handle_message(event):
     gid = event.source.sender_id #get group_id
     profile = line_bot_api.get_profile(sender)
     
-    # data=text.split(' ')
-    # if(data[0]=='tambah'):
-    #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=inputHewan(data[1], data[2], data[3], data[4], data[5])))
-    # elif(data[0]=='lihat'):
-    #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=cariHewan(data[1])))
+    data=text.split(' ')
+    if(data[0]=='tambah'):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='asd'))
+    elif(data[0]=='lihat'):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='qwe'))
 
     if text=="/menu":
         line_bot_api.reply_message(event.reply_token,TemplateSendMessage(
