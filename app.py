@@ -79,7 +79,7 @@ notes = {""}
 #     data = r.json()
 
 #     flag = data['flag']
-   
+
 #     if(flag == "1"):
 #         hasil = ""
 #         for i in range(0,len(data['digital_zoo'])):
@@ -110,7 +110,7 @@ notes = {""}
 #     data = r.json()
 
 #     flag = data['flag']
-   
+
 #     if(flag == "1"):
 #         return 'Hewan dengan Kode '+Kode+' berhasil dilepas'
 #     elif(flag == "0"):
@@ -156,11 +156,17 @@ def handle_message(event):
     gid = event.source.sender_id #get group_id
     profile = line_bot_api.get_profile(sender)
     
+#KERANG AJAIB
     data=text.split(' ')
     if(data[0]=='tambah'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='asd'))
     elif(data[0]=='lihat'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='qwe'))
+#goblok
+    if(data[0]=='geblek' or data[0]=='goblok' or data[0]=='gubluk' or data[0]='gblk'):
+        n=random.randint(0, 18)
+        hasil=["iya", "mungkin", "bisa jadi", "wajib", "terserah", "bebas", "sembarang", "sunnah", "jangan", "sak karepmu", "tanya admin","kakean takok cuk", "apa urusan anda menanyakan hal itu kepada saya","silakan bertanya pada rumput yang bergoyang", "oh yo jelas", "pasti","mboh","lho yo iyo seh","entahlah"]
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=hasil[a]))
 
     if text=="/menu":
         line_bot_api.reply_message(event.reply_token,TemplateSendMessage(
@@ -246,51 +252,61 @@ def handle_message(event):
         kamus="Kategori Anjing :\n1. /anjing-ga-jelas\n2. /anjing-ga-nyambung\n3. /anjing-ngegas\n4. /anjing-tolol\n5. /anjing-semua\n6. /anjing-jangkrik\n7. /anjing-kok\n8. /anjing-bawel\n9. /anjing-baper\n10. /anjing-kalem"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     
+    #1
     if text=="/anjing-ga-jelas" or text=="ga jelas":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://cdn.brilio.net/news/2018/04/05/141154/760223-meme-anjing.jpg',
     preview_image_url='https://cdn.brilio.net/news/2018/04/05/141154/760223-meme-anjing.jpg'
     ))
+    #2
     if text=="/anjing-ga-nyambung" or text=="ga nyambung":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pics.me.me/anjing-kaga-nyambung-31476214.png',
     preview_image_url='https://pics.me.me/anjing-kaga-nyambung-31476214.png'
     ))
+    #3
     if text=="/anjing-ngegas" or text=="ngegas":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://img.duniaku.net/2018/03/1521427491-anjing-ngegas.jpg',
     preview_image_url='https://img.duniaku.net/2018/03/1521427491-anjing-ngegas.jpg'
     ))
+    #4
     if text=="/anjing-tolol" or text=="tolol":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DYLq_4fU0AA9b-B.jpg',
     preview_image_url='https://pbs.twimg.com/media/DYLq_4fU0AA9b-B.jpg'
     ))
+    #5
     if text=="/anjing-semua" or text=="asu kabeh":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://1.bp.blogspot.com/-nsYjWy0W4AU/VArRtVc7MxI/AAAAAAAAM8k/SnNZKZxfNmA/s1600/bm-image-789062.jpeg',
     preview_image_url='https://1.bp.blogspot.com/-nsYjWy0W4AU/VArRtVc7MxI/AAAAAAAAM8k/SnNZKZxfNmA/s1600/bm-image-789062.jpeg'
     ))
+    #6
     if text=="/anjing-jangkrik" or text=="jangkrik":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DX95-GUUQAUIT7i.jpg',
     preview_image_url='https://pbs.twimg.com/media/DX95-GUUQAUIT7i.jpg'
     ))
+    #7
     if text=="/anjing-kok" or text=="kok anjing":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DYLLvU3VAAABy7F.jpg',
     preview_image_url='https://pbs.twimg.com/media/DYLLvU3VAAABy7F.jpg'
     ))
+    #8
     if text=="/anjing-bawel" or text=="bawel":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://s.kaskus.id/images/2018/03/14/7034635_201803140545070870.jpg',
     preview_image_url='https://s.kaskus.id/images/2018/03/14/7034635_201803140545070870.jpg'
     ))
+    #9
     if text=="/anjing-baper" or text=="baper":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://img.duniaku.net/2018/03/1521427445-anjing-baper.jpg',
     preview_image_url='https://img.duniaku.net/2018/03/1521427445-anjing-baper.jpg'
     ))
+    #10
     if text=="/anjing-kalem" or text=="kalem":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://scontent-atl3-1.cdninstagram.com/vp/a5162fe74fd29170ddbbfbba71863c1b/5C5537BA/t51.2885-15/e35/29088954_1860060620959017_6436073020644655104_n.jpg',
@@ -302,106 +318,127 @@ def handle_message(event):
         kamus="Kategori Pun :\n1. /pun-asu\n2. /pun-bawel\n3. /pun-bego\n4. /pun-ngegas\n5. /pun-gas\n6. /pun-gawat\n7. /pun-gelut\n8. /pun-goblok\n9. /pun-ikan-goblok\n10. /pun-joanchok\n11. /pun-kancil\n12. /pun-kecewa\n13. /pun-keren\n14. /pun-kocak\n15. /pun-lodeh\n16. /pun-mager\n17. /pun-pinter\n18. /pun-sabi\n19. /pun-sekip\n20. /pun-siyap\n21. /pun-yamaap"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     
+    #1
     if text=="/pun-asu":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
+    #2
     if text=="/pun-bawel":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
+    #3
     if text=="/pun-bego":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
+    #4
     if text=="/pun-ngegas":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
+    #5
     if text=="/pun-gas":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
+    #6
     if text=="/pun-gawat":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
+    #6
     if text=="/pun-gelut":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
+    #6
     if text=="/pun-goblok":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
+    #7
     if text=="/pun-ikan-goblok":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
+    #8
     if text=="/pun-joanchok":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
+    #9
     if text=="/pun-kancil":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
+    #10
     if text=="/pun-kecewa":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
+    #11
     if text=="/pun-keren":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
+    #12
     if text=="/pun-kocak":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
+    #13
     if text=="/pun-lodeh":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
+    #14
     if text=="/pun-mager":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
+    #15
     if text=="/pun-pinter":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
+    #16
     if text=="/pun-sabi":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
+    #17
     if text=="/pun-sekip":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
+    #18
     if text=="/pun-siyap":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
+    #19
     if text=="/pun-yamaap":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
