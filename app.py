@@ -359,7 +359,7 @@ def handle_message(event):
             line_bot_api.reply_message(event.reply_token,TextSendMessage(text=profile.display_name+'jahat :('))
             line_bot_api.leave_room(event.source.room_id)
     if text=="/bye":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='gamau keluar wek!'))
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='gamau-keluar wek!'))
 
 import os
 if __name__ == "__main__":
