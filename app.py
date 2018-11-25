@@ -56,10 +56,13 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    text = event.message.text #simplify for receove message
-    sender = event.source.user_id #get usesenderr_id
-    gid = event.source.sender_id #get group_id
+    rawText = event.message.text
+    text = rawText.lower().strip()
+    sender = event.source.user_id
+    gid = event.source.sender_id
     profile = line_bot_api.get_profile(sender)
+
+    
     if text=="adit":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat adit'))
     if text=="mail":
@@ -74,7 +77,6 @@ def handle_message(event):
     preview_image_url='https://s0.bukalapak.com/img/0343005662/w-1000/Boneka_Anak_Jerapah_Imut_Menggemaskan.jpg'
     ))
 
-    line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Halo '+profile.display_name+'\nKata Kunci Tidak Diketahui :) \nKetik "menu" untuk mengetahui menu yang tersedia'))
         
 import os
 if __name__ == "__main__":
