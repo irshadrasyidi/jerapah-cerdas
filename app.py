@@ -80,8 +80,8 @@ def handle_message(event):
                                 data='action=buy&itemid=1'
                             ),
                             MessageAction(
-                                label='Koleksi Meme',
-                                text='Koleksi Meme'
+                                label='Kategori Meme',
+                                text='Kategori Meme'
                             ),
                             URIAction(
                                 label='Akun IG saya',
@@ -113,11 +113,12 @@ def handle_message(event):
             )
         ))
     
-    if text=="Koleksi Meme":
-        kamus="Koleksi Meme :\n1. /meme1 : Kecewa\n" \
-        "2. /meme2 : Thanks\n1. /meme1 : Kecewa\n" \
-        "2. /meme2 : Thanks\n1. /meme1 : Kecewa\n" \
-        "2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks"
+    if text=="Kategori Meme":
+        kamus="""Kategori Meme :\n
+        1. Anjing\n
+        2. Pun\n
+        3. Wikihow\n
+        4. Kak Seto"""
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
 
     if text=="adit":
