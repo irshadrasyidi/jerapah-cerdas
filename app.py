@@ -42,100 +42,100 @@ handler = WebhookHandler('6b3652ce6db6b622101382eba4c3fd25')
 #===========[ NOTE SAVER ]=======================
 notes = {""}
 
-#INPUT DATA HEWAN
-def inputHewan(Kode, Tipe, Hewan, Nama, Gender):
-    r = requests.post("http://www.aditmasih.tk/api_irshad/insert.php", data={'Kode': Kode, 'Tipe': Tipe, 'Hewan': Hewan, 'Nama': Nama, 'Gender': Gender})
-    data = r.json()
+# #INPUT DATA HEWAN
+# def inputHewan(Kode, Tipe, Hewan, Nama, Gender):
+#     r = requests.post("http://www.aditmasih.tk/api_irshad/insert.php", data={'Kode': Kode, 'Tipe': Tipe, 'Hewan': Hewan, 'Nama': Nama, 'Gender': Gender})
+#     data = r.json()
 
-    flag = data['flag']
+#     flag = data['flag']
 
-    if(flag == "1"):
-        return 'Hewan '+Hewan+' Bernama '+Nama+' berhasil diimport dari hutan'
-    elif(flag == "0"):
-        return 'Hewan gk jadi masuk'
+#     if(flag == "1"):
+#         return 'Hewan '+Hewan+' Bernama '+Nama+' berhasil diimport dari hutan'
+#     elif(flag == "0"):
+#         return 'Hewan gk jadi masuk'
 
-def cariHewan(Kode):
-    URLhewan = "http://www.aditmasih.tk/api_irshad/show.php?Kode=" + Kode
-    r = requests.get(URLhewan)
-    data = r.json()
-    err = "Hewan tidak ditemukan"
+# def cariHewan(Kode):
+#     URLhewan = "http://www.aditmasih.tk/api_irshad/show.php?Kode=" + Kode
+#     r = requests.get(URLhewan)
+#     data = r.json()
+#     err = "Hewan tidak ditemukan"
     
-    flag = data['flag']
-    if(flag == "1"):
-        Kode = data['digital_zoo'][0]['Kode']
-        Tipe = data['digital_zoo'][0]['Tipe']
-        Hewan = data['digital_zoo'][0]['Hewan']
-        Nama = data['digital_zoo'][0]['Nama']
-        Gender = data['digital_zoo'][0]['Gender']
+#     flag = data['flag']
+#     if(flag == "1"):
+#         Kode = data['digital_zoo'][0]['Kode']
+#         Tipe = data['digital_zoo'][0]['Tipe']
+#         Hewan = data['digital_zoo'][0]['Hewan']
+#         Nama = data['digital_zoo'][0]['Nama']
+#         Gender = data['digital_zoo'][0]['Gender']
 
-        data= "Kode : "+Kode+"\nTipe : "+Tipe+"\nHewan : "+Hewan+"\nNama : "+Nama+"\nGender : "+Gender
-        return data
+#         data= "Kode : "+Kode+"\nTipe : "+Tipe+"\nHewan : "+Hewan+"\nNama : "+Nama+"\nGender : "+Gender
+#         return data
 
-    elif(flag == "0"):
-        return err
+#     elif(flag == "0"):
+#         return err
 
-def showAll():
-    r = requests.post("http://www.aditmasih.tk/api_irshad/all.php")
-    data = r.json()
+# def showAll():
+#     r = requests.post("http://www.aditmasih.tk/api_irshad/all.php")
+#     data = r.json()
 
-    flag = data['flag']
+#     flag = data['flag']
 
-    if(flag == "1"):
-        hasil = ""
-        for i in range(0,len(data['digital_zoo'])):
-            Kode = data['digital_zoo'][int(i)][0]
-            Tipe = data['digital_zoo'][int(i)][2]
-            Hewan = data['digital_zoo'][int(i)][4]
-            Nama = data['digital_zoo'][int(i)][6]
-            Gender = data['digital_zoo'][int(i)][8]
-            hasil=hasil+str(i+1)
-            hasil=hasil+".\nKode : "
-            hasil=hasil+Kode
-            hasil=hasil+"\nTipe : "
-            hasil=hasil+Tipe
-            hasil=hasil+"\nHewan : "
-            hasil=hasil+Hewan
-            hasil=hasil+"\nNama : "
-            hasil=hasil+Nama
-            hasil=hasil+"\nGender : "
-            hasil=hasil+Gender
-            hasil=hasil+"\n"
-        return hasil
-    elif(flag == "0"):
-        return 'Kebun binatang kosong'
+#     if(flag == "1"):
+#         hasil = ""
+#         for i in range(0,len(data['digital_zoo'])):
+#             Kode = data['digital_zoo'][int(i)][0]
+#             Tipe = data['digital_zoo'][int(i)][2]
+#             Hewan = data['digital_zoo'][int(i)][4]
+#             Nama = data['digital_zoo'][int(i)][6]
+#             Gender = data['digital_zoo'][int(i)][8]
+#             hasil=hasil+str(i+1)
+#             hasil=hasil+".\nKode : "
+#             hasil=hasil+Kode
+#             hasil=hasil+"\nTipe : "
+#             hasil=hasil+Tipe
+#             hasil=hasil+"\nHewan : "
+#             hasil=hasil+Hewan
+#             hasil=hasil+"\nNama : "
+#             hasil=hasil+Nama
+#             hasil=hasil+"\nGender : "
+#             hasil=hasil+Gender
+#             hasil=hasil+"\n"
+#         return hasil
+#     elif(flag == "0"):
+#         return 'Kebun binatang kosong'
 
-#DELETE DATA HEWAN
-def delHewan(Kode):
-    r = requests.post("http://www.aditmasih.tk/api_irshad/delete.php", data={'Kode': Kode})
-    data = r.json()
+# #DELETE DATA HEWAN
+# def delHewan(Kode):
+#     r = requests.post("http://www.aditmasih.tk/api_irshad/delete.php", data={'Kode': Kode})
+#     data = r.json()
 
-    flag = data['flag']
+#     flag = data['flag']
 
-    if(flag == "1"):
-        return 'Hewan dengan Kode '+Kode+' berhasil dilepas'
-    elif(flag == "0"):
-        return 'Hewannya emang ga ada :/'
+#     if(flag == "1"):
+#         return 'Hewan dengan Kode '+Kode+' berhasil dilepas'
+#     elif(flag == "0"):
+#         return 'Hewannya emang ga ada :/'
 
-#UPDATE DATA HEWAN
-def updateHewan(Kode_Lama, Kode, Tipe, Hewan, Nama, Gender):
-    URLhewan = "http://www.aditmasih.tk/api_irshad/show.php?Kode=" + Kode_Lama
-    r = requests.get(URLhewan)
-    data = r.json()
-    err = "Hewan tidak ditemukan"
-    KodeLama = Kode_Lama
-    flag = data['flag']
-    if(flag == "1"):
-        r = requests.post("http://www.aditmasih.tk/api_irshad/update.php", data={'KodeLama':KodeLama, 'Kode': Kode, 'Tipe': Tipe, 'Hewan': Hewan, 'Nama':Nama, 'Gender':Gender})
-        data = r.json()
-        flag = data['flag']
+# #UPDATE DATA HEWAN
+# def updateHewan(Kode_Lama, Kode, Tipe, Hewan, Nama, Gender):
+#     URLhewan = "http://www.aditmasih.tk/api_irshad/show.php?Kode=" + Kode_Lama
+#     r = requests.get(URLhewan)
+#     data = r.json()
+#     err = "Hewan tidak ditemukan"
+#     KodeLama = Kode_Lama
+#     flag = data['flag']
+#     if(flag == "1"):
+#         r = requests.post("http://www.aditmasih.tk/api_irshad/update.php", data={'KodeLama':KodeLama, 'Kode': Kode, 'Tipe': Tipe, 'Hewan': Hewan, 'Nama':Nama, 'Gender':Gender})
+#         data = r.json()
+#         flag = data['flag']
 
-        if(flag == "1"):
-            return 'Data '+KodeLama+' berhasil diupdate'
-        elif(flag == "0"):
-            return 'Data gagal diupdate'
+#         if(flag == "1"):
+#             return 'Data '+KodeLama+' berhasil diupdate'
+#         elif(flag == "0"):
+#             return 'Data gagal diupdate'
 
-    elif(flag == "0"):
-        return err
+#     elif(flag == "0"):
+#         return err
 
 # Post Request
 @app.route("/callback", methods=['POST'])
@@ -151,24 +151,21 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    rawText = event.message.text
-    text = rawText.lower().strip()
-    sender = event.source.user_id
-    gid = event.source.sender_id
+    text = event.message.text #simplify for receove message
+    sender = event.source.user_id #get usesenderr_id
+    gid = event.source.sender_id #get group_id
     profile = line_bot_api.get_profile(sender)
-
-    data = text.split(' ')
-
-#KERANG AJAIB
     
+#KERANG AJAIB
+    data=text.split(' ')
     if(data[0]=='tambah'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='asd'))
     elif(data[0]=='lihat'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='qwe'))
-#tuntunan-alam
-    if(data[0]=='apa' or data[0]=='opo' or data[0]=='kuy' or data[0]='yuk' or data[0]='ayo' or data[0]=='ayok' or data[0]=='masak' or data[0]='mosok' or data[0]=='ayok' or data[0]=='ayo' or data[0]='mosok'):
+#goblok
+    if(data[0]=='geblek' or data[0]=='goblok' or data[0]=='gubluk' or data[0]='gblk'):
         n=random.randint(0, 18)
-        hasil=[""]
+        hasil=["iya", "mungkin", "bisa jadi", "wajib", "terserah", "bebas", "sembarang", "sunnah", "jangan", "sak karepmu", "tanya admin","kakean takok cuk", "apa urusan anda menanyakan hal itu kepada saya","silakan bertanya pada rumput yang bergoyang", "oh yo jelas", "pasti","mboh","lho yo iyo seh","entahlah"]
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=hasil[a]))
 
     if text=="/menu":
@@ -182,36 +179,16 @@ def handle_message(event):
                         text='My most valuable personal collection',
                         actions=[
                             PostbackAction(
-                                label='Apa ini?',
-                                text='Kamus Meme Shitpost',
+                                label='Kategori Meme',
+                                text='/kategori-meme',
                                 data='action=buy&itemid=1'
                             ),
                             MessageAction(
                                 label='Koleksi Meme',
-                                text='Koleksi Meme'
+                                text='/koleksi-meme'
                             ),
                             URIAction(
                                 label='Promosi IG saya',
-                                uri='https://www.instagram.com/irshadrasyidi/'
-                            )
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://i.ytimg.com/vi/mSFzdwxljog/maxresdefault.jpg',
-                        title='Tuntunan Alam',
-                        text='Anda bertanya, Alam menjawab',
-                        actions=[
-                            PostbackAction(
-                                label='Ini apa?',
-                                text='Tuntunan Alam',
-                                data='action=buy&itemid=2'
-                            ),
-                            MessageAction(
-                                label='Jompa-jampi',
-                                text='Jompa-Jampi'
-                            ),
-                            URIAction(
-                                label='Promosi Twitter saya',
                                 uri='https://www.instagram.com/irshadrasyidi/'
                             )
                         ]
@@ -487,9 +464,6 @@ def handle_message(event):
         kamus="Kategori Seto :\n1. /anjing-ga-jelas\n2. /anjing-ga-nyambung\n3. /anjing-ngegas\n4. /anjing-tolol\n5. /anjing-semua\n6. /anjing-asu\n7. /anjing-ga-sopan\n8. /anjing-ga-jelas"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     
-        
-
-
     if text=="vivat":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its!'))
     if text=="cuy":
