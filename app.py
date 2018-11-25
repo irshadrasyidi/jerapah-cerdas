@@ -196,7 +196,7 @@ def handle_message(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='http://pre13.deviantart.net/5dc4/th/pre/i/2012/359/9/6/bg_nature_stock_by_moonglowlilly-d5p5pe3.jpg',
+                        thumbnail_image_url='https://i.ytimg.com/vi/mSFzdwxljog/maxresdefault.jpg',
                         title='Tuntunan Alam',
                         text='Anda bertanya, Alam menjawab',
                         actions=[
@@ -211,7 +211,7 @@ def handle_message(event):
                             ),
                             URIAction(
                                 label='Promosi Twitter saya',
-                                uri='https://twitter.com/didotbrodot'
+                                uri='https://www.instagram.com/irshadrasyidi/'
                             )
                         ]
                     )
