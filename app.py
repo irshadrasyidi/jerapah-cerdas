@@ -76,12 +76,12 @@ def handle_message(event):
                         actions=[
                             PostbackAction(
                                 label='Apa ini?',
-                                text='Kamus Meme',
+                                text='kamus meme',
                                 data='action=buy&itemid=1'
                             ),
                             MessageAction(
                                 label='Kategori Meme',
-                                text='Kategori Meme'
+                                text='kategori meme'
                             ),
                             URIAction(
                                 label='Akun IG saya',
@@ -113,7 +113,7 @@ def handle_message(event):
             )
         ))
     
-    if text=="Kategori Meme":
+    if text=="kategori meme":
         kamus="""Kategori Meme :\n
         1. Anjing\n
         2. Pun\n
