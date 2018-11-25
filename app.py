@@ -119,21 +119,37 @@ def handle_message(event):
             template=ImageCarouselTemplate(
                 columns=[
                     ImageCarouselColumn(
-                        image_url='https://example.com/item1.jpg',
+                        image_url='https://asset.kompas.com/crop/0x2:960x642/750x500/data/photo/2018/03/06/2717904116.jpg',
                         action=PostbackAction(
-                            label='postback1',
-                            text='postback text1',
+                            label='Anjing',
+                            text='meme anjing',
                             data='action=buy&itemid=1'
                         )
                     ),
                     ImageCarouselColumn(
-                        image_url='https://example.com/item2.jpg',
+                        image_url='https://forums.lbsg.net/uploads/default/original/2X/7/7c14a99d7de45e3d691ed9cf05deec1ec69d0d78.png',
                         action=PostbackAction(
-                            label='postback2',
-                            text='postback text2',
+                            label='Pun',
+                            text='meme pun',
                             data='action=buy&itemid=2'
                         )
                     )
+                    # ImageCarouselColumn(
+                    #     image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120552320355.jpg',
+                    #     action=PostbackAction(
+                    #         label='WikiHow',
+                    #         text='meme wikihow',
+                    #         data='action=buy&itemid=3'
+                    #     )
+                    # ),
+                    # ImageCarouselColumn(
+                    #     image_url='http://tps2u.com/wp-content/uploads/2017/11/OTHERS-1.jpg',
+                    #     action=PostbackAction(
+                    #         label='Others',
+                    #         text='meme etcetera',
+                    #         data='action=buy&itemid=4'
+                    #     )
+                    # )
                 ]
             )
         ))
