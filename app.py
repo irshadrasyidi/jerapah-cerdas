@@ -156,8 +156,19 @@ def handle_message(event):
     gid = event.source.sender_id #get group_id
     profile = line_bot_api.get_profile(sender)
 
-    data = text.lower()
     data = text.split(' ')
+
+#KERANG AJAIB
+    
+    if(data[0]=='tambah'):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='asd'))
+    elif(data[0]=='lihat'):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='qwe'))
+#tuntunan-alam
+    if(data[0]=='apa' or data[0]=='opo' or data[0]=='kuy' or data[0]='yuk' or data[0]='ayo' or data[0]=='ayok' or data[0]=='masak' or data[0]='mosok' or data[0]=='ayok' or data[0]=='ayo' or data[0]='mosok'):
+        n=random.randint(0, 18)
+        hasil=[""]
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=hasil[a]))
 
     if text=="/menu":
         line_bot_api.reply_message(event.reply_token,TemplateSendMessage(
@@ -476,17 +487,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     
         
-#KERANG AJAIB
-    
-    if(data[0]=='tambah'):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='asd'))
-    elif(data[0]=='lihat'):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='qwe'))
-#tuntunan-alam
-    if(data[0]=='apa' or data[0]=='opo' or data[0]=='kuy' or data[0]='yuk' or data[0]='ayo' or data[0]=='ayok' or data[0]=='masak' or data[0]='mosok' or data[0]=='ayok' or data[0]=='ayo' or data[0]='mosok'):
-        n=random.randint(0, 18)
-        hasil=[""]
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=hasil[a]))
+
 
     if text=="vivat":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its!'))
