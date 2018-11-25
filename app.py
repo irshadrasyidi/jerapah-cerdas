@@ -155,18 +155,9 @@ def handle_message(event):
     sender = event.source.user_id #get usesenderr_id
     gid = event.source.sender_id #get group_id
     profile = line_bot_api.get_profile(sender)
-    
-#KERANG AJAIB
-    data=text.split(' ')
-    if(data[0]=='tambah'):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='asd'))
-    elif(data[0]=='lihat'):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='qwe'))
-#goblok
-    if(data[0]=='geblek' or data[0]=='goblok' or data[0]=='gubluk' or data[0]='gblk'):
-        n=random.randint(0, 18)
-        hasil=["iya", "mungkin", "bisa jadi", "wajib", "terserah", "bebas", "sembarang", "sunnah", "jangan", "sak karepmu", "tanya admin","kakean takok cuk", "apa urusan anda menanyakan hal itu kepada saya","silakan bertanya pada rumput yang bergoyang", "oh yo jelas", "pasti","mboh","lho yo iyo seh","entahlah"]
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=hasil[a]))
+
+    data = text.lower()
+    data = text.split(' ')
 
     if text=="/menu":
         line_bot_api.reply_message(event.reply_token,TemplateSendMessage(
@@ -179,17 +170,37 @@ def handle_message(event):
                         text='My most valuable personal collection',
                         actions=[
                             PostbackAction(
-                                label='Kategori Meme',
-                                text='/kategori-meme',
+                                label='Apa ini?',
+                                text='Kamus Meme Shitpost',
                                 data='action=buy&itemid=1'
                             ),
                             MessageAction(
                                 label='Koleksi Meme',
-                                text='/koleksi-meme'
+                                text='Koleksi Meme'
                             ),
                             URIAction(
                                 label='Promosi IG saya',
                                 uri='https://www.instagram.com/irshadrasyidi/'
+                            )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='http://pre13.deviantart.net/5dc4/th/pre/i/2012/359/9/6/bg_nature_stock_by_moonglowlilly-d5p5pe3.jpg',
+                        title='Tuntunan Alam',
+                        text='Anda bertanya, Alam menjawab',
+                        actions=[
+                            PostbackAction(
+                                label='Ini apa?',
+                                text='Tuntunan Alam',
+                                data='action=buy&itemid=2'
+                            ),
+                            MessageAction(
+                                label='Jompa-jampi',
+                                text='Jompa-Jampi'
+                            ),
+                            URIAction(
+                                label='Promosi Twitter saya',
+                                uri='https://twitter.com/didotbrodot'
                             )
                         ]
                     )
@@ -245,7 +256,10 @@ def handle_message(event):
             )
         ))
     if text=="/koleksi-meme":
-        kamus="kamus shitpost :\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks"
+        kamus="kamus shitpost :\n1. /meme1 : Kecewa\n"
+        "2. /meme2 : Thanks\n1. /meme1 : Kecewa\n"
+        "2. /meme2 : Thanks\n1. /meme1 : Kecewa\n"
+        "2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
 #ANJING
     if text=="/meme-anjing":
@@ -464,6 +478,21 @@ def handle_message(event):
         kamus="Kategori Seto :\n1. /anjing-ga-jelas\n2. /anjing-ga-nyambung\n3. /anjing-ngegas\n4. /anjing-tolol\n5. /anjing-semua\n6. /anjing-asu\n7. /anjing-ga-sopan\n8. /anjing-ga-jelas"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     
+        
+#KERANG AJAIB
+    
+    if(data[0]=='tambah'):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='asd'))
+    elif(data[0]=='lihat'):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='qwe'))
+#tuntunan-alam
+    if(data[0]=='apa' or data[0]=='opo' or data[0]=='kuy' or data[0]='yuk' or data[0]='ayo'
+        or data[0]=='ayok' or data[0]=='masak' or data[0]='mosok'
+        or data[0]=='ayok' or data[0]=='ayo' or data[0]='mosok'):
+        n=random.randint(0, 18)
+        hasil=[""]
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=hasil[a]))
+
     if text=="vivat":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its!'))
     if text=="cuy":
