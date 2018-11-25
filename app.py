@@ -256,10 +256,7 @@ def handle_message(event):
             )
         ))
     if text=="/koleksi-meme":
-        kamus="kamus shitpost :\n1. /meme1 : Kecewa\n"
-        "2. /meme2 : Thanks\n1. /meme1 : Kecewa\n"
-        "2. /meme2 : Thanks\n1. /meme1 : Kecewa\n"
-        "2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks"
+        kamus="kamus shitpost :\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
 #ANJING
     if text=="/meme-anjing":
@@ -486,9 +483,7 @@ def handle_message(event):
     elif(data[0]=='lihat'):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='qwe'))
 #tuntunan-alam
-    if(data[0]=='apa' or data[0]=='opo' or data[0]=='kuy' or data[0]='yuk' or data[0]='ayo'
-        or data[0]=='ayok' or data[0]=='masak' or data[0]='mosok'
-        or data[0]=='ayok' or data[0]=='ayo' or data[0]='mosok'):
+    if(data[0]=='apa' or data[0]=='opo' or data[0]=='kuy' or data[0]='yuk' or data[0]='ayo' or data[0]=='ayok' or data[0]=='masak' or data[0]='mosok' or data[0]=='ayok' or data[0]=='ayo' or data[0]='mosok'):
         n=random.randint(0, 18)
         hasil=[""]
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=hasil[a]))
