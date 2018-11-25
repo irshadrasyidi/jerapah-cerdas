@@ -62,6 +62,56 @@ def handle_message(event):
     gid = event.source.sender_id
     profile = line_bot_api.get_profile(sender)
 
+    data=text.split(' ')
+
+    if text=="/menu":
+        line_bot_api.reply_message(event.reply_token,TemplateSendMessage(
+            alt_text='Carousel template',
+            template=CarouselTemplate(
+                columns=[
+                    CarouselColumn(
+                        thumbnail_image_url='https://example.com/item1.jpg',
+                        title='Meme Shitpost',
+                        text='Koleksi Personal Paling Berharga',
+                        actions=[
+                            PostbackAction(
+                                label='Apa ini?',
+                                text='Kamus Meme',
+                                data='action=buy&itemid=1'
+                            ),
+                            MessageAction(
+                                label='Koleksi Meme',
+                                text='Koleksi Meme'
+                            ),
+                            URIAction(
+                                label='Akun IG saya',
+                                uri='https://www.instagram.com/irshadrasyidi/'
+                            )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://static.family.ca/rendition/17001/1058/595',
+                        title='Sound of Nature',
+                        text='Anda bertanya, alam menjawab',
+                        actions=[
+                            PostbackAction(
+                                label='Ini apa?',
+                                text='Tuntunan Alam',
+                                data='action=buy&itemid=2'
+                            ),
+                            MessageAction(
+                                label='Jompa-Jampi',
+                                text='Jompa-Jampi'
+                            ),
+                            URIAction(
+                                label='Akun IG saya',
+                                uri='https://www.instagram.com/irshadrasyidi/'
+                            )
+                        ]
+                    )
+                ]
+            )
+        ))
     
     if text=="adit":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat adit'))
