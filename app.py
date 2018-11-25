@@ -133,23 +133,23 @@ def handle_message(event):
                             text='meme pun',
                             data='action=buy&itemid=2'
                         )
+                    ),
+                    ImageCarouselColumn(
+                        image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120552320355.jpg',
+                        action=PostbackAction(
+                            label='WikiHow',
+                            text='meme wikihow',
+                            data='action=buy&itemid=3'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url='http://tps2u.com/wp-content/uploads/2017/11/OTHERS-1.jpg',
+                        action=PostbackAction(
+                            label='Others',
+                            text='meme etcetera',
+                            data='action=buy&itemid=4'
+                        )
                     )
-                    # ImageCarouselColumn(
-                    #     image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120552320355.jpg',
-                    #     action=PostbackAction(
-                    #         label='WikiHow',
-                    #         text='meme wikihow',
-                    #         data='action=buy&itemid=3'
-                    #     )
-                    # ),
-                    # ImageCarouselColumn(
-                    #     image_url='http://tps2u.com/wp-content/uploads/2017/11/OTHERS-1.jpg',
-                    #     action=PostbackAction(
-                    #         label='Others',
-                    #         text='meme etcetera',
-                    #         data='action=buy&itemid=4'
-                    #     )
-                    # )
                 ]
             )
         ))
