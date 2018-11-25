@@ -119,7 +119,8 @@ def handle_message(event):
             template=ImageCarouselTemplate(
                 columns=[
                     ImageCarouselColumn(
-                        image_url='https://asset.kompas.com/crop/0x2:960x642/750x500/data/photo/2018/03/06/2717904116.jpg',
+                        #image_url='https://asset.kompas.com/crop/0x2:960x642/750x500/data/photo/2018/03/06/2717904116.jpg',
+                        image_url='https://i.imgur.com/ywKZuaB.gifv',
                         action=PostbackAction(
                             label='Anjing',
                             text='meme anjing',
