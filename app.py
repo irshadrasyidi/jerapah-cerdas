@@ -114,12 +114,45 @@ def handle_message(event):
         ))
     
     if text=="kategori meme":
-        kamus="""Kategori Meme :\n
-        1. Anjing\n
-        2. Pun\n
-        3. Wikihow\n
-        4. Kak Seto"""
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
+        line_bot_api.reply_message(event.reply_token,TemplateSendMessage(
+            alt_text='ImageCarousel template',
+            template=ImageCarouselTemplate(
+                columns=[
+                    ImageCarouselColumn(
+                        image_url='https://asset.kompas.com/crop/0x2:960x642/750x500/data/photo/2018/03/06/2717904116.jpg',
+                        action=PostbackAction(
+                            label='Anjing',
+                            text='meme anjing',
+                            data='action=buy&itemid=1'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url='https://forums.lbsg.net/uploads/default/original/2X/7/7c14a99d7de45e3d691ed9cf05deec1ec69d0d78.png',
+                        action=PostbackAction(
+                            label='Pun',
+                            text='meme pun',
+                            data='action=buy&itemid=2'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120552320355.jpg',
+                        action=PostbackAction(
+                            label='WikiHow',
+                            text='meme wikihow',
+                            data='action=buy&itemid=4'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url='http://tps2u.com/wp-content/uploads/2017/11/OTHERS-1.jpg',
+                        action=PostbackAction(
+                            label='Others',
+                            text='meme etcetera',
+                            data='action=buy&itemid=5'
+                        )
+                    )
+                ]
+            )
+        ))
 
     if text=="adit":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat adit'))
@@ -136,7 +169,7 @@ def handle_message(event):
     ))
 
     #ANJING
-    if text=="/meme-anjing":
+    if text=="meme anjing":
         kamus="Kategori Anjing :\n1. /anjing-ga-jelas\n2. /anjing-ga-nyambung\n3. /anjing-ngegas\n4. /anjing-tolol\n5. /anjing-semua\n6. /anjing-jangkrik\n7. /anjing-kok\n8. /anjing-bawel\n9. /anjing-baper\n10. /anjing-kalem"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     
@@ -202,7 +235,7 @@ def handle_message(event):
     ))
 
 #PUN
-    if text=="/meme-pun":
+    if text=="meme pun":
         kamus="Kategori Pun :\n1. /pun-asu\n2. /pun-bawel\n3. /pun-bego\n4. /pun-ngegas\n5. /pun-gas\n6. /pun-gawat\n7. /pun-gelut\n8. /pun-goblok\n9. /pun-ikan-goblok\n10. /pun-joanchok\n11. /pun-kancil\n12. /pun-kecewa\n13. /pun-keren\n14. /pun-kocak\n15. /pun-lodeh\n16. /pun-mager\n17. /pun-pinter\n18. /pun-sabi\n19. /pun-sekip\n20. /pun-siyap\n21. /pun-yamaap"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     
