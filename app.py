@@ -217,7 +217,7 @@ def handle_message(event):
     preview_image_url='https://img.duniaku.net/2018/03/1521427445-anjing-baper.jpg'
     ))
     #10
-    if text=="/anjing-kalem" or text=="kalem":
+    if text=="/anjing-kalem" or text=="kalem" or data[0]=="kalem":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://scontent-atl3-1.cdninstagram.com/vp/a5162fe74fd29170ddbbfbba71863c1b/5C5537BA/t51.2885-15/e35/29088954_1860060620959017_6436073020644655104_n.jpg',
     preview_image_url='https://scontent-atl3-1.cdninstagram.com/vp/a5162fe74fd29170ddbbfbba71863c1b/5C5537BA/t51.2885-15/e35/29088954_1860060620959017_6436073020644655104_n.jpg'
