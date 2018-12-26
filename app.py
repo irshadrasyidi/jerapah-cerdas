@@ -9,13 +9,14 @@ from linebot.exceptions import (
 from linebot.models import *
 import requests, json
 
+from random import randint
+
 import errno
 import os
 import sys, random
 import tempfile
 import requests
 import re
-import requests, json
 
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
@@ -38,104 +39,8 @@ app = Flask(__name__)
 line_bot_api = LineBotApi('u/HC0JwWnT0bZ62dGFiU3ewK50M68nvOgXi6SMDCnJ/TK07kCMFEDbaMqtXGpYOCPgRAaNH27m66RXcGnAHizI8fXUj5mEChhd2ikqGQ+y9/AAvB0TUFjM6q79pBEPAIHjCv7ttW0o50W0woztRGsgdB04t89/1O/w1cDnyilFU=')
 # Channel Secret
 handler = WebhookHandler('6b3652ce6db6b622101382eba4c3fd25')
-
 #===========[ NOTE SAVER ]=======================
 notes = {""}
-
-# #INPUT DATA HEWAN
-# def inputHewan(Kode, Tipe, Hewan, Nama, Gender):
-#     r = requests.post("http://www.aditmasih.tk/api_irshad/insert.php", data={'Kode': Kode, 'Tipe': Tipe, 'Hewan': Hewan, 'Nama': Nama, 'Gender': Gender})
-#     data = r.json()
-
-#     flag = data['flag']
-
-#     if(flag == "1"):
-#         return 'Hewan '+Hewan+' Bernama '+Nama+' berhasil diimport dari hutan'
-#     elif(flag == "0"):
-#         return 'Hewan gk jadi masuk'
-
-# def cariHewan(Kode):
-#     URLhewan = "http://www.aditmasih.tk/api_irshad/show.php?Kode=" + Kode
-#     r = requests.get(URLhewan)
-#     data = r.json()
-#     err = "Hewan tidak ditemukan"
-    
-#     flag = data['flag']
-#     if(flag == "1"):
-#         Kode = data['digital_zoo'][0]['Kode']
-#         Tipe = data['digital_zoo'][0]['Tipe']
-#         Hewan = data['digital_zoo'][0]['Hewan']
-#         Nama = data['digital_zoo'][0]['Nama']
-#         Gender = data['digital_zoo'][0]['Gender']
-
-#         data= "Kode : "+Kode+"\nTipe : "+Tipe+"\nHewan : "+Hewan+"\nNama : "+Nama+"\nGender : "+Gender
-#         return data
-
-#     elif(flag == "0"):
-#         return err
-
-# def showAll():
-#     r = requests.post("http://www.aditmasih.tk/api_irshad/all.php")
-#     data = r.json()
-
-#     flag = data['flag']
-
-#     if(flag == "1"):
-#         hasil = ""
-#         for i in range(0,len(data['digital_zoo'])):
-#             Kode = data['digital_zoo'][int(i)][0]
-#             Tipe = data['digital_zoo'][int(i)][2]
-#             Hewan = data['digital_zoo'][int(i)][4]
-#             Nama = data['digital_zoo'][int(i)][6]
-#             Gender = data['digital_zoo'][int(i)][8]
-#             hasil=hasil+str(i+1)
-#             hasil=hasil+".\nKode : "
-#             hasil=hasil+Kode
-#             hasil=hasil+"\nTipe : "
-#             hasil=hasil+Tipe
-#             hasil=hasil+"\nHewan : "
-#             hasil=hasil+Hewan
-#             hasil=hasil+"\nNama : "
-#             hasil=hasil+Nama
-#             hasil=hasil+"\nGender : "
-#             hasil=hasil+Gender
-#             hasil=hasil+"\n"
-#         return hasil
-#     elif(flag == "0"):
-#         return 'Kebun binatang kosong'
-
-# #DELETE DATA HEWAN
-# def delHewan(Kode):
-#     r = requests.post("http://www.aditmasih.tk/api_irshad/delete.php", data={'Kode': Kode})
-#     data = r.json()
-
-#     flag = data['flag']
-
-#     if(flag == "1"):
-#         return 'Hewan dengan Kode '+Kode+' berhasil dilepas'
-#     elif(flag == "0"):
-#         return 'Hewannya emang ga ada :/'
-
-# #UPDATE DATA HEWAN
-# def updateHewan(Kode_Lama, Kode, Tipe, Hewan, Nama, Gender):
-#     URLhewan = "http://www.aditmasih.tk/api_irshad/show.php?Kode=" + Kode_Lama
-#     r = requests.get(URLhewan)
-#     data = r.json()
-#     err = "Hewan tidak ditemukan"
-#     KodeLama = Kode_Lama
-#     flag = data['flag']
-#     if(flag == "1"):
-#         r = requests.post("http://www.aditmasih.tk/api_irshad/update.php", data={'KodeLama':KodeLama, 'Kode': Kode, 'Tipe': Tipe, 'Hewan': Hewan, 'Nama':Nama, 'Gender':Gender})
-#         data = r.json()
-#         flag = data['flag']
-
-#         if(flag == "1"):
-#             return 'Data '+KodeLama+' berhasil diupdate'
-#         elif(flag == "0"):
-#             return 'Data gagal diupdate'
-
-#     elif(flag == "0"):
-#         return err
 
 # Post Request
 @app.route("/callback", methods=['POST'])
@@ -151,22 +56,13 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    text = event.message.text #simplify for receove message
-    sender = event.source.user_id #get usesenderr_id
-    gid = event.source.sender_id #get group_id
+    rawText = event.message.text
+    text = rawText.lower().strip()
+    sender = event.source.user_id
+    gid = event.source.sender_id
     profile = line_bot_api.get_profile(sender)
-    
-#KERANG AJAIB
+
     data=text.split(' ')
-    if(data[0]=='tambah'):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='asd'))
-    elif(data[0]=='lihat'):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='qwe'))
-#goblok
-    if(data[0]=='geblek' or data[0]=='goblok' or data[0]=='gubluk' or data[0]='gblk'):
-        n=random.randint(0, 18)
-        hasil=["iya", "mungkin", "bisa jadi", "wajib", "terserah", "bebas", "sembarang", "sunnah", "jangan", "sak karepmu", "tanya admin","kakean takok cuk", "apa urusan anda menanyakan hal itu kepada saya","silakan bertanya pada rumput yang bergoyang", "oh yo jelas", "pasti","mboh","lho yo iyo seh","entahlah"]
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=hasil[a]))
 
     if text=="/menu":
         line_bot_api.reply_message(event.reply_token,TemplateSendMessage(
@@ -174,21 +70,41 @@ def handle_message(event):
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
-                        thumbnail_image_url='https://i.ytimg.com/vi/mSFzdwxljog/maxresdefault.jpg',
+                        thumbnail_image_url='https://example.com/item1.jpg',
                         title='Meme Shitpost',
-                        text='My most valuable personal collection',
+                        text='Koleksi Personal Paling Berharga',
                         actions=[
                             PostbackAction(
-                                label='Kategori Meme',
-                                text='/kategori-meme',
+                                label='Apa ini?',
+                                text='kamus meme',
                                 data='action=buy&itemid=1'
                             ),
                             MessageAction(
-                                label='Koleksi Meme',
-                                text='/koleksi-meme'
+                                label='Kategori Meme',
+                                text='kategori meme'
                             ),
                             URIAction(
-                                label='Promosi IG saya',
+                                label='Akun IG saya',
+                                uri='https://www.instagram.com/irshadrasyidi/'
+                            )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://static.family.ca/rendition/17001/1058/595',
+                        title='Sound of Nature',
+                        text='Anda bertanya, alam menjawab',
+                        actions=[
+                            PostbackAction(
+                                label='Ini apa?',
+                                text='Tuntunan Alam',
+                                data='action=buy&itemid=2'
+                            ),
+                            MessageAction(
+                                label='Jompa-Jampi',
+                                text='Jompa-Jampi'
+                            ),
+                            URIAction(
+                                label='Akun IG saya',
                                 uri='https://www.instagram.com/irshadrasyidi/'
                             )
                         ]
@@ -196,16 +112,18 @@ def handle_message(event):
                 ]
             )
         ))
-    if text=="/kategori-meme":
+
+    if text=="kategori-meme":
         line_bot_api.reply_message(event.reply_token,TemplateSendMessage(
             alt_text='ImageCarousel template',
             template=ImageCarouselTemplate(
                 columns=[
                     ImageCarouselColumn(
-                        image_url='https://asset.kompas.com/crop/0x2:960x642/750x500/data/photo/2018/03/06/2717904116.jpg',
+                        #image_url='https://asset.kompas.com/crop/0x2:960x642/750x500/data/photo/2018/03/06/2717904116.jpg',
+                        image_url='https://i.imgur.com/ywKZuaB.gifv',
                         action=PostbackAction(
                             label='Anjing',
-                            text='/meme-anjing',
+                            text='meme anjing',
                             data='action=buy&itemid=1'
                         )
                     ),
@@ -213,42 +131,87 @@ def handle_message(event):
                         image_url='https://forums.lbsg.net/uploads/default/original/2X/7/7c14a99d7de45e3d691ed9cf05deec1ec69d0d78.png',
                         action=PostbackAction(
                             label='Pun',
-                            text='/meme-pun',
+                            text='meme pun',
                             data='action=buy&itemid=2'
                         )
                     ),
                     ImageCarouselColumn(
-                        image_url='https://3.bp.blogspot.com/-3DCApIDpPg8/WadDwhqKGlI/AAAAAAAALVQ/cLo2R5M3C3AHmdC7WH7YZr-q_mwYu_0BACLcBGAs/s1600/kak-seto.jpg',
+                        image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120552320355.jpg',
                         action=PostbackAction(
-                            label='Kak Seto',
-                            text='/meme-seto',
+                            label='WikiHow',
+                            text='meme wikihow',
                             data='action=buy&itemid=3'
                         )
                     ),
-                    # ImageCarouselColumn(
-                    #     image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120552320355.jpg',
-                    #     action=PostbackAction(
-                    #         label='WikiHow',
-                    #         text='/meme-wikihow',
-                    #         data='action=buy&itemid=4'
-                    #     )
-                    # ),
-                    # ImageCarouselColumn(
-                    #     image_url='http://tps2u.com/wp-content/uploads/2017/11/OTHERS-1.jpg',
-                    #     action=PostbackAction(
-                    #         label='Others',
-                    #         text='/meme-others',
-                    #         data='action=buy&itemid=5'
-                    #     )
-                    # )
+                    ImageCarouselColumn(
+                        image_url='https://i.imgur.com/SBUbHHN.gif',
+                        action=PostbackAction(
+                            label='Others',
+                            text='meme etcetera',
+                            data='action=buy&itemid=4'
+                        )
+                    )
                 ]
             )
         ))
-    if text=="/koleksi-meme":
-        kamus="kamus shitpost :\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks\n1. /meme1 : Kecewa\n2. /meme2 : Thanks"
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
-#ANJING
-    if text=="/meme-anjing":
+    
+    # if text=="kategori-meme":
+    #     line_bot_api.reply_message(event.reply_token,TemplateSendMessage(
+    #         alt_text='ImageCarousel template',
+    #         template=ImageCarouselTemplate(
+    #             columns=[
+    #                 ImageCarouselColumn(
+    #                     image_url='https://asset.kompas.com/crop/0x2:960x642/750x500/data/photo/2018/03/06/2717904116.jpg',
+    #                     action=PostbackAction(
+    #                         label='Anjing',
+    #                         text='meme anjing',
+    #                         data='action=buy&itemid=1'
+    #                     )
+    #                 ),
+    #                 ImageCarouselColumn(
+    #                     image_url='https://forums.lbsg.net/uploads/default/original/2X/7/7c14a99d7de45e3d691ed9cf05deec1ec69d0d78.png',
+    #                     action=PostbackAction(
+    #                         label='Pun',
+    #                         text='meme pun',
+    #                         data='action=buy&itemid=2'
+    #                     )
+    #                 ),
+    #                 ImageCarouselColumn(
+    #                     image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120552320355.jpg',
+    #                     action=PostbackAction(
+    #                         label='WikiHow',
+    #                         text='meme wikihow',
+    #                         data='action=buy&itemid=4'
+    #                     )
+    #                 ),
+    #                 ImageCarouselColumn(
+    #                     image_url='http://tps2u.com/wp-content/uploads/2017/11/OTHERS-1.jpg',
+    #                     action=PostbackAction(
+    #                         label='Others',
+    #                         text='meme etcetera',
+    #                         data='action=buy&itemid=5'
+    #                     )
+    #                 )
+    #             ]
+    #         )
+    #     ))
+
+    if text=="adit":
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat adit'))
+    if text=="mail":
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat mail'))
+    if text=="djohan":
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat djohan'))
+    if text=="cuy":
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='oposeduh'))
+    if text=="tyo":
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    original_content_url='https://s0.bukalapak.com/img/0343005662/w-1000/Boneka_Anak_Jerapah_Imut_Menggemaskan.jpg',
+    preview_image_url='https://s0.bukalapak.com/img/0343005662/w-1000/Boneka_Anak_Jerapah_Imut_Menggemaskan.jpg'
+    ))
+
+    #ANJING
+    if text=="meme anjing":
         kamus="Kategori Anjing :\n1. /anjing-ga-jelas\n2. /anjing-ga-nyambung\n3. /anjing-ngegas\n4. /anjing-tolol\n5. /anjing-semua\n6. /anjing-jangkrik\n7. /anjing-kok\n8. /anjing-bawel\n9. /anjing-baper\n10. /anjing-kalem"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     
@@ -314,21 +277,15 @@ def handle_message(event):
     ))
 
 #PUN
-    if text=="/meme-pun":
+    if text=="meme pun":
         kamus="Kategori Pun :\n1. /pun-asu\n2. /pun-bawel\n3. /pun-bego\n4. /pun-ngegas\n5. /pun-gas\n6. /pun-gawat\n7. /pun-gelut\n8. /pun-goblok\n9. /pun-ikan-goblok\n10. /pun-joanchok\n11. /pun-kancil\n12. /pun-kecewa\n13. /pun-keren\n14. /pun-kocak\n15. /pun-lodeh\n16. /pun-mager\n17. /pun-pinter\n18. /pun-sabi\n19. /pun-sekip\n20. /pun-siyap\n21. /pun-yamaap"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     
-    #1
-    if text=="/pun-asu":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
-    preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
-    ))
     #2
     if text=="/pun-bawel":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
-    preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
+    original_content_url='https://1.bp.blogspot.com/-AHXu8nVDgww/Wr3YdzZvCVI/AAAAAAAABPg/AO7Mnycr_oQx3bdzboe6qyW8WyqjynfXACLcBGAs/s1600/IMG_20180327_222109.jpg',
+    preview_image_url='https://1.bp.blogspot.com/-AHXu8nVDgww/Wr3YdzZvCVI/AAAAAAAABPg/AO7Mnycr_oQx3bdzboe6qyW8WyqjynfXACLcBGAs/s1600/IMG_20180327_222109.jpg'
     ))
     #3
     if text=="/pun-bego":
@@ -357,8 +314,8 @@ def handle_message(event):
     #6
     if text=="/pun-gelut":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
-    preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
+    original_content_url='https://pics.me.me/gelut-29735709.png',
+    preview_image_url='https://pics.me.me/gelut-29735709.png'
     ))
     #6
     if text=="/pun-goblok":
@@ -387,14 +344,14 @@ def handle_message(event):
     #10
     if text=="/pun-kecewa":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
-    preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
+    original_content_url='https://pics.me.me/kecewa-31619297.png',
+    preview_image_url='https://pics.me.me/kecewa-31619297.png'
     ))
     #11
     if text=="/pun-keren":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
-    preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
+    original_content_url='http://gituaja.com/wp-content/uploads/2018/04/Pelesetan-Gambar-Yang-Super-Receh-Tapi-Ketika-Dibaca-Kalian-Mengerti-GituAja-21.jpg',
+    preview_image_url='http://gituaja.com/wp-content/uploads/2018/04/Pelesetan-Gambar-Yang-Super-Receh-Tapi-Ketika-Dibaca-Kalian-Mengerti-GituAja-21.jpg'
     ))
     #12
     if text=="/pun-kocak":
@@ -429,22 +386,33 @@ def handle_message(event):
     #17
     if text=="/pun-sekip":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
-    preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
+    original_content_url='https://4.bp.blogspot.com/-TXgBZ19sxHs/Wr3bhYlQy6I/AAAAAAAABPs/vbC_Be9GFmsWrhytSZXd90D9DaQymyhdQCLcBGAs/s1600/IMG_20180327_222132.jpg',
+    preview_image_url='https://4.bp.blogspot.com/-TXgBZ19sxHs/Wr3bhYlQy6I/AAAAAAAABPs/vbC_Be9GFmsWrhytSZXd90D9DaQymyhdQCLcBGAs/s1600/IMG_20180327_222132.jpg'
     ))
     #18
     if text=="/pun-siyap":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
-    preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
+    original_content_url='https://www.teknosaurus.com/wp-content/uploads/2018/03/sayap-e1521330529574.jpg',
+    preview_image_url='https://www.teknosaurus.com/wp-content/uploads/2018/03/sayap-e1521330529574.jpg'
     ))
     #19
     if text=="/pun-yamaap":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
-    preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
+    original_content_url='http://gituaja.com/wp-content/uploads/2018/04/Pelesetan-Gambar-Yang-Super-Receh-Tapi-Ketika-Dibaca-Kalian-Mengerti-GituAja-21.jpg',
+    preview_image_url='http://gituaja.com/wp-content/uploads/2018/04/Pelesetan-Gambar-Yang-Super-Receh-Tapi-Ketika-Dibaca-Kalian-Mengerti-GituAja-21.jpg'
     ))
-    
+    #20
+    if text=="/pun-thanks":
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    original_content_url='https://3.bp.blogspot.com/-2bHJrd2yl7s/Wr3Sy2zDudI/AAAAAAAABNk/DKwqkIkvufUteDl_CQlvfV98EjDNeTJagCLcBGAs/s1600/IMG_20180327_221555.jpg',
+    preview_image_url='https://3.bp.blogspot.com/-2bHJrd2yl7s/Wr3Sy2zDudI/AAAAAAAABNk/DKwqkIkvufUteDl_CQlvfV98EjDNeTJagCLcBGAs/s1600/IMG_20180327_221555.jpg'
+    ))
+    #21
+    if text=="/pun-kampret":
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    original_content_url='https://cdn2.boombastis.com/wp-content/uploads/2018/03/7kampret.jpeg',
+    preview_image_url='https://cdn2.boombastis.com/wp-content/uploads/2018/03/7kampret.jpeg '
+    ))
     
     
     
@@ -458,21 +426,7 @@ def handle_message(event):
     if text=="/meme-seto":
         kamus="Kategori Seto :\n1. /anjing-ga-jelas\n2. /anjing-ga-nyambung\n3. /anjing-ngegas\n4. /anjing-tolol\n5. /anjing-semua\n6. /anjing-asu\n7. /anjing-ga-sopan\n8. /anjing-ga-jelas"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
-    
-    if text=="vivat":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its 3x!'))
-    if text=="cuy":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='opo?'))
-    if text=="/begobgt":
-        if isinstance(event.source, SourceGroup):
-            line_bot_api.reply_message(event.reply_token,TextSendMessage(text=profile.display_name+'jahat :('))
-            line_bot_api.leave_room(event.source.group_id)
-        elif isinstance(event.source, SourceRoom):
-            line_bot_api.reply_message(event.reply_token,TextSendMessage(text=profile.display_name+'jahat :('))
-            line_bot_api.leave_room(event.source.room_id)
-    if text=="/bye":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='gamau keluar wek!'))
-
+        
 import os
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
