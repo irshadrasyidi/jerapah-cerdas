@@ -460,7 +460,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     
     if text=="vivat":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its!'))
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='hidup its 3x!'))
     if text=="cuy":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='opo?'))
     if text=="/begobgt":
