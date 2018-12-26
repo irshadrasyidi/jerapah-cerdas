@@ -229,133 +229,133 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     
     #2
-    if text=="/pun-bawel":
+    if text=="/pun-bawel" or text=="bawel":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://1.bp.blogspot.com/-AHXu8nVDgww/Wr3YdzZvCVI/AAAAAAAABPg/AO7Mnycr_oQx3bdzboe6qyW8WyqjynfXACLcBGAs/s1600/IMG_20180327_222109.jpg',
     preview_image_url='https://1.bp.blogspot.com/-AHXu8nVDgww/Wr3YdzZvCVI/AAAAAAAABPg/AO7Mnycr_oQx3bdzboe6qyW8WyqjynfXACLcBGAs/s1600/IMG_20180327_222109.jpg'
     ))
     #3
-    if text=="/pun-bego":
+    if text=="/pun-bego" or text=="bego":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
     #4
-    if text=="/pun-ngegas":
+    if text=="/pun-ngegas" or text=="ngegas":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
     #5
-    if text=="/pun-gas":
+    if text=="/pun-gas" or text=="gas":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
     #6
-    if text=="/pun-gawat":
+    if text=="/pun-gawat" or text=="gawat":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
     #6
-    if text=="/pun-gelut":
+    if text=="/pun-gelut" or text=="gelut":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pics.me.me/gelut-29735709.png',
     preview_image_url='https://pics.me.me/gelut-29735709.png'
     ))
     #6
-    if text=="/pun-goblok":
+    if text=="/pun-goblok" or text=="goblok":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
     #7
-    if text=="/pun-ikan-goblok":
+    if text=="/pun-ikan-goblok" or text=="ikan goblok":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
     #8
-    if text=="/pun-joanchok":
+    if text=="/pun-joanchok" or text=="joanchok":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
     #9
-    if text=="/pun-kancil":
+    if text=="/pun-kancil" or text=="kancil":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
     #10
-    if text=="/pun-kecewa":
+    if text=="/pun-kecewa" or text=="kecewa":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pics.me.me/kecewa-31619297.png',
     preview_image_url='https://pics.me.me/kecewa-31619297.png'
     ))
     #11
-    if text=="/pun-keren":
+    if text=="/pun-keren" or text=="keren":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='http://gituaja.com/wp-content/uploads/2018/04/Pelesetan-Gambar-Yang-Super-Receh-Tapi-Ketika-Dibaca-Kalian-Mengerti-GituAja-21.jpg',
     preview_image_url='http://gituaja.com/wp-content/uploads/2018/04/Pelesetan-Gambar-Yang-Super-Receh-Tapi-Ketika-Dibaca-Kalian-Mengerti-GituAja-21.jpg'
     ))
     #12
-    if text=="/pun-kocak":
+    if text=="/pun-kocak" or text=="kocak":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
     #13
-    if text=="/pun-lodeh":
+    if text=="/pun-lodeh" or text=="terserah":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
     #14
-    if text=="/pun-mager":
+    if text=="/pun-mager" or text=="baper":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
     #15
-    if text=="/pun-pinter":
+    if text=="/pun-pinter" or text=="pinter":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
     #16
-    if text=="/pun-sabi":
+    if text=="/pun-sabi" or text=="sabi":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
     preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
     ))
     #17
-    if text=="/pun-sekip":
+    if text=="/pun-sekip" or text=="skip":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://4.bp.blogspot.com/-TXgBZ19sxHs/Wr3bhYlQy6I/AAAAAAAABPs/vbC_Be9GFmsWrhytSZXd90D9DaQymyhdQCLcBGAs/s1600/IMG_20180327_222132.jpg',
     preview_image_url='https://4.bp.blogspot.com/-TXgBZ19sxHs/Wr3bhYlQy6I/AAAAAAAABPs/vbC_Be9GFmsWrhytSZXd90D9DaQymyhdQCLcBGAs/s1600/IMG_20180327_222132.jpg'
     ))
     #18
-    if text=="/pun-siyap":
+    if text=="/pun-siyap" or text=="siyap":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://www.teknosaurus.com/wp-content/uploads/2018/03/sayap-e1521330529574.jpg',
     preview_image_url='https://www.teknosaurus.com/wp-content/uploads/2018/03/sayap-e1521330529574.jpg'
     ))
     #19
-    if text=="/pun-yamaap":
+    if text=="/pun-yamaap" or text=="yamaap":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='http://gituaja.com/wp-content/uploads/2018/04/Pelesetan-Gambar-Yang-Super-Receh-Tapi-Ketika-Dibaca-Kalian-Mengerti-GituAja-21.jpg',
     preview_image_url='http://gituaja.com/wp-content/uploads/2018/04/Pelesetan-Gambar-Yang-Super-Receh-Tapi-Ketika-Dibaca-Kalian-Mengerti-GituAja-21.jpg'
     ))
     #20
-    if text=="/pun-thanks":
+    if text=="/pun-thanks" or text=="thanks":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://3.bp.blogspot.com/-2bHJrd2yl7s/Wr3Sy2zDudI/AAAAAAAABNk/DKwqkIkvufUteDl_CQlvfV98EjDNeTJagCLcBGAs/s1600/IMG_20180327_221555.jpg',
     preview_image_url='https://3.bp.blogspot.com/-2bHJrd2yl7s/Wr3Sy2zDudI/AAAAAAAABNk/DKwqkIkvufUteDl_CQlvfV98EjDNeTJagCLcBGAs/s1600/IMG_20180327_221555.jpg'
     ))
     #21
-    if text=="/pun-kampret":
+    if text=="/pun-kampret" or text=="kampret":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://cdn2.boombastis.com/wp-content/uploads/2018/03/7kampret.jpeg',
     preview_image_url='https://cdn2.boombastis.com/wp-content/uploads/2018/03/7kampret.jpeg '
