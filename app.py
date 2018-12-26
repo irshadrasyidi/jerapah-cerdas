@@ -237,14 +237,14 @@ def handle_message(event):
     #3
     if text=="/pun-bego" or text=="bego":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
-    preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
+    original_content_url='https://pbs.twimg.com/media/DYaIxpdU0AE2UcO.jpg',
+    preview_image_url='https://pbs.twimg.com/media/DYaIxpdU0AE2UcO.jpg'
     ))
     #4
     if text=="/pun-ngegas" or text=="ngegas":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
-    preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
+    original_content_url='https://s.kaskus.id/images/2017/10/07/9824467_201710070650410306.jpg',
+    preview_image_url='https://s.kaskus.id/images/2017/10/07/9824467_201710070650410306.jpg'
     ))
     #5
     if text=="/pun-gas" or text=="gas":
