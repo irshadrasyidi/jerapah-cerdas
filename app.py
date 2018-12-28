@@ -225,7 +225,7 @@ def handle_message(event):
 
 #PUN
     if text=="meme pun":
-        kamus="Kategori Pun :\n2. /pun-bawel\n3. /pun-bego\n4. /pun-ngegas\n5. /pun-gas\n6. /pun-gawat\n7. /pun-gelut\n8. /pun-goblok\n9. /pun-ikan-goblok\n11. /pun-kancil\n12. /pun-kecewa\n13. /pun-keren\n14. /pun-kocak\n15. /pun-lodeh\n16. /pun-mager\n17. /pun-pinter\n18. /pun-sabi\n19. /pun-sekip\n20. /pun-siyap\n21. /pun-yamaap"
+        kamus="Kategori Pun :\n2. /pun-bawel\n3. /pun-bego\n4. /pun-ngegas\n5. /pun-gas\n6. /pun-gawat\n7. /pun-gelut\n8. /pun-bubar\n9. /pun-ikan-goblok\n11. /pun-kancil\n12. /pun-kecewa\n13. /pun-keren\n14. /pun-kocak\n15. /pun-lodeh\n16. /pun-mager\n17. /pun-pinter\n18. /pun-sabi\n19. /pun-sekip\n20. /pun-siyap\n21. /pun-yamaap"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     
     #2
@@ -276,6 +276,12 @@ def handle_message(event):
     original_content_url='https://i.pinimg.com/236x/d2/55/46/d25546911ab75e65de5d0e5b6f267c5c.jpg',
     preview_image_url='https://i.pinimg.com/236x/d2/55/46/d25546911ab75e65de5d0e5b6f267c5c.jpg'
     ))
+    #8
+    if text=="/pun-bubar" or text=="bubar":
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    original_content_url='https://pbs.twimg.com/media/DY9OLOLVwAEadK7.jpg',
+    preview_image_url='https://pbs.twimg.com/media/DY9OLOLVwAEadK7.jpg'
+    ))
     #9
     if text=="/pun-kancil" or text=="kancil":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
@@ -297,14 +303,14 @@ def handle_message(event):
     #12
     if text=="/pun-kocak" or text=="kocak":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
-    preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
+    original_content_url='https://pbs.twimg.com/media/DYL2-5dVoAARtb4.jpg',
+    preview_image_url='https://pbs.twimg.com/media/DYL2-5dVoAARtb4.jpg'
     ))
     #13
     if text=="/pun-lodeh" or text=="terserah":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
-    preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
+    original_content_url='https://pics.me.me/terserah-lodeh-31686397.png',
+    preview_image_url='https://pics.me.me/terserah-lodeh-31686397.png'
     ))
     #14
     if text=="/pun-mager" or text=="baper":
