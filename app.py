@@ -313,22 +313,22 @@ def handle_message(event):
     preview_image_url='https://pics.me.me/terserah-lodeh-31686397.png'
     ))
     #14
-    if text=="/pun-mager" or text=="baper":
+    if text=="/pun-mager" or text=="mager":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
-    preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
+    original_content_url='https://storage.jualo.com/original/12555347/bengkel-las-aneka-kar-alat-musik-lainnya-12555347.jpg',
+    preview_image_url='https://storage.jualo.com/original/12555347/bengkel-las-aneka-kar-alat-musik-lainnya-12555347.jpg'
     ))
     #15
     if text=="/pun-pinter" or text=="pinter":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
-    preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
+    original_content_url='https://pbs.twimg.com/media/DkNtokXVAAA3gdr.jpg',
+    preview_image_url='https://pbs.twimg.com/media/DkNtokXVAAA3gdr.jpg'
     ))
     #16
     if text=="/pun-sabi" or text=="sabi":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
-    preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
+    original_content_url='https://pbs.twimg.com/media/DbI1oKdUMAAKHl3.jpg',
+    preview_image_url='https://pbs.twimg.com/media/DbI1oKdUMAAKHl3.jpg'
     ))
     #17
     if text=="/pun-sekip" or text=="skip":
