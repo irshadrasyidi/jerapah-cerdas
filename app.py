@@ -388,6 +388,20 @@ def handle_message(event):
     preview_image_url='https://s0.bukalapak.com/img/0343005662/w-1000/Boneka_Anak_Jerapah_Imut_Menggemaskan.jpg'
     ))
         
+
+#LEAVE GRUP / MPC
+    if text=="/bye":
+        if isinstance(event.source, SourceGroup):
+            line_bot_api.push_message(event.source.group_id, TextSendMessage(text='***Snap!***'))
+            line_bot_api.push_message(event.source.group_id, TextSendMessage(text="Mr. Stark, I don't feel so good" ))
+            line_bot_api.push_message(event.source.group_id, TextSendMessage(text='Parah, '+profile.display_name+'jahat bgt'))
+            line_bot_api.leave_group(event.source.group_id)
+        elif isinstance(event.source, SourceRoom):
+            line_bot_api.push_message(event.source.group_id, TextSendMessage(text='***Snap!***'))
+            line_bot_api.push_message(event.source.group_id, TextSendMessage(text="Mr. Stark, I don't feel so good" ))
+            line_bot_api.push_message(event.source.group_id, TextSendMessage(text='Parah, '+profile.display_name+'jahat bgt'))
+            line_bot_api.leave_room(event.source.room_id)
+    
 import os
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
