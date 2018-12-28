@@ -163,7 +163,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     
     #1
-    if text=="/anjing-ga-jelas" or text=="ga jelas":
+    if text=="/anjing-ga-jelas" or text=="ga jelas" or data[0]=="gaje" or data[0]=="geje" or data[0]=="gj":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://cdn.brilio.net/news/2018/04/05/141154/760223-meme-anjing.jpg',
     preview_image_url='https://cdn.brilio.net/news/2018/04/05/141154/760223-meme-anjing.jpg'
@@ -175,13 +175,13 @@ def handle_message(event):
     preview_image_url='https://pics.me.me/anjing-kaga-nyambung-31476214.png'
     ))
     #3
-    if text=="/anjing-ngegas" or text=="ngegas":
+    if text=="/anjing-ngegas" or text=="ngegas" or data[0]=="ngegas":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://img.duniaku.net/2018/03/1521427491-anjing-ngegas.jpg',
     preview_image_url='https://img.duniaku.net/2018/03/1521427491-anjing-ngegas.jpg'
     ))
     #4
-    if text=="/anjing-tolol" or text=="tolol":
+    if text=="/anjing-tolol" or text=="tolol" or data[0]=="tolol":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DYLq_4fU0AA9b-B.jpg',
     preview_image_url='https://pbs.twimg.com/media/DYLq_4fU0AA9b-B.jpg'
@@ -193,7 +193,7 @@ def handle_message(event):
     preview_image_url='https://1.bp.blogspot.com/-nsYjWy0W4AU/VArRtVc7MxI/AAAAAAAAM8k/SnNZKZxfNmA/s1600/bm-image-789062.jpeg'
     ))
     #6
-    if text=="/anjing-jangkrik" or text=="jangkrik":
+    if text=="/anjing-jangkrik" or text=="jangkrik" or data[0]=="jangkrik":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DX95-GUUQAUIT7i.jpg',
     preview_image_url='https://pbs.twimg.com/media/DX95-GUUQAUIT7i.jpg'
@@ -205,13 +205,13 @@ def handle_message(event):
     preview_image_url='https://pbs.twimg.com/media/DYLLvU3VAAABy7F.jpg'
     ))
     #8
-    if text=="/anjing-bawel" or text=="bawel":
+    if text=="/anjing-bawel" or text=="bawel" or data[0]=="bawel":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://s.kaskus.id/images/2018/03/14/7034635_201803140545070870.jpg',
     preview_image_url='https://s.kaskus.id/images/2018/03/14/7034635_201803140545070870.jpg'
     ))
     #9
-    if text=="/anjing-baper" or text=="baper":
+    if text=="/anjing-baper" or text=="baper" or data[0]=="baper":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://img.duniaku.net/2018/03/1521427445-anjing-baper.jpg',
     preview_image_url='https://img.duniaku.net/2018/03/1521427445-anjing-baper.jpg'
@@ -225,7 +225,7 @@ def handle_message(event):
 
 #PUN
     if text=="meme pun":
-        kamus="Kategori Pun :\n1. /pun-asu\n2. /pun-bawel\n3. /pun-bego\n4. /pun-ngegas\n5. /pun-gas\n6. /pun-gawat\n7. /pun-gelut\n8. /pun-goblok\n9. /pun-ikan-goblok\n10. /pun-joanchok\n11. /pun-kancil\n12. /pun-kecewa\n13. /pun-keren\n14. /pun-kocak\n15. /pun-lodeh\n16. /pun-mager\n17. /pun-pinter\n18. /pun-sabi\n19. /pun-sekip\n20. /pun-siyap\n21. /pun-yamaap"
+        kamus="Kategori Pun :\n2. /pun-bawel\n3. /pun-bego\n4. /pun-ngegas\n5. /pun-gas\n6. /pun-gawat\n7. /pun-gelut\n8. /pun-goblok\n9. /pun-ikan-goblok\n10. /pun-joanchok\n11. /pun-kancil\n12. /pun-kecewa\n13. /pun-keren\n14. /pun-kocak\n15. /pun-lodeh\n16. /pun-mager\n17. /pun-pinter\n18. /pun-sabi\n19. /pun-sekip\n20. /pun-siyap\n21. /pun-yamaap"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     
     #2
@@ -249,14 +249,14 @@ def handle_message(event):
     #5
     if text=="/pun-gas" or text=="gas":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
-    preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
+    original_content_url='https://s.kaskus.id/images/2017/05/01/9437462_201705010152380796.jpg',
+    preview_image_url='https://s.kaskus.id/images/2017/05/01/9437462_201705010152380796.jpg'
     ))
     #6
     if text=="/pun-gawat" or text=="gawat":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg',
-    preview_image_url='https://image.shutterstock.com/image-vector/error-404-page-not-found-450w-1027982980.jpg'
+    original_content_url='https://em.wattpad.com/a597dfd0d5b0115078e72028c89b42f412c398e2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f4c346e547651464b426c66765a513d3d2d3532352e313531613331396163343031306232343335303035353539383537312e6a7067?s=fit&w=720&h=720',
+    preview_image_url='https://em.wattpad.com/a597dfd0d5b0115078e72028c89b42f412c398e2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f4c346e547651464b426c66765a513d3d2d3532352e313531613331396163343031306232343335303035353539383537312e6a7067?s=fit&w=720&h=720'
     ))
     #6
     if text=="/pun-gelut" or text=="gelut":
@@ -374,12 +374,10 @@ def handle_message(event):
         kamus="Kategori Seto :\n1. /anjing-ga-jelas\n2. /anjing-ga-nyambung\n3. /anjing-ngegas\n4. /anjing-tolol\n5. /anjing-semua\n6. /anjing-asu\n7. /anjing-ga-sopan\n8. /anjing-ga-jelas"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
 
-    if text=="adit":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat adit'))
-    if text=="mail":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat mail'))
-    if text=="djohan":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Kamu jahat djohan'))
+
+
+
+#etc
     if text=="cuy":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='oposeduh'))
     if text=="tyo":
@@ -394,12 +392,12 @@ def handle_message(event):
         if isinstance(event.source, SourceGroup):
             line_bot_api.push_message(event.source.group_id, TextSendMessage(text='***Snap!***'))
             line_bot_api.push_message(event.source.group_id, TextSendMessage(text="Mr. Stark, I don't feel so good" ))
-            line_bot_api.push_message(event.source.group_id, TextSendMessage(text='Parah, '+profile.display_name+'jahat bgt'))
+            line_bot_api.push_message(event.source.group_id, TextSendMessage(text='Parah, '+profile.display_name+' jahat bgt'))
             line_bot_api.leave_group(event.source.group_id)
         elif isinstance(event.source, SourceRoom):
             line_bot_api.push_message(event.source.group_id, TextSendMessage(text='***Snap!***'))
             line_bot_api.push_message(event.source.group_id, TextSendMessage(text="Mr. Stark, I don't feel so good" ))
-            line_bot_api.push_message(event.source.group_id, TextSendMessage(text='Parah, '+profile.display_name+'jahat bgt'))
+            line_bot_api.push_message(event.source.group_id, TextSendMessage(text='Parah, '+profile.display_name+' jahat bgt'))
             line_bot_api.leave_room(event.source.room_id)
     
 import os
