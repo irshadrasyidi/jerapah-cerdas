@@ -158,6 +158,7 @@ def handle_message(event):
         ))
 
 #MULT CHOICE
+    #BAWEL
     #ANJING 8, PUN 2
     if data[0]=="bawel":
         a = random.randint(0, 1)
@@ -246,20 +247,20 @@ def handle_message(event):
     original_content_url='https://1.bp.blogspot.com/-AHXu8nVDgww/Wr3YdzZvCVI/AAAAAAAABPg/AO7Mnycr_oQx3bdzboe6qyW8WyqjynfXACLcBGAs/s1600/IMG_20180327_222109.jpg',
     preview_image_url='https://1.bp.blogspot.com/-AHXu8nVDgww/Wr3YdzZvCVI/AAAAAAAABPg/AO7Mnycr_oQx3bdzboe6qyW8WyqjynfXACLcBGAs/s1600/IMG_20180327_222109.jpg'
     ))
-    #3
-    if text=="/pun-bego" or text=="bego" or data[0]=="bego":
+    #3 MULT CHOICE
+    if text=="/pun-bego" or data[0]=="bego":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DYaIxpdU0AE2UcO.jpg',
     preview_image_url='https://pbs.twimg.com/media/DYaIxpdU0AE2UcO.jpg'
     ))
     #4 MULT CHOICE
-    if text=="/pun-ngegas" or text=="ngegas" or data[0]=="ngegas":
+    if text=="/pun-ngegas" or data[0]=="ngegas":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://s.kaskus.id/images/2017/10/07/9824467_201710070650410306.jpg',
     preview_image_url='https://s.kaskus.id/images/2017/10/07/9824467_201710070650410306.jpg'
     ))
-    #5
-    if text=="/pun-gas" or text=="gas" or data[0]=="gas":
+    #5 MULT CHOICE
+    if text=="/pun-gas" or data[0]=="gas":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://s.kaskus.id/images/2017/05/01/9437462_201705010152380796.jpg',
     preview_image_url='https://s.kaskus.id/images/2017/05/01/9437462_201705010152380796.jpg'
@@ -337,25 +338,25 @@ def handle_message(event):
     preview_image_url='https://pbs.twimg.com/media/DbI1oKdUMAAKHl3.jpg'
     ))
     #17
-    if text=="/pun-sekip" or text=="skip" or data[0]=="skip" or data[0]=="sekip" or data[0]=="sqip" or data[0]=="sqiv":
+    if text=="/pun-sekip" or data[0]=="skip" or data[0]=="sekip" or data[0]=="sqip" or data[0]=="sqiv":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://4.bp.blogspot.com/-TXgBZ19sxHs/Wr3bhYlQy6I/AAAAAAAABPs/vbC_Be9GFmsWrhytSZXd90D9DaQymyhdQCLcBGAs/s1600/IMG_20180327_222132.jpg',
     preview_image_url='https://4.bp.blogspot.com/-TXgBZ19sxHs/Wr3bhYlQy6I/AAAAAAAABPs/vbC_Be9GFmsWrhytSZXd90D9DaQymyhdQCLcBGAs/s1600/IMG_20180327_222132.jpg'
     ))
     #18
-    if text=="/pun-siyap" or text=="siyap" or data[0]=="siap" or data[0]=="siyap" or data[0]=="shap" or data[0]=="ready" or data[0]=="siaap":
+    if text=="/pun-siyap" or data[0]=="siap" or data[0]=="siyap" or data[0]=="shap" or data[0]=="ready" or data[0]=="siaap":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://www.teknosaurus.com/wp-content/uploads/2018/03/sayap-e1521330529574.jpg',
     preview_image_url='https://www.teknosaurus.com/wp-content/uploads/2018/03/sayap-e1521330529574.jpg'
     ))
     #20
-    if text=="/pun-thanks" or text=="thanks" or data[0]=="thanks" or data[0]=="thank" or data[0]=="makasih" or data[0]=="trims":
+    if text=="/pun-thanks" or data[0]=="thanks" or data[0]=="thank" or data[0]=="makasih" or data[0]=="trims":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://3.bp.blogspot.com/-2bHJrd2yl7s/Wr3Sy2zDudI/AAAAAAAABNk/DKwqkIkvufUteDl_CQlvfV98EjDNeTJagCLcBGAs/s1600/IMG_20180327_221555.jpg',
     preview_image_url='https://3.bp.blogspot.com/-2bHJrd2yl7s/Wr3Sy2zDudI/AAAAAAAABNk/DKwqkIkvufUteDl_CQlvfV98EjDNeTJagCLcBGAs/s1600/IMG_20180327_221555.jpg'
     ))
     #21
-    if text=="/pun-kampret" or text=="kampret" or data[0]=="kampret":
+    if text=="/pun-kampret" or data[0]=="kampret":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://cdn2.boombastis.com/wp-content/uploads/2018/03/7kampret.jpeg',
     preview_image_url='https://cdn2.boombastis.com/wp-content/uploads/2018/03/7kampret.jpeg '
