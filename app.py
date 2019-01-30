@@ -205,7 +205,7 @@ def handle_message(event):
     preview_image_url='https://pbs.twimg.com/media/DYLLvU3VAAABy7F.jpg'
     ))
     #8
-    if text=="/anjing-bawel" or text=="bawel" or data[0]=="bawel":
+    if text=="/anjing-bawel" or text=="bawel anjing":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://s.kaskus.id/images/2018/03/14/7034635_201803140545070870.jpg',
     preview_image_url='https://s.kaskus.id/images/2018/03/14/7034635_201803140545070870.jpg'
@@ -230,10 +230,13 @@ def handle_message(event):
     
     #2 MULT CHOICE
     if text=="/pun-bawel" or text=="bawel" or data[0]=="bawel":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://1.bp.blogspot.com/-AHXu8nVDgww/Wr3YdzZvCVI/AAAAAAAABPg/AO7Mnycr_oQx3bdzboe6qyW8WyqjynfXACLcBGAs/s1600/IMG_20180327_222109.jpg',
-    preview_image_url='https://1.bp.blogspot.com/-AHXu8nVDgww/Wr3YdzZvCVI/AAAAAAAABPg/AO7Mnycr_oQx3bdzboe6qyW8WyqjynfXACLcBGAs/s1600/IMG_20180327_222109.jpg'
-    ))
+        a = random.randint(0, 1)
+        b = ["https://s.kaskus.id/images/2018/03/14/7034635_201803140545070870.jpg", "https://1.bp.blogspot.com/-AHXu8nVDgww/Wr3YdzZvCVI/AAAAAAAABPg/AO7Mnycr_oQx3bdzboe6qyW8WyqjynfXACLcBGAs/s1600/IMG_20180327_222109.jpg"]
+        if a == 0:
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url=b[a],
+        preview_image_url=b[a]
+        ))
     #3
     if text=="/pun-bego" or text=="bego" or data[0]=="bego":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
