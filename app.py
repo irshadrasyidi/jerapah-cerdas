@@ -84,8 +84,8 @@ def handle_message(event):
                                 text='kategori meme'
                             ),
                             URIAction(
-                                label='Akun IG saya',
-                                uri='https://www.instagram.com/irshadrasyidi/'
+                                label='Akun Twitter saya',
+                                uri='https://twitter.com/didotbrodot'
                             )
                         ]
                     ),
@@ -104,8 +104,8 @@ def handle_message(event):
                                 text='Jompa-Jampi'
                             ),
                             URIAction(
-                                label='Akun IG saya',
-                                uri='https://www.instagram.com/irshadrasyidi/'
+                                label='Akun Twitter saya',
+                                uri='https://twitter.com/didotbrodot'
                             )
                         ]
                     )
@@ -159,7 +159,7 @@ def handle_message(event):
 
 #ANJING
     if text=="meme anjing":
-        kamus="Kategori Anjing :\n1. /anjing-ga-jelas :\n'ga jelas', 'gaje', 'geje', 'gj'\n2. /anjing-ga-nyambung :\n'ga nyambung'\n3. /anjing-ngegas :\n4. /anjing-tolol :\n5. /anjing-semua :\n6. /anjing-jangkrik :\n7. /anjing-kok :\n8. /anjing-bawel :\n9. /anjing-baper :\n10. /anjing-kalem :"
+        kamus="Kategori Anjing :\n1. /anjing-ga-jelas :\n'ga jelas', 'gaje', 'geje', 'gj'\n2. /anjing-ga-nyambung :\n'ga nyambung'\n3. /anjing-ngegas :\n'ngegas'\n4. /anjing-tolol :\n'tolol'\n5. /anjing-semua :\n'asu kabeh'\n6. /anjing-jangkrik :\n'jangkrik'\n7. /anjing-kok :\n'kok anjing'\n8. /anjing-bawel :\n'bawel'\n9. /anjing-baper :\n'baper'\n10. /anjing-kalem :\n'kalem'"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     
     #1
