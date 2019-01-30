@@ -159,7 +159,7 @@ def handle_message(event):
 
 #ANJING
     if text=="meme anjing":
-        kamus="Kategori Anjing :\n1. /anjing-ga-jelas\n2. /anjing-ga-nyambung\n3. /anjing-ngegas\n4. /anjing-tolol\n5. /anjing-semua\n6. /anjing-jangkrik\n7. /anjing-kok\n8. /anjing-bawel\n9. /anjing-baper\n10. /anjing-kalem"
+        kamus="Kategori Anjing :\n1. /anjing-ga-jelas :\n'ga jelas', 'gaje', 'geje', 'gj'\n2. /anjing-ga-nyambung :\n'ga nyambung'\n3. /anjing-ngegas :\n4. /anjing-tolol :\n5. /anjing-semua :\n6. /anjing-jangkrik :\n7. /anjing-kok :\n8. /anjing-bawel :\n9. /anjing-baper :\n10. /anjing-kalem :"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     
     #1
