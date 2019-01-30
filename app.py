@@ -157,12 +157,22 @@ def handle_message(event):
             )
         ))
 
+#MULT CHOICE
+    #ANJING 8, PUN 2
+    if data[0]=="bawel":
+        a = random.randint(0, 1)
+        b = ["https://s.kaskus.id/images/2018/03/14/7034635_201803140545070870.jpg", "https://1.bp.blogspot.com/-AHXu8nVDgww/Wr3YdzZvCVI/AAAAAAAABPg/AO7Mnycr_oQx3bdzboe6qyW8WyqjynfXACLcBGAs/s1600/IMG_20180327_222109.jpg"]
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    original_content_url=b[a],
+    preview_image_url=b[a]
+    ))
+
 #ANJING
     if text=="meme anjing":
         kamus="Kategori Anjing :\n1. /anjing-ga-jelas :\n'ga jelas', 'gaje', 'geje', 'gj'\n2. /anjing-ga-nyambung :\n'ga nyambung'\n3. /anjing-ngegas :\n'ngegas'\n4. /anjing-tolol :\n'tolol'\n5. /anjing-semua :\n'asu kabeh'\n6. /anjing-jangkrik :\n'jangkrik'\n7. /anjing-kok :\n'kok anjing'\n8. /anjing-bawel :\n'bawel'\n9. /anjing-baper :\n'baper'\n10. /anjing-kalem :\n'kalem'"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     
-    #1
+    #1 MULT CHOICE
     if text=="/anjing-ga-jelas" or text=="ga jelas" or data[0]=="gaje" or data[0]=="geje" or data[0]=="gj":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://cdn.brilio.net/news/2018/04/05/141154/760223-meme-anjing.jpg',
@@ -174,14 +184,14 @@ def handle_message(event):
     original_content_url='https://pics.me.me/anjing-kaga-nyambung-31476214.png',
     preview_image_url='https://pics.me.me/anjing-kaga-nyambung-31476214.png'
     ))
-    #3
-    if text=="/anjing-ngegas" or text=="ngegas" or data[0]=="ngegas":
+    #3 MULT CHOICE
+    if text=="/anjing-ngegas" or data[0]=="ngegas":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://img.duniaku.net/2018/03/1521427491-anjing-ngegas.jpg',
     preview_image_url='https://img.duniaku.net/2018/03/1521427491-anjing-ngegas.jpg'
     ))
     #4
-    if text=="/anjing-tolol" or text=="tolol" or data[0]=="tolol":
+    if text=="/anjing-tolol" or data[0]=="tolol":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DYLq_4fU0AA9b-B.jpg',
     preview_image_url='https://pbs.twimg.com/media/DYLq_4fU0AA9b-B.jpg'
@@ -193,19 +203,19 @@ def handle_message(event):
     preview_image_url='https://1.bp.blogspot.com/-nsYjWy0W4AU/VArRtVc7MxI/AAAAAAAAM8k/SnNZKZxfNmA/s1600/bm-image-789062.jpeg'
     ))
     #6
-    if text=="/anjing-jangkrik" or text=="jangkrik" or data[0]=="jangkrik":
+    if text=="/anjing-jangkrik" or data[0]=="jangkrik":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DX95-GUUQAUIT7i.jpg',
     preview_image_url='https://pbs.twimg.com/media/DX95-GUUQAUIT7i.jpg'
     ))
     #7
-    if text=="/anjing-kok" or text=="kok anjing":
+    if text=="/anjing-kok" or text=="kok anjing" or text=="koq anjg":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DYLLvU3VAAABy7F.jpg',
     preview_image_url='https://pbs.twimg.com/media/DYLLvU3VAAABy7F.jpg'
     ))
-    #8
-    if text=="/anjing-bawel" or text=="bawel anjing":
+    #8 MULT CHOICE
+    if text=="/anjing-bawel":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://s.kaskus.id/images/2018/03/14/7034635_201803140545070870.jpg',
     preview_image_url='https://s.kaskus.id/images/2018/03/14/7034635_201803140545070870.jpg'
@@ -223,18 +233,18 @@ def handle_message(event):
     preview_image_url='https://scontent-atl3-1.cdninstagram.com/vp/a5162fe74fd29170ddbbfbba71863c1b/5C5537BA/t51.2885-15/e35/29088954_1860060620959017_6436073020644655104_n.jpg'
     ))
 
+
+
 #PUN
     if text=="meme pun":
         kamus="Kategori Pun :\n1. /pun-bawel\n2. /pun-bego\n3. /pun-ngegas\n4. /pun-gas\n5. /pun-gawat\n6. /pun-ikan-goblok\n7. /pun-gelut\n8. /pun-bubar\n9. /pun-ikan-goblok\n11. /pun-kancil\n12. /pun-kecewa\n13. /pun-keren\n14. /pun-kocak\n15. /pun-lodeh\n16. /pun-mager\n17. /pun-pinter\n18. /pun-sabi\n19. /pun-sekip\n20. /pun-siyap\n21. /pun-thanks\n22. /pun-kampret"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     
     #2 MULT CHOICE
-    if text=="/pun-bawel" or text=="bawel" or data[0]=="bawel":
-        a = random.randint(0, 1)
-        b = ["https://s.kaskus.id/images/2018/03/14/7034635_201803140545070870.jpg", "https://1.bp.blogspot.com/-AHXu8nVDgww/Wr3YdzZvCVI/AAAAAAAABPg/AO7Mnycr_oQx3bdzboe6qyW8WyqjynfXACLcBGAs/s1600/IMG_20180327_222109.jpg"]
+    if text=="/pun-bawel":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url=b[a],
-    preview_image_url=b[a]
+    original_content_url='https://1.bp.blogspot.com/-AHXu8nVDgww/Wr3YdzZvCVI/AAAAAAAABPg/AO7Mnycr_oQx3bdzboe6qyW8WyqjynfXACLcBGAs/s1600/IMG_20180327_222109.jpg',
+    preview_image_url='https://1.bp.blogspot.com/-AHXu8nVDgww/Wr3YdzZvCVI/AAAAAAAABPg/AO7Mnycr_oQx3bdzboe6qyW8WyqjynfXACLcBGAs/s1600/IMG_20180327_222109.jpg'
     ))
     #3
     if text=="/pun-bego" or text=="bego" or data[0]=="bego":
@@ -255,97 +265,97 @@ def handle_message(event):
     preview_image_url='https://s.kaskus.id/images/2017/05/01/9437462_201705010152380796.jpg'
     ))
     #6
-    if text=="/pun-gawat" or text=="gawat" or data[0]=="gawat":
+    if text=="/pun-gawat" or data[0]=="gawat":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://em.wattpad.com/a597dfd0d5b0115078e72028c89b42f412c398e2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f4c346e547651464b426c66765a513d3d2d3532352e313531613331396163343031306232343335303035353539383537312e6a7067?s=fit&w=720&h=720',
     preview_image_url='https://em.wattpad.com/a597dfd0d5b0115078e72028c89b42f412c398e2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f4c346e547651464b426c66765a513d3d2d3532352e313531613331396163343031306232343335303035353539383537312e6a7067?s=fit&w=720&h=720'
     ))
     #6
-    if text=="/pun-gelut" or text=="gelut" or data[0]=="gelut":
+    if text=="/pun-gelut" or data[0]=="gelut":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pics.me.me/gelut-29735709.png',
     preview_image_url='https://pics.me.me/gelut-29735709.png'
     ))
     #7 MULT CHOICE
-    if text=="/pun-ikan-goblok" or text=="goblok" or data[0]=="goblok":
+    if text=="/pun-ikan-goblok" or data[0]=="goblok":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://i.pinimg.com/236x/d2/55/46/d25546911ab75e65de5d0e5b6f267c5c.jpg',
     preview_image_url='https://i.pinimg.com/236x/d2/55/46/d25546911ab75e65de5d0e5b6f267c5c.jpg'
     ))
     #8
-    if text=="/pun-bubar" or text=="bubar" or data[0]=="bubar" or data[0]=="leren":
+    if text=="/pun-bubar" or data[0]=="bubar" or data[0]=="leren":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DY9OLOLVwAEadK7.jpg',
     preview_image_url='https://pbs.twimg.com/media/DY9OLOLVwAEadK7.jpg'
     ))
     #9
-    if text=="/pun-kancil" or text=="kancil" or data[0]=="kancil":
+    if text=="/pun-kancil" or data[0]=="kancil":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DjSIfjUVAAAX5WQ.jpg:large',
     preview_image_url='https://pbs.twimg.com/media/DjSIfjUVAAAX5WQ.jpg:large'
     ))
     #10
-    if text=="/pun-kecewa" or text=="kecewa" or data[0]=="kecewa":
+    if text=="/pun-kecewa" or data[0]=="kecewa":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pics.me.me/kecewa-31619297.png',
     preview_image_url='https://pics.me.me/kecewa-31619297.png'
     ))
     #11
-    if text=="/pun-keren" or text=="keren" or data[0]=="keren" or data[0]=="cool" or data[0]=="kewl":
+    if text=="/pun-keren" or data[0]=="keren" or data[0]=="cool" or data[0]=="kewl":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://media.keepo.me/20180306164724/511x288--28872329_1460633664058488_1580595060448431199_n.jpg',
     preview_image_url='https://media.keepo.me/20180306164724/511x288--28872329_1460633664058488_1580595060448431199_n.jpg'
     ))
     #12
-    if text=="/pun-kocak" or text=="kocak" or data[0]=="kocak" or data[0]=="ngakak":
+    if text=="/pun-kocak" or data[0]=="kocak" or data[0]=="ngakak":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DYL2-5dVoAARtb4.jpg',
     preview_image_url='https://pbs.twimg.com/media/DYL2-5dVoAARtb4.jpg'
     ))
     #13
-    if text=="/pun-lodeh" or text=="terserah" or data[0]=="terserah" or data[0]=="serah" or data[0]=="seterah":
+    if text=="/pun-lodeh" data[0]=="terserah" or data[0]=="serah" or data[0]=="seterah":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pics.me.me/terserah-lodeh-31686397.png',
     preview_image_url='https://pics.me.me/terserah-lodeh-31686397.png'
     ))
     #14
-    if text=="/pun-mager" or text=="mager" or data[0]=="mager":
+    if text=="/pun-mager" or data[0]=="mager":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://storage.jualo.com/original/12555347/bengkel-las-aneka-kar-alat-musik-lainnya-12555347.jpg',
     preview_image_url='https://storage.jualo.com/original/12555347/bengkel-las-aneka-kar-alat-musik-lainnya-12555347.jpg'
     ))
     #15
-    if text=="/pun-pinter" or text=="pinter" or data[0]=="pinter" or data[0]=="pintar" or data[0]=="smart":
+    if text=="/pun-pinter" or data[0]=="pinter" or data[0]=="pintar" or data[0]=="smart":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DkNtokXVAAA3gdr.jpg',
     preview_image_url='https://pbs.twimg.com/media/DkNtokXVAAA3gdr.jpg'
     ))
     #16
-    if text=="/pun-sabi" or text=="sabi" or data[0]=="sabi" or data[0]=="bisa":
+    if text=="/pun-sabi" or data[0]=="sabi" or data[0]=="bisa":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DbI1oKdUMAAKHl3.jpg',
     preview_image_url='https://pbs.twimg.com/media/DbI1oKdUMAAKHl3.jpg'
     ))
     #17
-    if text=="/pun-sekip" or text=="skip" or data[0]=="skip" or data[0]=="sekip" or data[0]=="sqip" or data[0]=="sqiv":
+    if text=="/pun-sekip" or data[0]=="skip" or data[0]=="sekip" or data[0]=="sqip" or data[0]=="sqiv":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://4.bp.blogspot.com/-TXgBZ19sxHs/Wr3bhYlQy6I/AAAAAAAABPs/vbC_Be9GFmsWrhytSZXd90D9DaQymyhdQCLcBGAs/s1600/IMG_20180327_222132.jpg',
     preview_image_url='https://4.bp.blogspot.com/-TXgBZ19sxHs/Wr3bhYlQy6I/AAAAAAAABPs/vbC_Be9GFmsWrhytSZXd90D9DaQymyhdQCLcBGAs/s1600/IMG_20180327_222132.jpg'
     ))
     #18
-    if text=="/pun-siyap" or text=="siyap" or data[0]=="siap" or data[0]=="siyap" or data[0]=="shap" or data[0]=="ready" or data[0]=="siaap":
+    if text=="/pun-siyap" or data[0]=="siap" or data[0]=="siyap" or data[0]=="shap" or data[0]=="ready" or data[0]=="siaap":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://www.teknosaurus.com/wp-content/uploads/2018/03/sayap-e1521330529574.jpg',
     preview_image_url='https://www.teknosaurus.com/wp-content/uploads/2018/03/sayap-e1521330529574.jpg'
     ))
     #20
-    if text=="/pun-thanks" or text=="thanks" or data[0]=="thanks" or data[0]=="thank" or data[0]=="makasih" or data[0]=="trims":
+    if text=="/pun-thanks" or data[0]=="thanks" or data[0]=="thank" or data[0]=="makasih" or data[0]=="trims":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://3.bp.blogspot.com/-2bHJrd2yl7s/Wr3Sy2zDudI/AAAAAAAABNk/DKwqkIkvufUteDl_CQlvfV98EjDNeTJagCLcBGAs/s1600/IMG_20180327_221555.jpg',
     preview_image_url='https://3.bp.blogspot.com/-2bHJrd2yl7s/Wr3Sy2zDudI/AAAAAAAABNk/DKwqkIkvufUteDl_CQlvfV98EjDNeTJagCLcBGAs/s1600/IMG_20180327_221555.jpg'
     ))
     #21
-    if text=="/pun-kampret" or text=="kampret" or data[0]=="kampret":
+    if text=="/pun-kampret" or data[0]=="kampret":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://cdn2.boombastis.com/wp-content/uploads/2018/03/7kampret.jpeg',
     preview_image_url='https://cdn2.boombastis.com/wp-content/uploads/2018/03/7kampret.jpeg '
