@@ -369,14 +369,92 @@ def handle_message(event):
     
 #WIKIHOW
     if text=="meme wikihow":
-        kamus="Kategori Wikihow :\n1. /anjing-ga-jelas\n2. /anjing-ga-nyambung\n3. /anjing-ngegas\n4. /anjing-tolol\n5. /anjing-semua\n6. /anjing-asu\n7. /anjing-ga-sopan\n8. /anjing-ga-jelas"
+        kamus="Meme Wikihow"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
-    if text=="/meme-seto":
-        kamus="Kategori Seto :\n1. /anjing-ga-jelas\n2. /anjing-ga-nyambung\n3. /anjing-ngegas\n4. /anjing-tolol\n5. /anjing-semua\n6. /anjing-asu\n7. /anjing-ga-sopan\n8. /anjing-ga-jelas"
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
-
-
-
+    #1
+    if text=="/wkh-terciduk":
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    original_content_url='https://pbs.twimg.com/media/DUnGmbTVAAYbI8w.jpg',
+    preview_image_url='https://pbs.twimg.com/media/DUnGmbTVAAYbI8w.jpg'
+    ))
+    #2
+    if text=="/wkh-berkelahi1":
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    original_content_url='https://ktawa.com/wp-content/uploads/2018/03/DXvYNzGUMAAc6wT.jpg',
+    preview_image_url='https://ktawa.com/wp-content/uploads/2018/03/DXvYNzGUMAAc6wT.jpg'
+    ))
+    #2
+    if text=="/wkh-berkelahi2":
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    original_content_url='https://pics.me.me/thumb_ayo-berkelahi-aku-gasuka-kalian-rukun-tribunstyle-com-meme-wikihow-35295086.png',
+    preview_image_url='https://pics.me.me/thumb_ayo-berkelahi-aku-gasuka-kalian-rukun-tribunstyle-com-meme-wikihow-35295086.png'
+    ))
+    #3
+    if text=="/wkh-tabok":
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    original_content_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120552320355.jpg',
+    preview_image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120552320355.jpg'
+    ))
+    #4
+    if text=="/wkh-kalem":
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    original_content_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120524290806.jpg',
+    preview_image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120524290806.jpg'
+    ))
+    #5
+    if text=="/wkh-maksiat":
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    original_content_url='https://pbs.twimg.com/media/DUnCIAUUMAArpyA.jpg',
+    preview_image_url='https://pbs.twimg.com/media/DUnCIAUUMAArpyA.jpg'
+    ))
+    #6
+    if text=="/wkh-bacot":
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    original_content_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120533550838.jpg',
+    preview_image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120533550838.jpg'
+    ))
+    #7
+    if text=="/wkh-sabar":
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    original_content_url='https://i.pinimg.com/750x/f3/83/c3/f383c3106936a4728d924dd7ff945c20.jpg',
+    preview_image_url='https://i.pinimg.com/750x/f3/83/c3/f383c3106936a4728d924dd7ff945c20.jpg'
+    ))
+    #8
+    if text=="/wkh-posthink":
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    original_content_url='https://pbs.twimg.com/media/DU3n1OuV4AE9sZg.jpg',
+    preview_image_url='https://pbs.twimg.com/media/DU3n1OuV4AE9sZg.jpg'
+    ))
+    #9
+    if text=="/wkh-bodoh":
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    original_content_url='https://ktawa.com/wp-content/uploads/2018/05/2761997_201803120735020920.jpg',
+    preview_image_url='https://ktawa.com/wp-content/uploads/2018/05/2761997_201803120735020920.jpg'
+    ))
+    #10
+    if text=="/wkh-bodo":
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    original_content_url='https://ktawa.com/wp-content/uploads/2018/09/DXgqnNRVwAA-_6F.jpg',
+    preview_image_url='https://ktawa.com/wp-content/uploads/2018/09/DXgqnNRVwAA-_6F.jpg'
+    ))
+    #11
+    if text=="/wkh-bomat":
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    original_content_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120525540375.jpg',
+    preview_image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120525540375.jpg'
+    ))
+    #12
+    if text=="/wkh-diam":
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    original_content_url='https://pbs.twimg.com/media/DXgpJPMU8AAxjFm.jpg',
+    preview_image_url='https://pbs.twimg.com/media/DXgpJPMU8AAxjFm.jpg'
+    ))
+    #13
+    if text=="/wkh-kesel":
+        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    original_content_url='https://pbs.twimg.com/media/DVtT5HfVoAA74P3.jpg',
+    preview_image_url='https://pbs.twimg.com/media/DVtT5HfVoAA74P3.jpg'
+    ))
 
 #etc
     if text=="cuy":
