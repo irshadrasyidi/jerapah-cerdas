@@ -4,3 +4,7 @@ meme anjing
 Kategori Anjing :\n1. /anjing-ga-jelas :\n'ga jelas', 'gaje', 'geje', 'gj'\n2. /anjing-ga-nyambung :\n'ga nyambung'\n3. /anjing-ngegas :\n'ngegas'\n4. /anjing-tolol :\n'tolol'\n5. /anjing-semua :\n'asu kabeh'\n6. /anjing-jangkrik :\n'jangkrik'\n7. /anjing-kok :\n'kok anjing'\n8. /anjing-bawel :\n'bawel'\n9. /anjing-baper :\n'baper'\n10. /anjing-kalem :\n'kalem'
 
 meme pun
+Kategori Pun :\n1. /pun-bawel\n2. /pun-bego\n3. /pun-ngegas\n4. /pun-gas\n5. /pun-gawat\n6. /pun-ikan-goblok\n7. /pun-gelut\n8. /pun-bubar\n9. /pun-ikan-goblok\n11. /pun-kancil\n12. /pun-kecewa\n13. /pun-keren\n14. /pun-kocak\n15. /pun-lodeh\n16. /pun-mager\n17. /pun-pinter\n18. /pun-sabi\n19. /pun-sekip\n20. /pun-siyap\n21. /pun-thanks\n22. /pun-kampret
+
+meme wikihow
+Kategori Wikihow :\n1. /wkh-terciduk\n
