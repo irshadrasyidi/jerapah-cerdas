@@ -164,12 +164,14 @@ def handle_message(event):
         a = random.randint(0, 1)
         b = ["https://ktawa.com/wp-content/uploads/2018/05/2761997_201803120735020920.jpg", "https://ktawa.com/wp-content/uploads/2018/09/DXgqnNRVwAA-_6F.jpg"]
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url=b[a],preview_image_url=b[a]))
+        del text
     #BAWEL
     #ANJING 8, PUN 2
     elif text=="/bawel" or data[0]=="bawel" or data[1]=="bawel":
         a = random.randint(0, 1)
         b = ["https://s.kaskus.id/images/2018/03/14/7034635_201803140545070870.jpg", "https://1.bp.blogspot.com/-AHXu8nVDgww/Wr3YdzZvCVI/AAAAAAAABPg/AO7Mnycr_oQx3bdzboe6qyW8WyqjynfXACLcBGAs/s1600/IMG_20180327_222109.jpg"]
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url=b[a],preview_image_url=b[a]))
+        text = None
 
 #ANJING
     elif text=="meme anjing":
