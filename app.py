@@ -199,7 +199,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     
     #1 MULT CHOICE
-    if text=="/anjing-ga-jelas" or text=="ga jelas" or text=="g jelas" or text=="gaje" or text=="geje" or text=="gj" or data[0]=="gaje" or data[0]=="geje" or data[0]=="gj" or data[1]=="gaje" or data[1]=="geje" or data[1]=="gj":
+    if (text=="/anjing-ga-jelas" or text=="ga jelas" or text=="g jelas" or text=="gaje" or text=="geje" or text=="gj") or (data[0]=="gaje" or data[0]=="geje" or data[0]=="gj" or data[1]=="gaje" or data[1]=="geje" or data[1]=="gj"):
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://cdn.brilio.net/news/2018/04/05/141154/760223-meme-anjing.jpg',
     preview_image_url='https://cdn.brilio.net/news/2018/04/05/141154/760223-meme-anjing.jpg'
