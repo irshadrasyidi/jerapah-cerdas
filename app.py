@@ -157,6 +157,8 @@ def handle_message(event):
             )
         ))
 
+    if text=="tes" or data[0]=="tes" or data[1]=="tes":
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='Parah, '+len(data)+' jahat bgt'+len(text)+'coy'))
 #MULT CHOICE
     #BAWEL
     #ANJING 8, PUN 2
