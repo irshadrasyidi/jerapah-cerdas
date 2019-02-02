@@ -174,8 +174,8 @@ def handle_message(event):
         c = random.randint(0, 1)
         d = ["https://ktawa.com/wp-content/uploads/2018/05/2761997_201803120735020920.jpg", "https://ktawa.com/wp-content/uploads/2018/09/DXgqnNRVwAA-_6F.jpg"]
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url=b[a],
-    preview_image_url=b[a]
+    original_content_url=b[c],
+    preview_image_url=b[c]
     ))
 
 #ANJING
