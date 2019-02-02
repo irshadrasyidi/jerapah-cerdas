@@ -170,7 +170,7 @@ def handle_message(event):
 
     #BODOH
     #WIKIHOW 9, WIKIHOW 10
-    if text=="bodoh" or text=="bodo" or data[0]=="bodoh" or data[1]=="bodoh" or data[0]=="bodo" or data[1]=="bodo":
+    if text=="bodoh" or data[0]=="bodoh" or data[1]=="bodoh" or data[0]=="bodo" or data[1]=="bodo":
         a = random.randint(0, 1)
         b = ["https://ktawa.com/wp-content/uploads/2018/05/2761997_201803120735020920.jpg", "https://ktawa.com/wp-content/uploads/2018/09/DXgqnNRVwAA-_6F.jpg"]
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
@@ -202,7 +202,7 @@ def handle_message(event):
     preview_image_url='https://img.duniaku.net/2018/03/1521427491-anjing-ngegas.jpg'
     ))
     #4
-    if text=="/anjing-tolol" or text=="tolol" or data[0]=="tolol" or data[1]=="tolol":
+    if text=="tolol" or data[0]=="tolol" or data[1]=="tolol":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DYLq_4fU0AA9b-B.jpg',
     preview_image_url='https://pbs.twimg.com/media/DYLq_4fU0AA9b-B.jpg'
