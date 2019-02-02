@@ -171,8 +171,8 @@ def handle_message(event):
     #BODOH
     #WIKIHOW 9, WIKIHOW 10
     if data[0]=="bodoh" or data[1]=="bodoh" or data[0]=="bodo" or data[1]=="bodo":
-        a = random.randint(0, 1)
-        b = ["https://ktawa.com/wp-content/uploads/2018/05/2761997_201803120735020920.jpg", "https://ktawa.com/wp-content/uploads/2018/09/DXgqnNRVwAA-_6F.jpg"]
+        c = random.randint(0, 1)
+        d = ["https://ktawa.com/wp-content/uploads/2018/05/2761997_201803120735020920.jpg", "https://ktawa.com/wp-content/uploads/2018/09/DXgqnNRVwAA-_6F.jpg"]
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url=b[a],
     preview_image_url=b[a]
@@ -360,7 +360,7 @@ def handle_message(event):
     preview_image_url='https://www.teknosaurus.com/wp-content/uploads/2018/03/sayap-e1521330529574.jpg'
     ))
     #20
-    if text=="/pun-thanks" or data[0]=="thanks" or data[0]=="thank" or data[0]=="makasih" or data[0]=="trims" or data[1]=="thanks" or data[1]=="thank" or data[1]=="makasih" or data[1]=="trims":
+    if text=="/pun-thanks" or data[0]=="thanks" or data[0]=="thank" or data[0]=="makasih" or data[0]=="trims" or data[0]=="thx" or data[0]=="maaci" or data[1]=="thanks" or data[1]=="thank" or data[1]=="makasih" or data[1]=="trims" or data[1]=="thx" or data[1]=="maaci":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://3.bp.blogspot.com/-2bHJrd2yl7s/Wr3Sy2zDudI/AAAAAAAABNk/DKwqkIkvufUteDl_CQlvfV98EjDNeTJagCLcBGAs/s1600/IMG_20180327_221555.jpg',
     preview_image_url='https://3.bp.blogspot.com/-2bHJrd2yl7s/Wr3Sy2zDudI/AAAAAAAABNk/DKwqkIkvufUteDl_CQlvfV98EjDNeTJagCLcBGAs/s1600/IMG_20180327_221555.jpg'
@@ -424,7 +424,7 @@ def handle_message(event):
     preview_image_url='https://i.pinimg.com/750x/f3/83/c3/f383c3106936a4728d924dd7ff945c20.jpg'
     ))
     #8
-    if text=="/wkh-posthink" or data[0]=="positif" or data[1]=="positif" or text=="positive thinking":
+    if text=="/wkh-posthink" or data[0]=="positif" or data[1]=="positif" or data[0]=="positive" or data[1]=="positive" or text=="positive thinking":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DU3n1OuV4AE9sZg.jpg',
     preview_image_url='https://pbs.twimg.com/media/DU3n1OuV4AE9sZg.jpg'
