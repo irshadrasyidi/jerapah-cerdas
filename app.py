@@ -324,7 +324,7 @@ def handle_message(event):
     preview_image_url='https://pbs.twimg.com/media/DYL2-5dVoAARtb4.jpg'
     ))
     #13
-    if text=="/pun-lodeh" or data[0]=="terserah" or data[0]=="serah" or data[0]=="seterah" or data[1]=="terserah" or data[1]=="serah" or data[1]=="seterah":
+    if text=="/pun-lodeh" or data[1]=="terserah" or data[1]=="serah" or data[1]=="seterah" or data[0]=="terserah" or data[0]=="serah" or data[0]=="seterah":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pics.me.me/terserah-lodeh-31686397.png',
     preview_image_url='https://pics.me.me/terserah-lodeh-31686397.png'
