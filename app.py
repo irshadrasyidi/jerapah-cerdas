@@ -160,13 +160,13 @@ def handle_message(event):
 #MULT CHOICE
     #BODOH
     #WIKIHOW 9, WIKIHOW 10
-    if text=="/mult-bodoh" or text=="bodoh" or text=="bodo":
-        a = random.randint(0, 1)
-        b = ["https://ktawa.com/wp-content/uploads/2018/05/2761997_201803120735020920.jpg", "https://ktawa.com/wp-content/uploads/2018/09/DXgqnNRVwAA-_6F.jpg"]
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url=b[a],
-    preview_image_url=b[a]
-    ))
+    # if text=="/mult-bodoh" or text=="bodoh" or text=="bodo":
+    #     a = random.randint(0, 1)
+    #     b = ["https://ktawa.com/wp-content/uploads/2018/05/2761997_201803120735020920.jpg", "https://ktawa.com/wp-content/uploads/2018/09/DXgqnNRVwAA-_6F.jpg"]
+    #     line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    # original_content_url=b[a],
+    # preview_image_url=b[a]
+    # ))
     if data[0]=="bodoh" or data[1]=="bodoh" or data[0]=="bodo" or data[1]=="bodo":
         a = random.randint(0, 1)
         b = ["https://ktawa.com/wp-content/uploads/2018/05/2761997_201803120735020920.jpg", "https://ktawa.com/wp-content/uploads/2018/09/DXgqnNRVwAA-_6F.jpg"]
@@ -177,13 +177,13 @@ def handle_message(event):
 
     #BAWEL
     #ANJING 8, PUN 2
-    if text=="bawel":
-        a = random.randint(0, 1)
-        b = ["https://s.kaskus.id/images/2018/03/14/7034635_201803140545070870.jpg", "https://1.bp.blogspot.com/-AHXu8nVDgww/Wr3YdzZvCVI/AAAAAAAABPg/AO7Mnycr_oQx3bdzboe6qyW8WyqjynfXACLcBGAs/s1600/IMG_20180327_222109.jpg"]
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url=b[a],
-    preview_image_url=b[a]
-    ))
+    # if text=="bawel":
+    #     a = random.randint(0, 1)
+    #     b = ["https://s.kaskus.id/images/2018/03/14/7034635_201803140545070870.jpg", "https://1.bp.blogspot.com/-AHXu8nVDgww/Wr3YdzZvCVI/AAAAAAAABPg/AO7Mnycr_oQx3bdzboe6qyW8WyqjynfXACLcBGAs/s1600/IMG_20180327_222109.jpg"]
+    #     line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+    # original_content_url=b[a],
+    # preview_image_url=b[a]
+    # ))
     if data[0]=="bawel" or data[1]=="bawel":
         a = random.randint(0, 1)
         b = ["https://s.kaskus.id/images/2018/03/14/7034635_201803140545070870.jpg", "https://1.bp.blogspot.com/-AHXu8nVDgww/Wr3YdzZvCVI/AAAAAAAABPg/AO7Mnycr_oQx3bdzboe6qyW8WyqjynfXACLcBGAs/s1600/IMG_20180327_222109.jpg"]
