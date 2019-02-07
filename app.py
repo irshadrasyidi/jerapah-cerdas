@@ -365,49 +365,49 @@ def handle_message(event):
         kamus="Meme Wikihow"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     #1
-    if text=="/wkh-terciduk" or data[0]=="terciduk" or data[0]=="tercyduk" or data[0]=="tercyduck" or data[0]=="diciduk" or data[0]=="dicyduk" or data[0]=="dicyduck"  or data[1]=="terciduk" or data[1]=="tercyduk" or data[1]=="tercyduck" or data[1]=="diciduk" or data[1]=="dicyduk" or data[1]=="dicyduck":
+    if data[0]=="terciduk" or data[1]=="terciduk" or data[2]=="terciduk":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DUnGmbTVAAYbI8w.jpg',
     preview_image_url='https://pbs.twimg.com/media/DUnGmbTVAAYbI8w.jpg'
     ))
     #2
-    if text=="/wkh-berkelahi1" or data[0]=="berkelahi" or data[0]=="tengkar" or data[1]=="berkelahi" or data[1]=="tengkar":
+    if data[0]=="berkelahi" or data[0]=="tengkar" or data[1]=="berkelahi" or data[1]=="tengkar" or data[2]=="berkelahi" or data[2]=="tengkar":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://ktawa.com/wp-content/uploads/2018/03/DXvYNzGUMAAc6wT.jpg',
     preview_image_url='https://ktawa.com/wp-content/uploads/2018/03/DXvYNzGUMAAc6wT.jpg'
     ))
     #3
-    if text=="/wkh-tabok" or data[0]=="tabok" or data[1]=="tabok":
+    if data[0]=="tabok" or data[1]=="tabok" or data[2]=="tabok":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120552320355.jpg',
     preview_image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120552320355.jpg'
     ))
     #4
-    if text=="/wkh-kalem" or data[0]=="kalem" or data[1]=="kalem" or data[0]=="calm" or data[1]=="calm":
+    if data[0]=="kalem" or data[1]=="kalem" or data[2]=="kalem"  or data[0]=="calm" or data[1]=="calm" or data[2]=="calm":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120524290806.jpg',
     preview_image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120524290806.jpg'
     ))
     #5
-    if text=="/wkh-maksiat" or data[0]=="maksiat" or data[1]=="maksiat":
+    if data[0]=="maksiat" or data[1]=="maksiat" or data[2]=="maksiat":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DUnCIAUUMAArpyA.jpg',
     preview_image_url='https://pbs.twimg.com/media/DUnCIAUUMAArpyA.jpg'
     ))
     #6
-    if text=="/wkh-bacot" or data[0]=="bacot" or data[1]=="bacot" or data[0]=="bct" or data[1]=="bct" or data[0]=="bacod" or data[1]=="bacod" or data[0]=="bcd" or data[1]=="bcd":
+    if data[0]=="bacot" or data[1]=="bacot" or data[2]=="bacot" or data[0]=="bct" or data[1]=="bct" or data[2]=="bct" or data[0]=="bacod" or data[1]=="bacod" or data[2]=="bacod" or data[0]=="bcd" or data[1]=="bcd" or data[2]=="bcd":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120533550838.jpg',
     preview_image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120533550838.jpg'
     ))
     #7
-    if text=="/wkh-sabar" or data[0]=="sabar" or data[1]=="sabar":
+    if data[0]=="sabar" or data[1]=="sabar" or data[2]=="sabar":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://i.pinimg.com/750x/f3/83/c3/f383c3106936a4728d924dd7ff945c20.jpg',
     preview_image_url='https://i.pinimg.com/750x/f3/83/c3/f383c3106936a4728d924dd7ff945c20.jpg'
     ))
     #8
-    if text=="/wkh-posthink" or data[0]=="positif" or data[1]=="positif" or data[0]=="positive" or data[1]=="positive" or text=="positive thinking":
+    if data[0]=="positif" or data[1]=="positif" or data[0]=="positive" or data[1]=="positive" or text=="positive thinking":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DU3n1OuV4AE9sZg.jpg',
     preview_image_url='https://pbs.twimg.com/media/DU3n1OuV4AE9sZg.jpg'
