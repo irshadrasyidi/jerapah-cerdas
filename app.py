@@ -407,7 +407,7 @@ def handle_message(event):
     preview_image_url='https://i.pinimg.com/750x/f3/83/c3/f383c3106936a4728d924dd7ff945c20.jpg'
     ))
     #8
-    if data[0]=="positif" or data[1]=="positif" or data[0]=="positive" or data[1]=="positive" or text=="positive thinking":
+    if text=="positive thinking" or text=="pikiran positif":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DU3n1OuV4AE9sZg.jpg',
     preview_image_url='https://pbs.twimg.com/media/DU3n1OuV4AE9sZg.jpg'
