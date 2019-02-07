@@ -433,7 +433,7 @@ def handle_message(event):
     preview_image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120525540375.jpg'
     ))
     #12
-    if text=="/wkh-diam":
+    if data[0]=="diam" or data[1]=="diam":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://pbs.twimg.com/media/DXgpJPMU8AAxjFm.jpg',
     preview_image_url='https://pbs.twimg.com/media/DXgpJPMU8AAxjFm.jpg'
