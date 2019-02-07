@@ -444,8 +444,18 @@ def handle_message(event):
     ))
 
 #etc
-    if data[0]=="cuy":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=len(data)))
+    if len(data)>=3:
+        if data[0]=="cuy":
+            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="a"))
+        if data[1]=="cuy":
+            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="b"))
+        if data[2]=="cuy":
+            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="c"))
+    else:
+        if text=="cuy":
+            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="d"))
+        if text=="cuy cuy":
+            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="e"))
     if text=="tyo":
         line_bot_api.reply_message(event.reply_token,ImageSendMessage(
     original_content_url='https://s0.bukalapak.com/img/0343005662/w-1000/Boneka_Anak_Jerapah_Imut_Menggemaskan.jpg',
