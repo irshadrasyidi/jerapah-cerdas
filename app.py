@@ -249,6 +249,85 @@ def handle_message(event):
         preview_image_url='https://cdn2.boombastis.com/wp-content/uploads/2018/03/7kampret.jpeg '
         ))
 
+        #1
+        elif data[0]=="terciduk" or data[1]=="terciduk" or data[2]=="terciduk":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://pbs.twimg.com/media/DUnGmbTVAAYbI8w.jpg',
+        preview_image_url='https://pbs.twimg.com/media/DUnGmbTVAAYbI8w.jpg'
+        ))
+        #2
+        elif data[0]=="berkelahi" or data[0]=="tengkar" or data[1]=="berkelahi" or data[1]=="tengkar" or data[2]=="berkelahi" or data[2]=="tengkar":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://ktawa.com/wp-content/uploads/2018/03/DXvYNzGUMAAc6wT.jpg',
+        preview_image_url='https://ktawa.com/wp-content/uploads/2018/03/DXvYNzGUMAAc6wT.jpg'
+        ))
+        #3
+        elif data[0]=="tabok" or data[1]=="tabok" or data[2]=="tabok":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120552320355.jpg',
+        preview_image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120552320355.jpg'
+        ))
+        #4
+        elif data[0]=="kalem" or data[1]=="kalem" or data[2]=="kalem"  or data[0]=="calm" or data[1]=="calm" or data[2]=="calm":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120524290806.jpg',
+        preview_image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120524290806.jpg'
+        ))
+        #5
+        elif data[0]=="maksiat" or data[1]=="maksiat" or data[2]=="maksiat":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://pbs.twimg.com/media/DUnCIAUUMAArpyA.jpg',
+        preview_image_url='https://pbs.twimg.com/media/DUnCIAUUMAArpyA.jpg'
+        ))
+        #6
+        elif data[0]=="bacot" or data[1]=="bacot" or data[2]=="bacot" or data[0]=="bct" or data[1]=="bct" or data[2]=="bct" or data[0]=="bacod" or data[1]=="bacod" or data[2]=="bacod" or data[0]=="bcd" or data[1]=="bcd" or data[2]=="bcd":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120533550838.jpg',
+        preview_image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120533550838.jpg'
+        ))
+        #7
+        elif data[0]=="sabar" or data[1]=="sabar" or data[2]=="sabar":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://i.pinimg.com/750x/f3/83/c3/f383c3106936a4728d924dd7ff945c20.jpg',
+        preview_image_url='https://i.pinimg.com/750x/f3/83/c3/f383c3106936a4728d924dd7ff945c20.jpg'
+        ))
+        #8
+        elif text=="positive thinking" or text=="pikiran positif":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://pbs.twimg.com/media/DU3n1OuV4AE9sZg.jpg',
+        preview_image_url='https://pbs.twimg.com/media/DU3n1OuV4AE9sZg.jpg'
+        ))
+        #9
+        elif text=="/wkh-bodoh":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://ktawa.com/wp-content/uploads/2018/05/2761997_201803120735020920.jpg',
+        preview_image_url='https://ktawa.com/wp-content/uploads/2018/05/2761997_201803120735020920.jpg'
+        ))
+        #10
+        elif text=="/wkh-bodo":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://ktawa.com/wp-content/uploads/2018/09/DXgqnNRVwAA-_6F.jpg',
+        preview_image_url='https://ktawa.com/wp-content/uploads/2018/09/DXgqnNRVwAA-_6F.jpg'
+        ))
+        #11
+        elif data[0]=="bomat" or data[1]=="bomat":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120525540375.jpg',
+        preview_image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120525540375.jpg'
+        ))
+        #12
+        elif data[0]=="diam" or data[1]=="diam":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://pbs.twimg.com/media/DXgpJPMU8AAxjFm.jpg',
+        preview_image_url='https://pbs.twimg.com/media/DXgpJPMU8AAxjFm.jpg'
+        ))
+        #13
+        elif data[0]=="kesel" or data[1]=="kesel":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://pbs.twimg.com/media/DVtT5HfVoAA74P3.jpg',
+        preview_image_url='https://pbs.twimg.com/media/DVtT5HfVoAA74P3.jpg'
+        ))
+
 
     if text=="/menu":
         line_bot_api.reply_message(event.reply_token,TemplateSendMessage(
@@ -370,101 +449,24 @@ def handle_message(event):
     elif text=="meme wikihow":
         kamus="Meme Wikihow"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
-    #1
-    if data[0]=="terciduk" or data[1]=="terciduk" or data[2]=="terciduk":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://pbs.twimg.com/media/DUnGmbTVAAYbI8w.jpg',
-    preview_image_url='https://pbs.twimg.com/media/DUnGmbTVAAYbI8w.jpg'
-    ))
-    #2
-    if data[0]=="berkelahi" or data[0]=="tengkar" or data[1]=="berkelahi" or data[1]=="tengkar" or data[2]=="berkelahi" or data[2]=="tengkar":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://ktawa.com/wp-content/uploads/2018/03/DXvYNzGUMAAc6wT.jpg',
-    preview_image_url='https://ktawa.com/wp-content/uploads/2018/03/DXvYNzGUMAAc6wT.jpg'
-    ))
-    #3
-    if data[0]=="tabok" or data[1]=="tabok" or data[2]=="tabok":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120552320355.jpg',
-    preview_image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120552320355.jpg'
-    ))
-    #4
-    if data[0]=="kalem" or data[1]=="kalem" or data[2]=="kalem"  or data[0]=="calm" or data[1]=="calm" or data[2]=="calm":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120524290806.jpg',
-    preview_image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120524290806.jpg'
-    ))
-    #5
-    if data[0]=="maksiat" or data[1]=="maksiat" or data[2]=="maksiat":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://pbs.twimg.com/media/DUnCIAUUMAArpyA.jpg',
-    preview_image_url='https://pbs.twimg.com/media/DUnCIAUUMAArpyA.jpg'
-    ))
-    #6
-    if data[0]=="bacot" or data[1]=="bacot" or data[2]=="bacot" or data[0]=="bct" or data[1]=="bct" or data[2]=="bct" or data[0]=="bacod" or data[1]=="bacod" or data[2]=="bacod" or data[0]=="bcd" or data[1]=="bcd" or data[2]=="bcd":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120533550838.jpg',
-    preview_image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120533550838.jpg'
-    ))
-    #7
-    if data[0]=="sabar" or data[1]=="sabar" or data[2]=="sabar":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://i.pinimg.com/750x/f3/83/c3/f383c3106936a4728d924dd7ff945c20.jpg',
-    preview_image_url='https://i.pinimg.com/750x/f3/83/c3/f383c3106936a4728d924dd7ff945c20.jpg'
-    ))
-    #8
-    if text=="positive thinking" or text=="pikiran positif":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://pbs.twimg.com/media/DU3n1OuV4AE9sZg.jpg',
-    preview_image_url='https://pbs.twimg.com/media/DU3n1OuV4AE9sZg.jpg'
-    ))
-    #9
-    if text=="/wkh-bodoh":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://ktawa.com/wp-content/uploads/2018/05/2761997_201803120735020920.jpg',
-    preview_image_url='https://ktawa.com/wp-content/uploads/2018/05/2761997_201803120735020920.jpg'
-    ))
-    #10
-    if text=="/wkh-bodo":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://ktawa.com/wp-content/uploads/2018/09/DXgqnNRVwAA-_6F.jpg',
-    preview_image_url='https://ktawa.com/wp-content/uploads/2018/09/DXgqnNRVwAA-_6F.jpg'
-    ))
-    #11
-    if text=="/wkh-bomat":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120525540375.jpg',
-    preview_image_url='https://s.kaskus.id/images/2018/03/12/7034635_201803120525540375.jpg'
-    ))
-    #12
-    if data[0]=="diam" or data[1]=="diam":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://pbs.twimg.com/media/DXgpJPMU8AAxjFm.jpg',
-    preview_image_url='https://pbs.twimg.com/media/DXgpJPMU8AAxjFm.jpg'
-    ))
-    #13
-    if text=="/wkh-kesel":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://pbs.twimg.com/media/DVtT5HfVoAA74P3.jpg',
-    preview_image_url='https://pbs.twimg.com/media/DVtT5HfVoAA74P3.jpg'
-    ))
+    
 
 #etc
-    if len(data)>=3:
-        if data[0]=="cuy":
-            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="a"))
-        if data[1]=="cuy":
-            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="b"))
-        if data[2]=="cuy":
-            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="c"))
-    else:
-        if text=="cuy":
-            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="d"))
-        if text=="cuy cuy":
-            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="e"))
-    if len(data)>=2:
-        if text=="tyo":
-            line_bot_api.reply_message(event.reply_token,TextSendMessage(text="e"))
+    # if len(data)>=3:
+    #     if data[0]=="cuy":
+    #         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="a"))
+    #     if data[1]=="cuy":
+    #         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="b"))
+    #     if data[2]=="cuy":
+    #         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="c"))
+    # else:
+    #     if text=="cuy":
+    #         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="d"))
+    #     if text=="cuy cuy":
+    #         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="e"))
+    # if len(data)>=2:
+    #     if text=="tyo":
+    #         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="e"))
         
 
 #LEAVE GRUP / MPC
