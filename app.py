@@ -367,7 +367,7 @@ def handle_message(event):
     
     
 #WIKIHOW
-    if text=="meme wikihow":
+    elif text=="meme wikihow":
         kamus="Meme Wikihow"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
     #1
