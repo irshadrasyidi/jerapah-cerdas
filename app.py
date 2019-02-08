@@ -134,6 +134,122 @@ def handle_message(event):
         preview_image_url='https://scontent-atl3-1.cdninstagram.com/vp/a5162fe74fd29170ddbbfbba71863c1b/5C5537BA/t51.2885-15/e35/29088954_1860060620959017_6436073020644655104_n.jpg'
         ))
 
+        #3 MULT CHOICE
+        elif data[0]=="bego" or data[1]=="bego" or data[2]=="bego" or data[0]=="bege" or data[1]=="bege" or data[2]=="bege" or data[0]=="begek" or data[1]=="begek" or data[2]=="begek":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://pbs.twimg.com/media/DYaIxpdU0AE2UcO.jpg',
+        preview_image_url='https://pbs.twimg.com/media/DYaIxpdU0AE2UcO.jpg'
+        ))
+        #4 MULT CHOICE
+        elif data[0]=="ngegas" or data[1]=="ngegas" or data[2]=="ngegas":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://s.kaskus.id/images/2017/10/07/9824467_201710070650410306.jpg',
+        preview_image_url='https://s.kaskus.id/images/2017/10/07/9824467_201710070650410306.jpg'
+        ))
+        #5 MULT CHOICE
+        elif data[0]=="gas" or data[1]=="gas" or data[2]=="gas":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://s.kaskus.id/images/2017/05/01/9437462_201705010152380796.jpg',
+        preview_image_url='https://s.kaskus.id/images/2017/05/01/9437462_201705010152380796.jpg'
+        ))
+        #6
+        elif data[0]=="gawat" or data[1]=="gawat" or data[2]=="gawat":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://em.wattpad.com/a597dfd0d5b0115078e72028c89b42f412c398e2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f4c346e547651464b426c66765a513d3d2d3532352e313531613331396163343031306232343335303035353539383537312e6a7067?s=fit&w=720&h=720',
+        preview_image_url='https://em.wattpad.com/a597dfd0d5b0115078e72028c89b42f412c398e2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f4c346e547651464b426c66765a513d3d2d3532352e313531613331396163343031306232343335303035353539383537312e6a7067?s=fit&w=720&h=720'
+        ))
+        #6
+        elif data[0]=="gelut" or data[1]=="gelut" or data[2]=="gelut":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://pics.me.me/gelut-29735709.png',
+        preview_image_url='https://pics.me.me/gelut-29735709.png'
+        ))
+        #7 MULT CHOICE
+        elif data[0]=="goblok" or data[1]=="goblok"  or data[2]=="goblok" or data[0]=="gblk" or data[1]=="gblk" or data[2]=="gblk" or data[0]=="goblog" or data[1]=="goblog" or data[2]=="goblog" or data[0]=="gblg" or data[1]=="gblg" or data[2]=="gblg":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://i.pinimg.com/236x/d2/55/46/d25546911ab75e65de5d0e5b6f267c5c.jpg',
+        preview_image_url='https://i.pinimg.com/236x/d2/55/46/d25546911ab75e65de5d0e5b6f267c5c.jpg'
+        ))
+        #8
+        elif data[0]=="bubar" or data[0]=="leren" or data[1]=="bubar" or data[1]=="leren" or data[2]=="bubar" or data[2]=="leren":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://pbs.twimg.com/media/DY9OLOLVwAEadK7.jpg',
+        preview_image_url='https://pbs.twimg.com/media/DY9OLOLVwAEadK7.jpg'
+        ))
+        #9
+        elif text=="ga sante":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://pbs.twimg.com/media/DjSIfjUVAAAX5WQ.jpg:large',
+        preview_image_url='https://pbs.twimg.com/media/DjSIfjUVAAAX5WQ.jpg:large'
+        ))
+        #10
+        elif data[0]=="kecewa" or data[1]=="kecewa" or data[2]=="kecewa":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://pics.me.me/kecewa-31619297.png',
+        preview_image_url='https://pics.me.me/kecewa-31619297.png'
+        ))
+        #11
+        elif data[0]=="keren" or data[0]=="cool" or data[0]=="kewl" or data[1]=="keren" or data[1]=="cool" or data[1]=="kewl" or data[2]=="keren" or data[2]=="cool" or data[2]=="kewl":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://media.keepo.me/20180306164724/511x288--28872329_1460633664058488_1580595060448431199_n.jpg',
+        preview_image_url='https://media.keepo.me/20180306164724/511x288--28872329_1460633664058488_1580595060448431199_n.jpg'
+        ))
+        #12
+        elif data[0]=="kocak" or data[1]=="kocak" or data[2]=="kocak":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://pbs.twimg.com/media/DYL2-5dVoAARtb4.jpg',
+        preview_image_url='https://pbs.twimg.com/media/DYL2-5dVoAARtb4.jpg'
+        ))
+        #13
+        elif data[1]=="terserah" or data[1]=="serah" or data[1]=="seterah" or data[0]=="terserah" or data[0]=="serah" or data[0]=="seterah" or data[2]=="terserah" or data[2]=="serah" or data[2]=="seterah":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://pics.me.me/terserah-lodeh-31686397.png',
+        preview_image_url='https://pics.me.me/terserah-lodeh-31686397.png'
+        ))
+        #14
+        elif data[0]=="mager" or data[1]=="mager" or data[2]=="mager":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://storage.jualo.com/original/12555347/bengkel-las-aneka-kar-alat-musik-lainnya-12555347.jpg',
+        preview_image_url='https://storage.jualo.com/original/12555347/bengkel-las-aneka-kar-alat-musik-lainnya-12555347.jpg'
+        ))
+        #15
+        elif data[0]=="pinter" or data[0]=="pintar" or data[0]=="smart" or data[1]=="pinter" or data[1]=="pintar" or data[1]=="smart" or data[2]=="pinter" or data[2]=="pintar" or data[2]=="smart":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://pbs.twimg.com/media/DkNtokXVAAA3gdr.jpg',
+        preview_image_url='https://pbs.twimg.com/media/DkNtokXVAAA3gdr.jpg'
+        ))
+        #16
+        elif data[0]=="sabi" or data[0]=="bisa" or data[1]=="sabi" or data[1]=="bisa" or data[2]=="sabi" or data[2]=="bisa":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://pbs.twimg.com/media/DbI1oKdUMAAKHl3.jpg',
+        preview_image_url='https://pbs.twimg.com/media/DbI1oKdUMAAKHl3.jpg'
+        ))
+        #17
+        elif data[0]=="skip" or data[0]=="sekip" or data[0]=="sqip" or data[0]=="sqiv" or data[1]=="skip" or data[1]=="sekip" or data[1]=="sqip" or data[1]=="sqiv" or data[2]=="skip" or data[2]=="sekip" or data[2]=="sqip" or data[2]=="sqiv":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://4.bp.blogspot.com/-TXgBZ19sxHs/Wr3bhYlQy6I/AAAAAAAABPs/vbC_Be9GFmsWrhytSZXd90D9DaQymyhdQCLcBGAs/s1600/IMG_20180327_222132.jpg',
+        preview_image_url='https://4.bp.blogspot.com/-TXgBZ19sxHs/Wr3bhYlQy6I/AAAAAAAABPs/vbC_Be9GFmsWrhytSZXd90D9DaQymyhdQCLcBGAs/s1600/IMG_20180327_222132.jpg'
+        ))
+        #18
+        elif data[0]=="siap" or data[0]=="siyap" or data[0]=="shap" or data[0]=="ready" or data[1]=="siap" or data[1]=="siyap" or data[1]=="shap" or data[1]=="ready" or data[2]=="siap" or data[2]=="siyap" or data[2]=="shap" or data[2]=="ready":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://www.teknosaurus.com/wp-content/uploads/2018/03/sayap-e1521330529574.jpg',
+        preview_image_url='https://www.teknosaurus.com/wp-content/uploads/2018/03/sayap-e1521330529574.jpg'
+        ))
+        #20
+        elif data[0]=="thanks" or data[0]=="thank" or data[0]=="makasih" or data[0]=="trims" or data[0]=="thx" or data[0]=="maaci" or data[1]=="thanks" or data[1]=="thank" or data[1]=="makasih" or data[1]=="trims" or data[1]=="thx" or data[1]=="maaci" or data[2]=="thanks" or data[2]=="thank" or data[2]=="makasih" or data[2]=="trims" or data[2]=="thx" or data[2]=="maaci":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://3.bp.blogspot.com/-2bHJrd2yl7s/Wr3Sy2zDudI/AAAAAAAABNk/DKwqkIkvufUteDl_CQlvfV98EjDNeTJagCLcBGAs/s1600/IMG_20180327_221555.jpg',
+        preview_image_url='https://3.bp.blogspot.com/-2bHJrd2yl7s/Wr3Sy2zDudI/AAAAAAAABNk/DKwqkIkvufUteDl_CQlvfV98EjDNeTJagCLcBGAs/s1600/IMG_20180327_221555.jpg'
+        ))
+        #21
+        elif data[0]=="kampret" or data[1]=="kampret" or data[2]=="kampret" or data[0]=="kamvret" or data[1]=="kamvret" or data[2]=="kamvret":
+            line_bot_api.reply_message(event.reply_token,ImageSendMessage(
+        original_content_url='https://cdn2.boombastis.com/wp-content/uploads/2018/03/7kampret.jpeg',
+        preview_image_url='https://cdn2.boombastis.com/wp-content/uploads/2018/03/7kampret.jpeg '
+        ))
+
+
     if text=="/menu":
         line_bot_api.reply_message(event.reply_token,TemplateSendMessage(
             alt_text='Carousel template',
@@ -243,120 +359,7 @@ def handle_message(event):
         kamus="Kategori Pun :\n1. /pun-bawel\n2. /pun-bego\n3. /pun-ngegas\n4. /pun-gas\n5. /pun-gawat\n6. /pun-ikan-goblok\n7. /pun-gelut\n8. /pun-bubar\n9. /pun-ikan-goblok\n11. /pun-kancil\n12. /pun-kecewa\n13. /pun-keren\n14. /pun-kocak\n15. /pun-lodeh\n16. /pun-mager\n17. /pun-pinter\n18. /pun-sabi\n19. /pun-sekip\n20. /pun-siyap\n21. /pun-thanks\n22. /pun-kampret"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=kamus))
 
-    #3 MULT CHOICE
-    elif data[0]=="bego" or data[1]=="bego" or data[2]=="bego" or data[0]=="bege" or data[1]=="bege" or data[2]=="bege" or data[0]=="begek" or data[1]=="begek" or data[2]=="begek":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://pbs.twimg.com/media/DYaIxpdU0AE2UcO.jpg',
-    preview_image_url='https://pbs.twimg.com/media/DYaIxpdU0AE2UcO.jpg'
-    ))
-    #4 MULT CHOICE
-    elif data[0]=="ngegas" or data[1]=="ngegas" or data[2]=="ngegas":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://s.kaskus.id/images/2017/10/07/9824467_201710070650410306.jpg',
-    preview_image_url='https://s.kaskus.id/images/2017/10/07/9824467_201710070650410306.jpg'
-    ))
-    #5 MULT CHOICE
-    elif data[0]=="gas" or data[1]=="gas" or data[2]=="gas":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://s.kaskus.id/images/2017/05/01/9437462_201705010152380796.jpg',
-    preview_image_url='https://s.kaskus.id/images/2017/05/01/9437462_201705010152380796.jpg'
-    ))
-    #6
-    elif data[0]=="gawat" or data[1]=="gawat" or data[2]=="gawat":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://em.wattpad.com/a597dfd0d5b0115078e72028c89b42f412c398e2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f4c346e547651464b426c66765a513d3d2d3532352e313531613331396163343031306232343335303035353539383537312e6a7067?s=fit&w=720&h=720',
-    preview_image_url='https://em.wattpad.com/a597dfd0d5b0115078e72028c89b42f412c398e2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f4c346e547651464b426c66765a513d3d2d3532352e313531613331396163343031306232343335303035353539383537312e6a7067?s=fit&w=720&h=720'
-    ))
-    #6
-    elif data[0]=="gelut" or data[1]=="gelut" or data[2]=="gelut":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://pics.me.me/gelut-29735709.png',
-    preview_image_url='https://pics.me.me/gelut-29735709.png'
-    ))
-    #7 MULT CHOICE
-    elif data[0]=="goblok" or data[1]=="goblok"  or data[2]=="goblok" or data[0]=="gblk" or data[1]=="gblk" or data[2]=="gblk" or data[0]=="goblog" or data[1]=="goblog" or data[2]=="goblog" or data[0]=="gblg" or data[1]=="gblg" or data[2]=="gblg":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://i.pinimg.com/236x/d2/55/46/d25546911ab75e65de5d0e5b6f267c5c.jpg',
-    preview_image_url='https://i.pinimg.com/236x/d2/55/46/d25546911ab75e65de5d0e5b6f267c5c.jpg'
-    ))
-    #8
-    elif data[0]=="bubar" or data[0]=="leren" or data[1]=="bubar" or data[1]=="leren" or data[2]=="bubar" or data[2]=="leren":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://pbs.twimg.com/media/DY9OLOLVwAEadK7.jpg',
-    preview_image_url='https://pbs.twimg.com/media/DY9OLOLVwAEadK7.jpg'
-    ))
-    #9
-    elif text=="ga sante":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://pbs.twimg.com/media/DjSIfjUVAAAX5WQ.jpg:large',
-    preview_image_url='https://pbs.twimg.com/media/DjSIfjUVAAAX5WQ.jpg:large'
-    ))
-    #10
-    elif data[0]=="kecewa" or data[1]=="kecewa" or data[2]=="kecewa":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://pics.me.me/kecewa-31619297.png',
-    preview_image_url='https://pics.me.me/kecewa-31619297.png'
-    ))
-    #11
-    elif data[0]=="keren" or data[0]=="cool" or data[0]=="kewl" or data[1]=="keren" or data[1]=="cool" or data[1]=="kewl" or data[2]=="keren" or data[2]=="cool" or data[2]=="kewl":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://media.keepo.me/20180306164724/511x288--28872329_1460633664058488_1580595060448431199_n.jpg',
-    preview_image_url='https://media.keepo.me/20180306164724/511x288--28872329_1460633664058488_1580595060448431199_n.jpg'
-    ))
-    #12
-    elif data[0]=="kocak" or data[1]=="kocak" or data[2]=="kocak":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://pbs.twimg.com/media/DYL2-5dVoAARtb4.jpg',
-    preview_image_url='https://pbs.twimg.com/media/DYL2-5dVoAARtb4.jpg'
-    ))
-    #13
-    elif data[1]=="terserah" or data[1]=="serah" or data[1]=="seterah" or data[0]=="terserah" or data[0]=="serah" or data[0]=="seterah" or data[2]=="terserah" or data[2]=="serah" or data[2]=="seterah":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://pics.me.me/terserah-lodeh-31686397.png',
-    preview_image_url='https://pics.me.me/terserah-lodeh-31686397.png'
-    ))
-    #14
-    elif data[0]=="mager" or data[1]=="mager" or data[2]=="mager":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://storage.jualo.com/original/12555347/bengkel-las-aneka-kar-alat-musik-lainnya-12555347.jpg',
-    preview_image_url='https://storage.jualo.com/original/12555347/bengkel-las-aneka-kar-alat-musik-lainnya-12555347.jpg'
-    ))
-    #15
-    elif data[0]=="pinter" or data[0]=="pintar" or data[0]=="smart" or data[1]=="pinter" or data[1]=="pintar" or data[1]=="smart" or data[2]=="pinter" or data[2]=="pintar" or data[2]=="smart":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://pbs.twimg.com/media/DkNtokXVAAA3gdr.jpg',
-    preview_image_url='https://pbs.twimg.com/media/DkNtokXVAAA3gdr.jpg'
-    ))
-    #16
-    elif data[0]=="sabi" or data[0]=="bisa" or data[1]=="sabi" or data[1]=="bisa" or data[2]=="sabi" or data[2]=="bisa":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://pbs.twimg.com/media/DbI1oKdUMAAKHl3.jpg',
-    preview_image_url='https://pbs.twimg.com/media/DbI1oKdUMAAKHl3.jpg'
-    ))
-    #17
-    elif data[0]=="skip" or data[0]=="sekip" or data[0]=="sqip" or data[0]=="sqiv" or data[1]=="skip" or data[1]=="sekip" or data[1]=="sqip" or data[1]=="sqiv" or data[2]=="skip" or data[2]=="sekip" or data[2]=="sqip" or data[2]=="sqiv":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://4.bp.blogspot.com/-TXgBZ19sxHs/Wr3bhYlQy6I/AAAAAAAABPs/vbC_Be9GFmsWrhytSZXd90D9DaQymyhdQCLcBGAs/s1600/IMG_20180327_222132.jpg',
-    preview_image_url='https://4.bp.blogspot.com/-TXgBZ19sxHs/Wr3bhYlQy6I/AAAAAAAABPs/vbC_Be9GFmsWrhytSZXd90D9DaQymyhdQCLcBGAs/s1600/IMG_20180327_222132.jpg'
-    ))
-    #18
-    elif data[0]=="siap" or data[0]=="siyap" or data[0]=="shap" or data[0]=="ready" or data[1]=="siap" or data[1]=="siyap" or data[1]=="shap" or data[1]=="ready" or data[2]=="siap" or data[2]=="siyap" or data[2]=="shap" or data[2]=="ready":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://www.teknosaurus.com/wp-content/uploads/2018/03/sayap-e1521330529574.jpg',
-    preview_image_url='https://www.teknosaurus.com/wp-content/uploads/2018/03/sayap-e1521330529574.jpg'
-    ))
-    #20
-    elif data[0]=="thanks" or data[0]=="thank" or data[0]=="makasih" or data[0]=="trims" or data[0]=="thx" or data[0]=="maaci" or data[1]=="thanks" or data[1]=="thank" or data[1]=="makasih" or data[1]=="trims" or data[1]=="thx" or data[1]=="maaci" or data[2]=="thanks" or data[2]=="thank" or data[2]=="makasih" or data[2]=="trims" or data[2]=="thx" or data[2]=="maaci":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://3.bp.blogspot.com/-2bHJrd2yl7s/Wr3Sy2zDudI/AAAAAAAABNk/DKwqkIkvufUteDl_CQlvfV98EjDNeTJagCLcBGAs/s1600/IMG_20180327_221555.jpg',
-    preview_image_url='https://3.bp.blogspot.com/-2bHJrd2yl7s/Wr3Sy2zDudI/AAAAAAAABNk/DKwqkIkvufUteDl_CQlvfV98EjDNeTJagCLcBGAs/s1600/IMG_20180327_221555.jpg'
-    ))
-    #21
-    elif data[0]=="kampret" or data[1]=="kampret" or data[2]=="kampret" or data[0]=="kamvret" or data[1]=="kamvret" or data[2]=="kamvret":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(
-    original_content_url='https://cdn2.boombastis.com/wp-content/uploads/2018/03/7kampret.jpeg',
-    preview_image_url='https://cdn2.boombastis.com/wp-content/uploads/2018/03/7kampret.jpeg '
-    ))
+    
     
     
     
